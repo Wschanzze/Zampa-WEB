@@ -1,0 +1,62 @@
+[
+  {
+    "id": "new-boots",
+    "name": "New Boots",
+    "price": 189.99,
+    "image": "assets/images/arr_boots_1780359001508.png",
+    "category": "working-attire",
+    "description": "Premium leather western boots handcrafted in the USA. Designed for all-day comfort and durability in the ranch.",
+    "details": [
+      "100% full-grain leather",
+      "Slip-resistant rubber outsole",
+      "Cushioned leather insole",
+      "12-inch shaft height"
+    ],
+    "stock": 12
+  },
+  {
+    "id": "new-ropes",
+    "name": "New Ropes",
+    "price": 65.00,
+    "image": "assets/images/arr_ropes_1780359014092.png",
+    "category": "ranching-supplies",
+    "description": "Professional-grade roping lassos built for precision, balance, and long-lasting performance.",
+    "details": [
+      "100% nylon blend",
+      "30-foot length",
+      "Medium soft lay",
+      "Excellent tip feel and consistency"
+    ],
+    "stock": 25
+  },
+  {
+    "id": "new-accessories",
+    "name": "New Accessories",
+    "price": 45.99,
+    "image": "assets/images/arr_accessories_1780359028617.png",
+    "category": "everyday-riding",
+    "description": "Heavy-duty leather ranching gloves and belt combo. Ensures protection and a classic western look.",
+    "details": [
+      "Genuine goatskin leather gloves",
+      "Solid brass buckle belt",
+      "Reinforced double-stitching",
+      "Weather-resistant coating"
+    ],
+    "stock": 18
+  },
+  {
+    "id": "winter-apparel",
+    "name": "Winter Apparel",
+    "price": 135.50,
+    "image": "assets/images/arr_winter_1780357589175.png",
+    "category": "working-attire",
+    "description": "Rugged canvas winter jacket lined with premium sherpa fleece to keep you warm during the coldest mornings.",
+    "details": [
+      "Heavy-weight cotton canvas shell",
+      "Sherpa-lined body and hood",
+      "Triple-stitched main seams",
+      "Two large front utility pockets"
+    ],
+    "stock": 8
+  }
+]
