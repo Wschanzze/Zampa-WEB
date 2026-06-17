@@ -15,7 +15,9 @@ const NutritionalBenefits = ({ isVintage }) => {
       
       <div className="benefits-grid">
         <div className="benefit-card">
-          <div className="benefit-icon">🧬</div>
+          <div className="benefit-image">
+            <img src="/assets/Quesos Zampa/IMG_9858.JPG" alt="Proteínas y digestión en Zampa" />
+          </div>
           <h3>Proteínas y Digestión</h3>
           <p>
             Contiene una mayor cantidad de proteínas, donde casi el 80% es caseína. Posee una muy baja concentración de beta-caseína A1 (asociada a trastornos digestivos). Casi la totalidad es la <strong>variante A2</strong>, haciéndola mucho más segura y beneficiosa para la salud intestinal.
@@ -23,7 +25,9 @@ const NutritionalBenefits = ({ isVintage }) => {
         </div>
         
         <div className="benefit-card">
-          <div className="benefit-icon">🦴</div>
+          <div className="benefit-image">
+            <img src="/assets/Quesos Zampa/IMG_0019.JPG" alt="Minerales esenciales y ovejas Zampa" />
+          </div>
           <h3>Minerales Esenciales</h3>
           <p>
             La elevada cantidad de proteínas está directamente relacionada con un mayor contenido de minerales esenciales. Destacan el <strong>Calcio</strong> y el <strong>Fósforo</strong>, fundamentales para contribuir a la fortaleza y salud de nuestro sistema óseo.
@@ -31,7 +35,9 @@ const NutritionalBenefits = ({ isVintage }) => {
         </div>
         
         <div className="benefit-card">
-          <div className="benefit-icon">🧈</div>
+          <div className="benefit-image">
+            <img src="/assets/Quesos Zampa/tipos de quesos.jpg" alt="Quesos y grasas saludables" />
+          </div>
           <h3>Grasas Saludables</h3>
           <p>
             Aunque posee mayor cantidad de grasa, presenta un <strong>menor contenido de colesterol</strong> en comparación con otras leches. Sus glóbulos de grasa son más pequeños, lo que facilita su descomposición y la hace más fácil y ligera de digerir.
