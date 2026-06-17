@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 
 const Navbar = () => {
@@ -13,17 +14,18 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="nav-links left-links">
-          <a href="#shop">TIENDA</a>
-          <a href="#about">HISTORIA</a>
+          <Link to="/">TIENDA</Link>
+          <Link to="/nosotros">NOSOTROS</Link>
+          <Link to="/el-chef">EL CHEF</Link>
         </div>
         
         <div className="logo-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <a href="#"><img src="/IMG_1960(1).png" alt="Zampa Logo" style={{ height: '90px', objectFit: 'contain' }} /></a>
+          <Link to="/"><img src="/IMG_1960(1).png" alt="Zampa Logo" style={{ height: '90px', objectFit: 'contain' }} /></Link>
           <span className="est" style={{ marginTop: '5px' }}>EST. 2021</span>
         </div>
         
         <div className="nav-links right-links">
-          <a href="#new-arrivals">QUESOS</a>
+          <Link to="/comunidad">COMUNIDAD</Link>
           <button 
             className="nav-cart-btn" 
             onClick={() => setIsCartOpen(true)}
@@ -41,9 +43,10 @@ const Navbar = () => {
 
       {/* Mobile Menu Drawer */}
       <div className={`nav-links-mobile ${isMobileMenuOpen ? 'open' : ''}`}>
-        <a href="#shop" onClick={toggleMobileMenu}>TIENDA</a>
-        <a href="#about" onClick={toggleMobileMenu}>HISTORIA</a>
-        <a href="#new-arrivals" onClick={toggleMobileMenu}>QUESOS</a>
+        <Link to="/" onClick={toggleMobileMenu}>TIENDA</Link>
+        <Link to="/nosotros" onClick={toggleMobileMenu}>NOSOTROS</Link>
+        <Link to="/el-chef" onClick={toggleMobileMenu}>EL CHEF</Link>
+        <Link to="/comunidad" onClick={toggleMobileMenu}>COMUNIDAD</Link>
         <button 
           className="nav-cart-btn"
           onClick={() => {

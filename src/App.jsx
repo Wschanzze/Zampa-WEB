@@ -1,33 +1,38 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ShopOccasion from './components/ShopOccasion';
-import BannerBW from './components/BannerBW';
-import OurStory from './components/OurStory';
-import NewArrivals from './components/NewArrivals';
-import JoinFamily from './components/JoinFamily';
 import Footer from './components/Footer';
 import Cart from './components/Cart';
 import ProductModal from './components/ProductModal';
 import ToastContainer from './components/ToastContainer';
 
+// Pages
+import Home from './pages/Home';
+import Nosotros from './pages/Nosotros';
+import ElChef from './pages/ElChef';
+import Comunidad from './pages/Comunidad';
+import ScrollToTop from './components/ScrollToTop';
+
 function App() {
   return (
     <AppProvider>
-      <div className="app-container">
-        <Navbar />
-        <Hero />
-        <ShopOccasion />
-        <BannerBW />
-        <OurStory />
-        <NewArrivals />
-        <JoinFamily />
-        <Footer />
-        <Cart />
-        <ProductModal />
-        <ToastContainer />
-      </div>
+      <Router>
+        <ScrollToTop />
+        <div className="app-container">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/nosotros" element={<Nosotros />} />
+            <Route path="/el-chef" element={<ElChef />} />
+            <Route path="/comunidad" element={<Comunidad />} />
+          </Routes>
+          <Footer />
+          <Cart />
+          <ProductModal />
+          <ToastContainer />
+        </div>
+      </Router>
     </AppProvider>
   );
 }
