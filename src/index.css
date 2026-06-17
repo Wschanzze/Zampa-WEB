@@ -151,29 +151,39 @@ h1, h2, h3, h4, h5, h6 {
 /* ====== NAVIGATION ====== */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1.5rem 5%;
-    background-color: var(--clr-bg);
+    gap: 6rem; /* Acercar los links al centro */
+    padding: 1.2rem 5%;
+    background-color: rgba(250, 248, 245, 0.9); /* Efecto cristal translúcido */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     position: sticky;
     top: 0;
     z-index: 100;
     border-bottom: 1px solid var(--clr-border);
+    transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem; /* Separación elegante entre links */
 }
 
 .nav-links button, .nav-links a {
-    font-size: 0.85rem;
+    font-size: 1.05rem; /* Fuente más grande para mejor visualización */
     font-weight: 500;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em; /* Espaciado premium */
     text-transform: uppercase;
     position: relative;
     cursor: pointer;
+    color: var(--clr-text-main);
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    color: var(--clr-accent);
 }
 
 .nav-links button::after, .nav-links a::after {
@@ -182,9 +192,17 @@ h1, h2, h3, h4, h5, h6 {
     bottom: -4px;
     left: 0;
     width: 0;
-    height: 1px;
+    height: 2px; /* Línea de hover ligeramente más gruesa */
     background-color: var(--clr-accent);
     transition: var(--transition);
+}
+
+.nav-links a.active::after {
+    width: 100%; /* Mantener la línea activa si estamos en la página actual */
+}
+
+.nav-links button:hover, .nav-links a:hover {
+    color: var(--clr-accent);
 }
 
 .nav-links button:hover::after, .nav-links a:hover::after {
@@ -956,6 +974,8 @@ h1, h2, h3, h4, h5, h6 {
     }
     .navbar {
         padding: 1rem 5%;
+        justify-content: space-between;
+        gap: 0;
     }
 
     /* Hero */
@@ -1147,4 +1167,10 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--clr-text-light);
     line-height: 1.6;
     font-family: var(--font-body);
+}
+
+.navbar.scrolled {
+    padding: 0.8rem 5%;
+    background-color: rgba(250, 248, 245, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }

@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 
 const Navbar = () => {
   const { cartCount, setIsCartOpen } = useApp();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -12,11 +25,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="nav-links left-links">
-          <Link to="/">TIENDA</Link>
-          <Link to="/nosotros">NOSOTROS</Link>
-          <Link to="/el-chef">EL CHEF</Link>
+          <NavLink to="/" end>TIENDA</NavLink>
+          <NavLink to="/nosotros">NOSOTROS</NavLink>
+          <NavLink to="/el-chef">EL CHEF</NavLink>
         </div>
         
         <div className="logo-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -25,7 +38,7 @@ const Navbar = () => {
         </div>
         
         <div className="nav-links right-links">
-          <Link to="/comunidad">COMUNIDAD</Link>
+          <NavLink to="/comunidad">COMUNIDAD</NavLink>
           <button 
             className="nav-cart-btn" 
             onClick={() => setIsCartOpen(true)}
