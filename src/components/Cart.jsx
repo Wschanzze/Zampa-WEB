@@ -25,7 +25,7 @@ const Cart = () => {
       />
       <div className={`cart-drawer ${isCartOpen ? 'open' : ''}`}>
         <div className="cart-header">
-          <h3 className="cart-title">YOUR CART</h3>
+          <h3 className="cart-title">TU CARRITO</h3>
           <button className="close-btn" onClick={() => setIsCartOpen(false)}>&times;</button>
         </div>
         
@@ -48,7 +48,7 @@ const Cart = () => {
                       <button className="qty-btn" onClick={() => updateQty(product.id, 1)}>+</button>
                     </div>
                     <button className="remove-item-btn" onClick={() => removeFromCart(product.id)}>
-                      Remove
+                      Eliminar
                     </button>
                   </div>
                 </div>
@@ -64,7 +64,7 @@ const Cart = () => {
               <span className="cart-subtotal-val">${cartSubtotal.toFixed(2)}</span>
             </div>
             <button className="btn btn-secondary btn-checkout" onClick={handleCheckout}>
-              CHECKOUT
+              FINALIZAR COMPRA
             </button>
           </div>
         )}

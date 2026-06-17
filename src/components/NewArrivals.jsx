@@ -13,9 +13,9 @@ const NewArrivals = () => {
   return (
     <section className="new-arrivals" id="new-arrivals">
       <div className="section-header">
-        <p className="section-subtitle">JUST IN</p>
+        <p className="section-subtitle">LO MÁS RECIENTE</p>
         <h3 className="section-title">
-          {categoryFilter === 'all' ? 'SHOP NEW ARRIVALS' : `NEW ARRIVALS - ${categoryFilter.replace('-', ' ')}`}
+          {categoryFilter === 'all' ? 'NUESTROS QUESOS' : `QUESOS - ${categoryFilter.replace('-', ' ').toUpperCase()}`}
         </h3>
       </div>
       
@@ -44,7 +44,7 @@ const NewArrivals = () => {
       </div>
       
       <div className="center-btn">
-        <a href="#shop" className="btn btn-secondary">BROWSE ALL</a>
+        <a href="#shop" className="btn btn-secondary">VER TODOS</a>
       </div>
     </section>
   );

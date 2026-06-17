@@ -19,30 +19,30 @@ const JoinFamily = () => {
   return (
     <section className="join-family">
       <img 
-        src="/assets/images/sunset_cowboy_1780357514909.png" 
-        alt="Cowboy at sunset" 
+        src="assets/Quesos Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg" 
+        alt="Quesos en maduración" 
         className="join-bg" 
       />
       <div className="join-content">
-        <p className="join-subtitle">BE THE FIRST TO KNOW</p>
-        <h2 className="join-title">JOIN THE FAMILY</h2>
+        <p className="join-subtitle">SÉ EL PRIMERO EN ENTERARTE</p>
+        <h2 className="join-title">NUEVAS HORMAS</h2>
         
         {!submitted ? (
           <form className="subscribe-form" onSubmit={handleSubmit}>
             <input 
               type="email" 
-              placeholder="EMAIL ADDRESS" 
+              placeholder="TU CORREO ELECTRÓNICO" 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required 
             />
-            <button type="submit" className="btn btn-submit">SUBMIT</button>
+            <button type="submit" className="btn btn-submit">SUSCRIBIRSE</button>
           </form>
         ) : (
-          <p className="success-message">THANK YOU! WELCOME TO THE LUCKY U STRIKES FAMILY.</p>
+          <p className="success-message">¡GRACIAS! TE HAS UNIDO A ZAMPA.</p>
         )}
         
-        <h1 className="watermark-logo">LUCKY<br />SUPPLIES<br />STRIKES</h1>
+        <h1 className="watermark-logo">ZAMPA<br />QUESOS<br />TANDIL</h1>
       </div>
     </section>
   );

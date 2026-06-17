@@ -46,7 +46,7 @@ const ProductModal = () => {
               closeProductModal();
             }}
           >
-            ADD TO CART
+            AÑADIR AL CARRITO
           </button>
         </div>
       </div>

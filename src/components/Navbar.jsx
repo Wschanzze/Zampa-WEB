@@ -13,19 +13,17 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="nav-links left-links">
-          <a href="#shop">SHOP</a>
-          <a href="#about">ABOUT US</a>
-          <a href="#roping">SHOP ROPING</a>
+          <a href="#shop">TIENDA</a>
+          <a href="#about">HISTORIA</a>
         </div>
         
-        <div className="logo-container">
-          <h1 className="logo">LUCKY <span class="u-motif">U</span> STRIKES</h1>
-          <span className="est">EST. 1989</span>
+        <div className="logo-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <a href="#"><img src="/IMG_1960(1).png" alt="Zampa Logo" style={{ height: '90px', objectFit: 'contain' }} /></a>
+          <span className="est" style={{ marginTop: '5px' }}>EST. 2021</span>
         </div>
         
         <div className="nav-links right-links">
-          <a href="#ranching">SHOP RANCHING</a>
-          <a href="#apparel">APPAREL</a>
+          <a href="#new-arrivals">QUESOS</a>
           <button 
             className="nav-cart-btn" 
             onClick={() => setIsCartOpen(true)}
@@ -43,11 +41,9 @@ const Navbar = () => {
 
       {/* Mobile Menu Drawer */}
       <div className={`nav-links-mobile ${isMobileMenuOpen ? 'open' : ''}`}>
-        <a href="#shop" onClick={toggleMobileMenu}>SHOP</a>
-        <a href="#about" onClick={toggleMobileMenu}>ABOUT US</a>
-        <a href="#roping" onClick={toggleMobileMenu}>SHOP ROPING</a>
-        <a href="#ranching" onClick={toggleMobileMenu}>SHOP RANCHING</a>
-        <a href="#apparel" onClick={toggleMobileMenu}>APPAREL</a>
+        <a href="#shop" onClick={toggleMobileMenu}>TIENDA</a>
+        <a href="#about" onClick={toggleMobileMenu}>HISTORIA</a>
+        <a href="#new-arrivals" onClick={toggleMobileMenu}>QUESOS</a>
         <button 
           className="nav-cart-btn"
           onClick={() => {

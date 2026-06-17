@@ -4,15 +4,15 @@ const Hero = () => {
   return (
     <header className="hero">
       <img 
-        src="/assets/images/hero_rope_horse_1780357474009.png" 
-        alt="Hand holding a rope on a horse" 
+        src="assets/Quesos Zampa/IMG_9816.JPG" 
+        alt="Producción de quesos Zampa" 
         className="hero-bg" 
       />
       <div className="hero-overlay"></div>
       <div className="hero-content">
-        <p className="hero-subtitle">PEAK PERFORMANCE | BUILT TO LAST</p>
-        <h2 className="hero-title">ROPING AND<br />RANCHING SUPPLIES</h2>
-        <a href="#new-arrivals" className="btn btn-primary">SHOP NEW ARRIVALS</a>
+        <p className="hero-subtitle">DE TANDIL PARA TU MESA | 100% PASTORIL</p>
+        <h2 className="hero-title">PRODUCCIÓN ARTESANAL<br />DE QUESO DE OVEJA</h2>
+        <a href="#new-arrivals" className="btn btn-primary">VER NUESTROS QUESOS</a>
       </div>
     </header>
   );

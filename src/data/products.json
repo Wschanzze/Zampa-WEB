@@ -1,62 +1,62 @@
 [
   {
-    "id": "new-boots",
-    "name": "New Boots",
-    "price": 189.99,
-    "image": "assets/images/arr_boots_1780359001508.png",
-    "category": "working-attire",
-    "description": "Premium leather western boots handcrafted in the USA. Designed for all-day comfort and durability in the ranch.",
+    "id": "queso-ahumado",
+    "name": "Queso Ahumado",
+    "price": 12500,
+    "image": "assets/Quesos Zampa/IMG_9821.JPG",
+    "category": "picadas",
+    "description": "Queso de oveja con proceso de ahumado. Color marfil uniforme, sin agregados. Ideal para acompañar fiambres intensos.",
     "details": [
-      "100% full-grain leather",
-      "Slip-resistant rubber outsole",
-      "Cushioned leather insole",
-      "12-inch shaft height"
+      "Leche de oveja 100% de pastura",
+      "Proceso de ahumado natural",
+      "Pasta firme",
+      "Sabor intenso y definido"
+    ],
+    "stock": 15
+  },
+  {
+    "id": "queso-pecorino",
+    "name": "Queso Pecorino",
+    "price": 18000,
+    "image": "assets/Quesos Zampa/IMG_9823.JPG",
+    "category": "alta-cocina",
+    "description": "Queso duro de oveja estilo italiano, madurado entre 9 y 12 meses. Su pasta firme y color amarillo pálido resaltan su complejidad.",
+    "details": [
+      "Maduración: 9 a 12 meses",
+      "Pasta firme y granulada",
+      "Sabor intenso y persistente",
+      "Ideal para rallar o degustar"
+    ],
+    "stock": 8
+  },
+  {
+    "id": "queso-oregano",
+    "name": "Queso de Orégano",
+    "price": 13000,
+    "image": "assets/Quesos Zampa/IMG_9824.JPG",
+    "category": "picadas",
+    "description": "Queso de oveja saborizado con orégano. Presencia de hierbas distribuidas en la pasta para un toque aromático.",
+    "details": [
+      "Orégano natural seleccionado",
+      "Pasta suave y uniforme",
+      "Perfil herbáceo",
+      "Perfecto para ensaladas o tablas"
     ],
     "stock": 12
   },
   {
-    "id": "new-ropes",
-    "name": "New Ropes",
-    "price": 65.00,
-    "image": "assets/images/arr_ropes_1780359014092.png",
-    "category": "ranching-supplies",
-    "description": "Professional-grade roping lassos built for precision, balance, and long-lasting performance.",
+    "id": "queso-manchego",
+    "name": "Queso Manchego",
+    "price": 15500,
+    "image": "assets/Quesos Zampa/IMG_9858.JPG",
+    "category": "mesa-diaria",
+    "description": "Queso de oveja estilo manchego de pasta compacta, sin agregados visibles. El clásico de todos los días, elaborado artesanalmente en Tandil.",
     "details": [
-      "100% nylon blend",
-      "30-foot length",
-      "Medium soft lay",
-      "Excellent tip feel and consistency"
+      "Estilo manchego tradicional",
+      "Pasta compacta y equilibrada",
+      "Sabor suave con notas lácticas",
+      "Corteza natural"
     ],
-    "stock": 25
-  },
-  {
-    "id": "new-accessories",
-    "name": "New Accessories",
-    "price": 45.99,
-    "image": "assets/images/arr_accessories_1780359028617.png",
-    "category": "everyday-riding",
-    "description": "Heavy-duty leather ranching gloves and belt combo. Ensures protection and a classic western look.",
-    "details": [
-      "Genuine goatskin leather gloves",
-      "Solid brass buckle belt",
-      "Reinforced double-stitching",
-      "Weather-resistant coating"
-    ],
-    "stock": 18
-  },
-  {
-    "id": "winter-apparel",
-    "name": "Winter Apparel",
-    "price": 135.50,
-    "image": "assets/images/arr_winter_1780357589175.png",
-    "category": "working-attire",
-    "description": "Rugged canvas winter jacket lined with premium sherpa fleece to keep you warm during the coldest mornings.",
-    "details": [
-      "Heavy-weight cotton canvas shell",
-      "Sherpa-lined body and hood",
-      "Triple-stitched main seams",
-      "Two large front utility pockets"
-    ],
-    "stock": 8
+    "stock": 20
   }
 ]
