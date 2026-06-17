@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import ShopOccasion from '../components/ShopOccasion';
 import BannerBW from '../components/BannerBW';
 import OurStory from '../components/OurStory';
+import PastoralSystem from '../components/PastoralSystem';
 import NewArrivals from '../components/NewArrivals';
 import JoinFamily from '../components/JoinFamily';
 
@@ -13,6 +14,7 @@ const Home = () => {
       <ShopOccasion />
       <BannerBW />
       <OurStory />
+      <PastoralSystem />
       <NewArrivals />
       <JoinFamily />
     </>

@@ -1079,3 +1079,72 @@ h1, h2, h3, h4, h5, h6 {
         bottom: 1rem;
     }
 }
+
+/* ====== PASTORAL SYSTEM ====== */
+.pastoral-system {
+    padding: 6rem 5%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+.pastoral-video video {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    box-shadow: 15px 15px 0 var(--clr-accent);
+    border-radius: 4px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .pastoral-video {
+        order: -1;
+    }
+    .pastoral-video video {
+        box-shadow: 10px 10px 0 var(--clr-accent);
+        max-height: 400px;
+    }
+}
+
+/* ====== NUTRITIONAL BENEFITS ====== */
+.benefits-section {
+    padding: 6rem 5%;
+    background-color: var(--clr-bg);
+}
+.benefits-header {
+    margin-bottom: 4rem;
+}
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+.benefit-card {
+    background: var(--clr-white);
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--clr-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+.benefit-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+.benefit-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--clr-text-main);
+    font-family: var(--font-brand);
+}
+.benefit-card p {
+    color: var(--clr-text-light);
+    line-height: 1.6;
+    font-family: var(--font-body);
+}
