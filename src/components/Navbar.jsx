@@ -33,7 +33,7 @@ const Navbar = () => {
         </div>
         
         <div className="logo-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <Link to="/"><img src="/IMG_1960(1).png" alt="Zampa Logo" style={{ height: '90px', objectFit: 'contain' }} /></Link>
+          <Link to="/"><img src="/IMG_1960(1).png" alt="Zampa Logo" className="navbar-logo" /></Link>
           <span className="est" style={{ marginTop: '5px' }}>EST. 2021</span>
         </div>
         

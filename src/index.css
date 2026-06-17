@@ -155,14 +155,22 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 6rem; /* Acercar los links al centro */
     padding: 1.2rem 5%;
-    background-color: rgba(250, 248, 245, 0.9); /* Efecto cristal translúcido */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background-color: var(--clr-bg); /* Quitar transparencia */
     position: sticky;
     top: 0;
     z-index: 100;
     border-bottom: 1px solid var(--clr-border);
     transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar-logo {
+    height: 110px; /* Agrandar un poco el logo */
+    object-fit: contain;
+    transition: height 0.3s ease;
+}
+
+.navbar.scrolled .navbar-logo {
+    height: 85px; /* Achicar sutilmente al hacer scroll */
 }
 
 .nav-links {
@@ -172,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-links button, .nav-links a {
-    font-size: 1.05rem; /* Fuente más grande para mejor visualización */
+    font-size: 0.9rem; /* Fuentes un poco más chicas */
     font-weight: 500;
     letter-spacing: 0.12em; /* Espaciado premium */
     text-transform: uppercase;
@@ -1180,7 +1188,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar.scrolled {
     padding: 0.8rem 5%;
-    background-color: rgba(250, 248, 245, 0.95);
+    background-color: var(--clr-bg);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
