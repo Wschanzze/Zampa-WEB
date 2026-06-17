@@ -1174,3 +1174,329 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(250, 248, 245, 0.95);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
+
+/* ====== NEWSPAPER LAYOUT ====== */
+.newspaper-wrapper {
+    background-color: #FAF8F5; /* Fondo crema de toda la sección */
+    padding: 4rem 2vw;
+    color: #2C2B29;
+}
+.newspaper-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #FDFCF7; /* Color de papel envejecido */
+    border: 1px solid #E2DEC9;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 3.5rem;
+    position: relative;
+}
+@media (max-width: 768px) {
+    .newspaper-container {
+        padding: 1.5rem;
+    }
+}
+/* Cabecera del periódico */
+.newspaper-header {
+    text-align: center;
+    border-bottom: 4px double #2C2B29;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.newspaper-header .masthead {
+    font-family: var(--font-brand);
+    font-size: 3.8rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin: 0;
+    color: #2C2B29;
+    line-height: 1;
+}
+@media (max-width: 768px) {
+    .newspaper-header .masthead {
+        font-size: 2.2rem;
+    }
+}
+.newspaper-meta {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #2C2B29;
+    border-bottom: 1px solid #2C2B29;
+    padding: 0.5rem 1rem;
+    margin-top: 1.2rem;
+    font-family: var(--font-sub);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+@media (max-width: 600px) {
+    .newspaper-meta {
+        flex-direction: column;
+        gap: 0.25rem;
+        align-items: center;
+        font-size: 0.7rem;
+    }
+}
+/* Cuadrícula / Pliegos */
+.newspaper-spread {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3.5rem;
+}
+@media (max-width: 1024px) {
+    .newspaper-spread {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+/* Página Izquierda */
+.newspaper-page-left {
+    border-right: 1px solid #E2DEC9;
+    padding-right: 2.5rem;
+}
+@media (max-width: 1024px) {
+    .newspaper-page-left {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid #E2DEC9;
+        padding-bottom: 3rem;
+    }
+}
+/* Artículos */
+.article-tag {
+    font-family: var(--font-sub);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--clr-accent);
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 600;
+}
+.article-title {
+    font-family: var(--font-brand);
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #2C2B29;
+}
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 1.8rem;
+    }
+}
+.article-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--clr-text-light);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.article-columns {
+    column-count: 2;
+    column-gap: 2rem;
+    text-align: justify;
+}
+@media (max-width: 600px) {
+    .article-columns {
+        column-count: 1;
+        text-align: left;
+    }
+}
+.article-text p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    color: #3C3B39;
+}
+.article-text p.drop-cap::first-letter {
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: var(--font-brand);
+    float: left;
+    margin-top: 4px;
+    margin-right: 8px;
+    line-height: 0.8;
+    color: #2C2B29;
+}
+/* Citas destacadas */
+.article-quote {
+    font-family: var(--font-brand);
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--clr-accent);
+    padding: 1.5rem 1rem;
+    margin: 2.5rem 0;
+    border-top: 1.5px solid #2C2B29;
+    border-bottom: 1.5px solid #2C2B29;
+}
+/* Contenedores de fotos */
+.newspaper-img-container {
+    margin: 1.8rem 0;
+}
+.newspaper-img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #E2DEC9;
+    padding: 6px;
+    background: #FFF;
+    display: block;
+}
+.newspaper-img-caption {
+    font-family: var(--font-sub);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--clr-text-light);
+    margin-top: 0.6rem;
+    text-align: center;
+}
+/* Página Derecha */
+.newspaper-page-right {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    gap: 2.5rem;
+}
+@media (max-width: 768px) {
+    .newspaper-page-right {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+.right-page-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.sub-article {
+    border-bottom: 1px dotted #E2DEC9;
+    padding-bottom: 2.5rem;
+}
+.sub-article:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+/* Barra de Estadísticas */
+.cifras-sidebar {
+    border-left: 1px solid #E2DEC9;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+@media (max-width: 768px) {
+    .cifras-sidebar {
+        border-left: none;
+        border-top: 1px solid #E2DEC9;
+        padding-left: 0;
+        padding-top: 2rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1.5rem;
+    }
+}
+.cifras-title {
+    font-family: var(--font-sub);
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid #2C2B29;
+    padding-bottom: 0.6rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+.cifra-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .cifra-item {
+        flex: 1 1 30%;
+    }
+}
+.cifra-number {
+    font-family: var(--font-brand);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #2C2B29;
+    margin-bottom: 0.4rem;
+}
+.cifra-label {
+    font-family: var(--font-sub);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--clr-text-light);
+    line-height: 1.3;
+}
+/* Adaptación Anuncio Vintage */
+.newspaper-ad-container {
+    border-top: 4px double #2C2B29;
+    margin-top: 4rem;
+    padding-top: 3.5rem;
+}
+.newspaper-ad-box {
+    border: 2px dashed #2C2B29;
+    padding: 3.5rem 2.5rem;
+    background-color: #FDFCF7;
+    position: relative;
+}
+.newspaper-ad-box::before {
+    content: "CRÓNICA DE BIENESTAR • SUPLEMENTO NUTRICIONAL";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FDFCF7;
+    padding: 0 15px;
+    font-family: var(--font-sub);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--clr-text-light);
+}
+
+.benefits-section.vintage-ad {
+    background: transparent;
+    padding: 0;
+}
+.benefits-section.vintage-ad .benefits-header h2 {
+    font-family: var(--font-brand);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #2C2B29;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+.benefits-section.vintage-ad .benefit-card {
+    background: transparent;
+    border: 1px solid #E2DEC9;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 2.5rem 2rem;
+}
+.benefits-section.vintage-ad .benefit-card:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: rgba(140, 98, 57, 0.03);
+}
+.benefits-section.vintage-ad .benefit-card h3 {
+    font-family: var(--font-brand);
+    color: #2C2B29;
+    font-size: 1.4rem;
+    font-weight: 700;
+}

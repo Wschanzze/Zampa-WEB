@@ -1,11 +1,13 @@
 import React from 'react';
 
-const NutritionalBenefits = () => {
+const NutritionalBenefits = ({ isVintage }) => {
   return (
-    <section className="benefits-section">
+    <section className={`benefits-section ${isVintage ? 'vintage-ad' : ''}`}>
       <div className="benefits-header">
-        <p className="story-subtitle" style={{textAlign: 'center'}}>NUESTRA MATERIA PRIMA</p>
-        <h2 className="story-title" style={{textAlign: 'center'}}>BENEFICIOS DE LA LECHE DE OVEJA</h2>
+        {!isVintage && <p className="story-subtitle" style={{textAlign: 'center'}}>NUESTRA MATERIA PRIMA</p>}
+        <h2 className={isVintage ? '' : 'story-title'} style={{textAlign: 'center', marginBottom: '1.5rem'}}>
+          BENEFICIOS DE LA LECHE DE OVEJA
+        </h2>
         <p style={{textAlign: 'center', maxWidth: '800px', margin: '0 auto', color: 'var(--clr-text-light)'}}>
           La leche de oveja se destaca por su alto valor nutricional, especialmente por su contenido de proteínas, minerales y grasa, lo que la convierte en un alimento altamente beneficioso para la digestión y la salud general.
         </p>
