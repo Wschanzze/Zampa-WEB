@@ -1,5 +1,5 @@
 import React from 'react';
-import PremiumHero from '../components/PremiumHero';
+import Hero from '../components/Hero';
 import BestSellers from '../components/BestSellers';
 import SignatureCollection from '../components/SignatureCollection';
 import ShopOccasion from '../components/ShopOccasion';
@@ -11,7 +11,7 @@ import JoinFamily from '../components/JoinFamily';
 const Home = () => {
   return (
     <>
-      <PremiumHero />
+      <Hero />
       <BestSellers />
       <SignatureCollection />
       <BannerBW />

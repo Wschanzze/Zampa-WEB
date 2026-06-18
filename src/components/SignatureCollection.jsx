@@ -14,7 +14,7 @@ const SignatureCollection = () => {
         </div>
         
         <div className="signature-image-col">
-          <img src="/assets/Quesos Zampa/producto_1.png" alt="Pecorino de Autor" />
+          <img src="/assets/Quesos%20Zampa/producto_1.png" alt="Pecorino de Autor" />
         </div>
         
         <div className="signature-specs-col">

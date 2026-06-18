@@ -1,14 +1,13 @@
 /* ====== CSS VARIABLES & THEME ====== */
 :root {
     /* Colors */
-    --clr-bg: #FFFFFF; /* Pure white for editorial look */
-    --clr-bg-alt: #FCFAF6; /* Ultra soft cream for alternate sections */
-    --clr-text-main: #1A1A1A; /* Darker charcoal */
-    --clr-text-light: #666666;
-    --clr-accent: #9A7B4F; /* More subdued, elegant gold/bronze */
+    --clr-bg: #FAF8F5; /* Aged white/cream */
+    --clr-text-main: #2C2B29; /* Deep charcoal */
+    --clr-text-light: #7A766F;
+    --clr-accent: #8C6239; /* Burnished gold/bronze */
     --clr-white: #FFFFFF;
-    --clr-dark: #121212;
-    --clr-border: #EAEAEA;
+    --clr-dark: #1A1A1A;
+    --clr-border: #E8E4DB;
 
     /* Typography */
     --font-brand: 'Playfair Display', serif;
@@ -65,12 +64,8 @@ button {
 /* ====== TYPOGRAPHY ====== */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-brand);
-    font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: 0.02em;
-}
-
-.uppercase {
+    font-weight: 800;
+    line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
