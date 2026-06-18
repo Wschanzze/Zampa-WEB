@@ -27,6 +27,7 @@ const Footer = () => {
           <Link to="/">TIENDA</Link>
           <Link to="/nosotros">NOSOTROS</Link>
           <Link to="/el-chef">EL CHEF</Link>
+          <Link to="/b2b">B2B / MAYORISTAS</Link>
           <Link to="/comunidad">COMUNIDAD</Link>
         </div>
         

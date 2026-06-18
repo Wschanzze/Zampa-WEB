@@ -38,6 +38,7 @@ const Navbar = () => {
         </div>
         
         <div className="nav-links right-links">
+          <NavLink to="/b2b">B2B / MAYORISTAS</NavLink>
           <NavLink to="/comunidad">COMUNIDAD</NavLink>
           <button 
             className="nav-cart-btn" 
@@ -59,6 +60,7 @@ const Navbar = () => {
         <Link to="/" onClick={toggleMobileMenu}>TIENDA</Link>
         <Link to="/nosotros" onClick={toggleMobileMenu}>NOSOTROS</Link>
         <Link to="/el-chef" onClick={toggleMobileMenu}>EL CHEF</Link>
+        <Link to="/b2b" onClick={toggleMobileMenu}>B2B / MAYORISTAS</Link>
         <Link to="/comunidad" onClick={toggleMobileMenu}>COMUNIDAD</Link>
         <button 
           className="nav-cart-btn"

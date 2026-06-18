@@ -1737,3 +1737,211 @@ h1, h2, h3, h4, h5, h6 {
         object-fit: cover;
     }
 }
+
+/* ====== B2B PAGE STYLES ====== */
+.b2b-page {
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+.b2b-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.b2b-card {
+    background-color: var(--clr-white);
+    padding: 2.5rem 1.5rem;
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition), box-shadow var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.b2b-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.b2b-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.b2b-card h4 {
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+    color: var(--clr-text-main);
+    text-transform: uppercase;
+}
+
+.b2b-card p {
+    font-family: var(--font-sub);
+    font-size: 0.9rem;
+    color: var(--clr-text-light);
+    line-height: 1.5;
+    margin-bottom: auto;
+}
+
+.b2b-spec {
+    display: block;
+    margin-top: 1.5rem;
+    font-family: var(--font-sub);
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--clr-accent);
+    text-transform: uppercase;
+    background-color: rgba(160, 140, 115, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+.b2b-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.b2b-specs-container {
+    background-color: var(--clr-white);
+    padding: 3rem;
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.b2b-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    font-family: var(--font-sub);
+    font-size: 0.95rem;
+}
+
+.b2b-table th, 
+.b2b-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.b2b-table th {
+    background-color: #fcfaf6;
+    color: var(--clr-text-main);
+    font-family: var(--font-main);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.b2b-table td strong {
+    color: var(--clr-text-main);
+}
+
+.b2b-form-container {
+    background-color: var(--clr-white);
+    padding: 3rem;
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.b2b-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-family: var(--font-main);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--clr-text-main);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--clr-border);
+    border-radius: 4px;
+    font-family: var(--font-sub);
+    font-size: 0.95rem;
+    background-color: #fff;
+    color: var(--clr-text-main);
+    transition: border-color var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--clr-accent);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.vintage-header {
+    font-family: var(--font-main);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: var(--clr-text-main);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--clr-accent);
+    padding-bottom: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .b2b-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .b2b-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .b2b-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .b2b-specs-container,
+    .b2b-form-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .b2b-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+

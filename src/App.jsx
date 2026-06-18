@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import Nosotros from './pages/Nosotros';
 import ElChef from './pages/ElChef';
 import Comunidad from './pages/Comunidad';
+import B2B from './pages/B2B';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/el-chef" element={<ElChef />} />
             <Route path="/comunidad" element={<Comunidad />} />
+            <Route path="/b2b" element={<B2B />} />
           </Routes>
           <Footer />
           <Cart />
