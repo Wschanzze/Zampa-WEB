@@ -14,7 +14,7 @@ const PastoralSystem = () => {
         </div>
         <div className="pastoral-video">
           <video 
-            src="assets/Quesos Zampa/IMG_1145.mp4" 
+            src="/assets/Quesos Zampa/IMG_1145.mp4" 
             autoPlay 
             loop 
             muted 

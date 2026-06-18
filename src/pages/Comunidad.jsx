@@ -2,23 +2,20 @@ import React from 'react';
 
 const Comunidad = () => {
   return (
-    <section className="our-story" style={{ padding: '6rem 5%', minHeight: '80vh' }}>
+    <section className="our-story" style={{ minHeight: '80vh' }}>
       <div className="section-header">
         <p className="section-subtitle">COMPROMISO Y VALOR</p>
         <h3 className="section-title" style={{ marginBottom: '1rem' }}>ZAMPA Y LA COMUNIDAD</h3>
       </div>
       
-      <div className="story-container" style={{ marginTop: '2rem' }}>
-        <div className="story-image">
+      <div className="story-container">
+        <div className="story-image story-image-shadow-left">
           <iframe 
-            width="100%" 
-            height="315" 
             src="https://www.youtube.com/embed/-Zb6oeexldo" 
             title="Zampa YouTube Video" 
             frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowFullScreen
-            style={{ borderRadius: '8px', boxShadow: '-15px 15px 0 var(--clr-accent)' }}
           ></iframe>
         </div>
         <div className="story-text">

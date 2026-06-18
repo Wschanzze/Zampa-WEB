@@ -8,7 +8,7 @@ const OurStory = () => {
       <div className="story-container">
         <div className="story-image">
           <img 
-            src="assets/Quesos Zampa/IMG_9879.JPG" 
+            src="/assets/Quesos Zampa/IMG_9879.JPG" 
             alt="Juan Cruz e Isabel" 
           />
         </div>

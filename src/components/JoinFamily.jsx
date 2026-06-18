@@ -19,7 +19,7 @@ const JoinFamily = () => {
   return (
     <section className="join-family">
       <img 
-        src="assets/Quesos Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg" 
+        src="/assets/Quesos Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg" 
         alt="Quesos en maduración" 
         className="join-bg" 
       />

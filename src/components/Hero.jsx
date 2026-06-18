@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <header className="hero">
       <img 
-        src="assets/Quesos Zampa/IMG_9816.JPG" 
+        src="/assets/Quesos Zampa/IMG_9816.JPG" 
         alt="Producción de quesos Zampa" 
         className="hero-bg" 
       />
