@@ -49,28 +49,36 @@ const B2B = () => {
       {/* Strategic Information Cards */}
       <div className="b2b-info-grid" style={{ marginBottom: '5rem' }}>
         <div className="b2b-card">
-          <div className="b2b-card-icon">📦</div>
+          <div className="b2b-card-image">
+            <img src="/assets/Quesos Zampa/IMG_9821.JPG" alt="Pedido Mínimo" />
+          </div>
           <h4>PEDIDO MÍNIMO</h4>
           <p>Manejamos volúmenes flexibles adaptados tanto a pequeñas tiendas gourmet y restaurantes de autor como a grandes distribuidores regionales.</p>
           <span className="b2b-spec">Mínimo: 10 kg de hormas mixtas</span>
         </div>
 
         <div className="b2b-card">
-          <div className="b2b-card-icon">🚛</div>
+          <div className="b2b-card-image">
+            <img src="/assets/Quesos Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg" alt="Logística y Cobertura" />
+          </div>
           <h4>LOGÍSTICA Y COBERTURA</h4>
           <p>Despachamos directamente desde nuestro tambo con cadena de frío garantizada. Coordinamos entregas semanales programadas.</p>
           <span className="b2b-spec">Envíos a todo el país</span>
         </div>
 
         <div className="b2b-card">
-          <div className="b2b-card-icon">⏳</div>
+          <div className="b2b-card-image">
+            <img src="/assets/Quesos Zampa/IMG_9858.JPG" alt="Conservación y Vida Útil" />
+          </div>
           <h4>CONSERVACIÓN Y VIDA ÚTIL</h4>
           <p>Nuestros quesos se entregan envasados al vacío, con rotulación clara, garantizando una excelente durabilidad en cámara.</p>
           <span className="b2b-spec">Vida útil: 180 días (envasado)</span>
         </div>
 
         <div className="b2b-card">
-          <div className="b2b-card-icon">🏷️</div>
+          <div className="b2b-card-image">
+            <img src="/assets/Quesos Zampa/tipos de quesos.jpg" alt="Soporte de Ventas" />
+          </div>
           <h4>SOPORTE DE VENTAS</h4>
           <p>Te brindamos material POP, fichas técnicas de producto, capacitación para tu personal de ventas y apoyo en degustaciones.</p>
           <span className="b2b-spec">Material digital & folletería gratis</span>
