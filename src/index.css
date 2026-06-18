@@ -2040,6 +2040,38 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 
+/* ====== INTRODUCTION ====== */
+.intro-section {
+    padding: 8rem 5%;
+    background-color: var(--clr-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-container {
+    max-width: 900px;
+}
+
+.intro-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--clr-accent);
+    margin-bottom: 2.5rem;
+}
+
+.intro-text {
+    font-family: var(--font-body);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    line-height: 1.8;
+    color: var(--clr-text-main);
+    font-weight: 300;
+}
+
+.intro-text strong {
+    font-weight: 600;
+}
+
 /* ====== BEST SELLERS (EDITORIAL) ====== */
 .best-sellers {
     background-color: var(--clr-bg);
