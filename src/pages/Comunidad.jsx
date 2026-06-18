@@ -17,6 +17,7 @@ const Comunidad = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowFullScreen
           ></iframe>
+          <h1 className="watermark-logo" style={{ bottom: '-5%', right: '-5%', opacity: '0.15' }}>ZAMPA<br />QUESOS<br />TANDIL</h1>
         </div>
         <div className="story-text">
           <p>En Zampa, creemos que nuestro crecimiento debe ir de la mano con el desarrollo de la comunidad local en Tandil y Napaleofú.</p>

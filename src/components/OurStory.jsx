@@ -11,6 +11,7 @@ const OurStory = () => {
             src="/assets/Quesos Zampa/IMG_9879.JPG" 
             alt="Juan Cruz e Isabel" 
           />
+          <h1 className="watermark-logo" style={{ bottom: '-10%', right: '-5%', opacity: '0.15' }}>ZAMPA<br />QUESOS<br />TANDIL</h1>
         </div>
         <div className="story-text">
           <p className="story-subtitle">TANDIL, ARGENTINA</p>

@@ -14,6 +14,7 @@ const Hero = () => {
         <h2 className="hero-title">PRODUCCIÓN ARTESANAL<br />DE QUESO DE OVEJA</h2>
         <a href="#new-arrivals" className="btn btn-primary">VER NUESTROS QUESOS</a>
       </div>
+      <h1 className="watermark-logo" style={{ bottom: '5%', right: '5%' }}>ZAMPA<br />QUESOS<br />TANDIL</h1>
     </header>
   );
 };

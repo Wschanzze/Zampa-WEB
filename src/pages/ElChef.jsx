@@ -125,6 +125,7 @@ const ElChef = () => {
                 className={`chef-sticky-image ${activeImage === section.image ? 'active' : ''}`}
               />
             ))}
+            <h1 className="watermark-logo" style={{ bottom: '-5%', right: '-5%', opacity: '0.1' }}>ZAMPA<br />QUESOS<br />TANDIL</h1>
           </div>
         </div>
       </div>

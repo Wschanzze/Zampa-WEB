@@ -30,7 +30,7 @@ const Nosotros = () => {
               Cómo Juan Cruz e Isabel unieron la gastronomía y el paisajismo en un tambo ovino referente en Napaleofú.
             </p>
             
-            <div className="newspaper-img-container">
+            <div className="newspaper-img-container" style={{ position: 'relative' }}>
               <img 
                 src="/assets/Quesos Zampa/IMG_9879.JPG" 
                 alt="Juan Cruz e Isabel - Zampa" 
@@ -38,6 +38,7 @@ const Nosotros = () => {
               <p className="newspaper-img-caption">
                 Juan Cruz Moy Peña (37) e Isabel Sáenz Rozas (31) en el predio donde comenzó su historia productiva.
               </p>
+              <h1 className="watermark-logo" style={{ bottom: '10%', right: '5%', opacity: '0.15' }}>ZAMPA<br />QUESOS<br />TANDIL</h1>
             </div>
 
             <div className="article-text">
