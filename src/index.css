@@ -2623,3 +2623,50 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
 }
 
+/* Galería de la página Comunidad */
+.comunidad-gallery {
+    padding: 0 5% 8rem 5%;
+    background-color: var(--clr-bg);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border: 1px solid var(--clr-border);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.02);
+}
+
+.gallery-caption {
+    font-family: var(--font-sub);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--clr-text-light);
+    margin-top: 1rem;
+    text-align: left;
+}

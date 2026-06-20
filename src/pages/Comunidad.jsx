@@ -40,6 +40,24 @@ const Comunidad = () => {
         </div>
       </section>
 
+      {/* SECCIÓN GALERÍA MINIMALISTA */}
+      <section className="comunidad-gallery">
+        <div className="gallery-grid">
+          <div className="gallery-item">
+            <img src="/assets/Quesos Zampa/BAB4C1FD-5368-4434-ADE4-498A3AE4D8C6.jpg" alt="Paisaje de pasturas de Zampa" />
+            <span className="gallery-caption">Pastizales de Napaleofú</span>
+          </div>
+          <div className="gallery-item">
+            <img src="/assets/Quesos Zampa/68C50477-1C39-48B6-86FE-640DEDCA65B1.jpg" alt="Tambo y ovejas en Zampa" />
+            <span className="gallery-caption">Tradición y Cuidado</span>
+          </div>
+          <div className="gallery-item">
+            <img src="/assets/Quesos Zampa/07B73847-614E-4FDC-B7AF-F639064C64CB.jpg" alt="Detalle de horma de queso de oveja" />
+            <span className="gallery-caption">Materia Prima Noble</span>
+          </div>
+        </div>
+      </section>
+
       {/* SECCIÓN COMPROMISOS / PILARES */}
       <section className="initiatives-section">
         <div className="initiatives-header">
