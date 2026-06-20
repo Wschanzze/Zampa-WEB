@@ -2047,29 +2047,107 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
 .intro-container {
-    max-width: 900px;
+    max-width: var(--container-max);
+    width: 100%;
+}
+
+.intro-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.intro-subtitle {
+    font-family: var(--font-sub);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: var(--clr-accent);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
 }
 
 .intro-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--clr-accent);
-    margin-bottom: 2.5rem;
-}
-
-.intro-text {
-    font-family: var(--font-body);
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
-    line-height: 1.8;
+    font-family: var(--font-brand);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     color: var(--clr-text-main);
-    font-weight: 300;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
 }
 
-.intro-text strong {
-    font-weight: 600;
+.intro-title-line {
+    width: 60px;
+    height: 1px;
+    background-color: var(--clr-accent);
+    margin: 0 auto;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+@media (max-width: 900px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
+.intro-pillar {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    position: relative;
+    border-right: 1px solid var(--clr-border);
+    transition: transform 0.3s ease;
+}
+
+.intro-pillar:last-child {
+    border-right: none;
+}
+
+@media (max-width: 900px) {
+    .intro-pillar {
+        border-right: none;
+        border-bottom: 1px solid var(--clr-border);
+        padding-bottom: 4rem;
+    }
+    .intro-pillar:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+.pillar-number {
+    font-family: var(--font-sub);
+    font-size: 1.8rem;
+    color: var(--clr-accent);
+    display: block;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.intro-pillar h3 {
+    font-family: var(--font-brand);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-text-main);
+    margin-bottom: 1.2rem;
+}
+
+.intro-pillar p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--clr-text-light);
+}
+
+.intro-pillar:hover {
+    transform: translateY(-5px);
 }
 
 /* ====== BEST SELLERS (EDITORIAL) ====== */
