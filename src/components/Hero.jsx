@@ -18,7 +18,6 @@ const Hero = () => {
           un producto noble y de carácter único a tu mesa.
         </p>
       </div>
-      <h1 className="watermark-logo" style={{ bottom: '5%', right: '5%' }}>ZAMPA<br />QUESOS<br />TANDIL</h1>
     </header>
   );
 };
