@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../components/Hero';
+import HeroSlider from '../components/HeroSlider';
 import Introduction from '../components/Introduction';
 import BannerBW from '../components/BannerBW';
 import OurStory from '../components/OurStory';
@@ -9,7 +9,7 @@ import JoinFamily from '../components/JoinFamily';
 const Home = () => {
   return (
     <>
-      <Hero />
+      <HeroSlider />
       <Introduction />
       <BannerBW />
       <OurStory />
