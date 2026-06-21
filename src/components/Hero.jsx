@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -13,10 +12,11 @@ const Hero = () => {
       <div className="hero-content">
         <p className="hero-subtitle">DE TANDIL PARA TU MESA | 100% PASTORIL</p>
         <h2 className="hero-title">PRODUCCIÓN ARTESANAL<br />DE QUESO DE OVEJA</h2>
-        <div className="hero-buttons">
-          <Link to="/nuestra-historia" className="btn btn-secondary">Conocer la historia</Link>
-          <Link to="/productos" className="btn btn-primary">Ver los quesos</Link>
-        </div>
+        <p className="hero-description">
+          Elaboramos quesos de oveja de alta gama bajo un sistema 100% pastoril. 
+          Respetamos el bienestar animal y los ciclos de la naturaleza para llevar 
+          un producto noble y de carácter único a tu mesa.
+        </p>
       </div>
       <h1 className="watermark-logo" style={{ bottom: '5%', right: '5%' }}>ZAMPA<br />QUESOS<br />TANDIL</h1>
     </header>
