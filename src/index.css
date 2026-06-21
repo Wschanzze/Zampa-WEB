@@ -282,6 +282,11 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     object-position: center;
     z-index: -2;
+    transition: transform 0.8s ease;
+}
+
+.hero:hover .hero-bg {
+    transform: scale(1.05);
 }
 
 .hero-overlay {
@@ -306,7 +311,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sub);
     font-size: clamp(0.75rem, 1.2vw, 0.85rem);
     letter-spacing: 0.35em;
-    color: var(--clr-accent);
+    color: var(--clr-white);
     text-transform: uppercase;
     margin-bottom: 1.5rem;
     font-weight: 600;
