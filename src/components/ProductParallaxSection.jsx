@@ -5,8 +5,8 @@ const ProductParallaxSection = () => {
     <section className="parallax-section">
       <div className="parallax-container">
         <img src="/assets/Quesos Zampa/producto_1.png" alt="Queso" className="parallax-img img-float-1" />
-        <img src="/assets/Quesos Zampa/producto_1.png" alt="Queso" className="parallax-img img-float-2" />
-        <img src="/assets/Quesos Zampa/producto_1.png" alt="Queso" className="parallax-img img-float-3" />
+        <img src="/assets/Quesos Zampa/producto_2.png" alt="Queso" className="parallax-img img-float-2" />
+        <img src="/assets/Quesos Zampa/producto_3.png" alt="Queso" className="parallax-img img-float-3" />
         
         <div className="parallax-content">
           <h2 className="parallax-title">
