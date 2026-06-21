@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SignatureCollection = () => {
   return (
@@ -10,7 +11,7 @@ const SignatureCollection = () => {
           <p className="signature-description">
             Nuestra gama <strong>Pecorino de Autor</strong> representa la excelencia en quesos de leche cruda de oveja, cuidadosamente curados y madurados en nuestra cava subterránea. Galardonados internacionalmente, destacan por sus complejos matices y carácter único.
           </p>
-          <a href="/tienda" className="link-editorial">Descubre Más <span className="line-arrow"></span></a>
+          <Link to="/productos" className="link-editorial">Descubre Más <span className="line-arrow"></span></Link>
         </div>
         
         <div className="signature-image-col">

@@ -47,7 +47,7 @@ const chefSections = [
   }
 ];
 
-const ElChef = () => {
+const Elaboracion = () => {
   const [activeImage, setActiveImage] = useState(chefSections[0].image);
   const textRefs = useRef([]);
 
@@ -133,4 +133,4 @@ const ElChef = () => {
   );
 };
 
-export default ElChef;
+export default Elaboracion;

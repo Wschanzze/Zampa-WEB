@@ -1,9 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Introduction from '../components/Introduction';
-import BestSellers from '../components/BestSellers';
-import SignatureCollection from '../components/SignatureCollection';
-import ShopOccasion from '../components/ShopOccasion';
 import BannerBW from '../components/BannerBW';
 import OurStory from '../components/OurStory';
 import PastoralSystem from '../components/PastoralSystem';
@@ -17,8 +14,6 @@ const Home = () => {
       <BannerBW />
       <OurStory />
       <PastoralSystem />
-      <BestSellers />
-      <SignatureCollection />
       <JoinFamily />
     </>
   );

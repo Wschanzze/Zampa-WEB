@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { useApp } from '../context/AppContext';
 
 const Navbar = () => {
-  const { cartCount, setIsCartOpen } = useApp();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -27,25 +25,24 @@ const Navbar = () => {
     <>
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="nav-links left-links">
-          <NavLink to="/" end>TIENDA</NavLink>
-          <NavLink to="/nosotros">NOSOTROS</NavLink>
-          <NavLink to="/el-chef">EL CHEF</NavLink>
+          <NavLink to="/" end>INICIO</NavLink>
+          <NavLink to="/productos">PRODUCTOS</NavLink>
+          <NavLink to="/nuestra-historia">NUESTRA HISTORIA</NavLink>
         </div>
         
         <div className="logo-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Link to="/"><img src="/IMG_1960(1).png" alt="Zampa Logo" className="navbar-logo" /></Link>
-          <span className="est" style={{ marginTop: '5px' }}>EST. 2021</span>
         </div>
         
         <div className="nav-links right-links">
+          <NavLink to="/elaboracion">ELABORACIÓN</NavLink>
           <NavLink to="/comunidad">COMUNIDAD</NavLink>
-          <NavLink to="/b2b">B2B / MAYORISTAS</NavLink>
-          <button 
-            className="nav-cart-btn" 
-            onClick={() => setIsCartOpen(true)}
-          >
-            CART {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-          </button>
+          <NavLink to="/revendedores">REVENDEDORES</NavLink>
+          <NavLink to="/contacto" className="nav-contact-btn-link" style={{ padding: 0 }}>
+            <button className="btn btn-primary" style={{ padding: '0.5rem 1.2rem', fontSize: '0.8rem', letterSpacing: '0.1em' }}>
+              CONTACTO
+            </button>
+          </NavLink>
         </div>
 
         <div className={`mobile-menu-btn ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
@@ -57,20 +54,17 @@ const Navbar = () => {
 
       {/* Mobile Menu Drawer */}
       <div className={`nav-links-mobile ${isMobileMenuOpen ? 'open' : ''}`}>
-        <Link to="/" onClick={toggleMobileMenu}>TIENDA</Link>
-        <Link to="/nosotros" onClick={toggleMobileMenu}>NOSOTROS</Link>
-        <Link to="/el-chef" onClick={toggleMobileMenu}>EL CHEF</Link>
+        <Link to="/" onClick={toggleMobileMenu}>INICIO</Link>
+        <Link to="/productos" onClick={toggleMobileMenu}>PRODUCTOS</Link>
+        <Link to="/nuestra-historia" onClick={toggleMobileMenu}>NUESTRA HISTORIA</Link>
+        <Link to="/elaboracion" onClick={toggleMobileMenu}>ELABORACIÓN</Link>
         <Link to="/comunidad" onClick={toggleMobileMenu}>COMUNIDAD</Link>
-        <Link to="/b2b" onClick={toggleMobileMenu}>B2B / MAYORISTAS</Link>
-        <button 
-          className="nav-cart-btn"
-          onClick={() => {
-            toggleMobileMenu();
-            setIsCartOpen(true);
-          }}
-        >
-          CART {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-        </button>
+        <Link to="/revendedores" onClick={toggleMobileMenu}>REVENDEDORES</Link>
+        <Link to="/contacto" onClick={toggleMobileMenu} style={{ padding: '1rem 0' }}>
+          <button className="btn btn-primary" style={{ width: '100%', padding: '0.8rem' }}>
+            CONTACTO
+          </button>
+        </Link>
       </div>
     </>
   );

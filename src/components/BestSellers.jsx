@@ -1,8 +1,7 @@
 import React from 'react';
-import { useApp } from '../context/AppContext';
+import { Link } from 'react-router-dom';
 
 const BestSellers = () => {
-  const { addToCart } = useApp();
 
   const bestSellers = [
     {
@@ -55,12 +54,12 @@ const BestSellers = () => {
               
               <div className="best-seller-actions">
                 <span className="best-seller-price">${product.price.toLocaleString()} / kg</span>
-                <button 
+                <Link 
+                  to="/contacto"
                   className="btn-add-minimal"
-                  onClick={() => addToCart(product)}
                 >
-                  Agregar al Carrito
-                </button>
+                  Consultar Producto
+                </Link>
               </div>
             </div>
           </div>

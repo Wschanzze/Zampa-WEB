@@ -1,7 +1,7 @@
 import React from 'react';
 import NutritionalBenefits from '../components/NutritionalBenefits';
 
-const Nosotros = () => {
+const NuestraHistoria = () => {
   return (
     <div className="newspaper-wrapper">
       <div className="newspaper-container">
@@ -170,4 +170,4 @@ const Nosotros = () => {
   );
 };
 
-export default Nosotros;
+export default NuestraHistoria;

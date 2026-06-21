@@ -24,16 +24,17 @@ const Footer = () => {
         </div>
 
         <div className="footer-col">
-          <Link to="/">TIENDA</Link>
-          <Link to="/nosotros">NOSOTROS</Link>
-          <Link to="/el-chef">EL CHEF</Link>
-          <Link to="/b2b">B2B / MAYORISTAS</Link>
+          <Link to="/">INICIO</Link>
+          <Link to="/productos">PRODUCTOS</Link>
+          <Link to="/nuestra-historia">NUESTRA HISTORIA</Link>
+          <Link to="/elaboracion">ELABORACIÓN</Link>
+          <Link to="/revendedores">REVENDEDORES</Link>
           <Link to="/comunidad">COMUNIDAD</Link>
         </div>
         
         <div className="footer-col">
           <a href="#support">SOPORTE</a>
-          <a href="#contact">CONTACTO</a>
+          <Link to="/contacto">CONTACTO</Link>
         </div>
       </div>
       

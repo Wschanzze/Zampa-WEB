@@ -18,7 +18,7 @@ const OurStory = () => {
           <h3 className="story-title">NUESTRA HISTORIA</h3>
           <p>Zampa nació hace tres años como un proyecto de vida compartido por Juan Cruz e Isabel, tras adquirir nuestras primeras 40 borregas frisonas lecheras. El nombre rinde homenaje al arbusto del sur argentino, asociado a la gran calidad del ganado ovino.</p>
           <p>Somos un emprendimiento familiar con base en Napaleofú que integra todo el proceso de elaboración de nuestros quesos, desde la cría hasta la maduración.</p>
-          <Link to="/nosotros" className="btn btn-secondary">LEER MÁS SOBRE NOSOTROS</Link>
+          <Link to="/nuestra-historia" className="btn btn-secondary">LEER MÁS SOBRE NOSOTROS</Link>
         </div>
       </div>
     </section>

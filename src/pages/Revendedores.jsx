@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 
-const B2B = () => {
+const Revendedores = () => {
   const { addToast } = useApp();
   const [formData, setFormData] = useState({
     businessName: '',
@@ -22,7 +22,7 @@ const B2B = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Simulate API request
-    console.log('B2B Form Submitted:', formData);
+    console.log('Revendedores Form Submitted:', formData);
     addToast('¡Solicitud enviada con éxito! Nos comunicaremos a la brevedad.');
     setFormData({
       businessName: '',
@@ -40,7 +40,7 @@ const B2B = () => {
     <section className="b2b-page" style={{ padding: '6rem 5% 4rem' }}>
       <div className="section-header" style={{ textAlign: 'center', marginBottom: '4rem' }}>
         <p className="section-subtitle">ALIANZAS COMERCIALES</p>
-        <h2 className="section-title">ZAMPA B2B & MAYORISTAS</h2>
+        <h2 className="section-title">ZAMPA REVENDEDORES</h2>
         <p className="section-description" style={{ maxWidth: '700px', margin: '1rem auto 0', color: 'var(--clr-text-light)' }}>
           Llevá el sabor único de nuestros quesos de oveja pastoriles a tu restaurante, fiambrería o red de distribución. Simplificamos tu logística y te ofrecemos condiciones comerciales estratégicas.
         </p>
@@ -141,7 +141,7 @@ const B2B = () => {
 
         {/* Contact Form Section */}
         <div className="b2b-form-container">
-          <h3 className="vintage-header">SOLICITUD DE ALTA MAYORISTA</h3>
+          <h3 className="vintage-header">SOLICITUD DE ALTA PARA REVENDEDORES</h3>
           <form className="vintage-ad-form b2b-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="businessName">Razón Social / Nombre Comercial *</label>
@@ -254,7 +254,7 @@ const B2B = () => {
             </div>
 
             <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-              Enviar Solicitud B2B
+              Enviar Solicitud de Revendedor
             </button>
           </form>
         </div>
@@ -263,4 +263,4 @@ const B2B = () => {
   );
 };
 
-export default B2B;
+export default Revendedores;
