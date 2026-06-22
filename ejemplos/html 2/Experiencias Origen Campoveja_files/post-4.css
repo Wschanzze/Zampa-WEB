@@ -1,0 +1,52 @@
+.elementor-kit-4{--e-global-color-primary:#4D1C13;--e-global-color-secondary:#4A4A4A;--e-global-color-text:#808080;--e-global-color-accent:#000000;--e-global-typography-primary-font-family:"Cormorant Unicase";--e-global-typography-primary-font-size:120px;--e-global-typography-primary-font-weight:300;--e-global-typography-primary-text-transform:lowercase;--e-global-typography-primary-line-height:100px;--e-global-typography-primary-letter-spacing:-4px;--e-global-typography-secondary-font-family:"Cormorant Unicase";--e-global-typography-secondary-font-size:46px;--e-global-typography-secondary-font-weight:400;--e-global-typography-secondary-line-height:36px;--e-global-typography-secondary-letter-spacing:-2px;--e-global-typography-text-font-family:"Raleway";--e-global-typography-text-font-size:16px;--e-global-typography-text-font-weight:400;--e-global-typography-text-line-height:25px;--e-global-typography-accent-font-family:"Bellefair";--e-global-typography-accent-font-size:23px;--e-global-typography-accent-font-weight:400;--e-global-typography-accent-line-height:29px;}.elementor-kit-4 e-page-transition{background-color:#FFBC7D;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1140px;}.e-con{--container-max-width:1140px;}.elementor-widget:not(:last-child){margin-block-end:20px;}.elementor-element{--widgets-spacing:20px 20px;--widgets-spacing-row:20px;--widgets-spacing-column:20px;}{}h1.entry-title{display:var(--page-title-display);}@media(max-width:1366px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:1360px;}.e-con{--container-max-width:1360px;}}@media(max-width:1024px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:1024px;}.e-con{--container-max-width:1024px;}}@media(max-width:767px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:767px;}.e-con{--container-max-width:767px;}}/* Start custom CSS *//* Estilo visual para los radios con imágenes */
+input[type="radio"] {
+  display: none;
+}
+
+.elementor-field-type-radio .elementor-field-option {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+.elementor-field-type-radio .elementor-field-option:hover {
+  border-color: #ccc;
+}
+
+.elementor-field-type-radio .elementor-field-option::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Imágenes personalizadas según el valor */
+.elementor-field-option:nth-child(1)::before {
+  background-image: url('https://www.quesoscampoveja.com/wp-content/uploads/2020/05/cuna_trufado_deautor_web_sombra.jpg');
+}
+
+.elementor-field-option:nth-child(2)::before {
+  background-image: url('https://www.quesoscampoveja.com/wp-content/uploads/2020/05/cuna_deautor_ahumado_web_sombra.jpg');
+}
+
+.elementor-field-option:nth-child(3)::before {
+  background-image: url('https://www.quesoscampoveja.com/wp-content/uploads/2020/05/cuna_viejo_tradicion_web_sombra.jpg');
+}
+
+.elementor-field-option:nth-child(4)::before {
+  background-image: url('https://www.quesoscampoveja.com/wp-content/uploads/2020/05/cuna_semi_tradicionweb_sombra_b.jpg');
+}
+
+/* Estilo para la opción seleccionada */
+input[type="radio"]:checked + label {
+  border-color: black !important;
+  box-shadow: 0 0 10px #00000050;
+}/* End custom CSS */

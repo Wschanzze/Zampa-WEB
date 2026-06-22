@@ -1,0 +1,284 @@
+(function ( $ ) {
+	'use strict';
+
+	$( window ).on(
+		'load',
+		function () {
+			qodefElementorSection.init();
+			qodefElementorSectionCallback.init();
+
+			// container extension.
+			qodefElementorContainer.init();
+			qodefElementorContainerCallback.init();
+		}
+	);
+
+	$( window ).on(
+		'elementor/frontend/init',
+		function () {
+			qodefElementorPremium.init();
+		}
+	);
+
+	var qodefElementorPremium = {
+		init: function () {
+			var isEditMode = Boolean( elementorFrontend.isEditMode() );
+
+			if ( isEditMode ) {
+				for ( var key in qodefEssentialPremium.shortcodes ) {
+					for ( var keyChild in qodefEssentialPremium.shortcodes[key] ) {
+						qodefElementorPremium.reInitShortcode( key, keyChild );
+					}
+				}
+			}
+		},
+		reInitShortcode: function ( key, keyChild ) {
+			elementorFrontend.hooks.addAction(
+				'frontend/element_ready/' + key + '.default',
+				function ( e ) {
+					// Check if object doesn't exist and print the module where is the error.
+					if ( typeof qodefEssentialPremium.shortcodes[key][keyChild] === 'undefined' ) {
+						console.log( keyChild );
+					} else if ( typeof qodefEssentialPremium.shortcodes[key][keyChild].createSlider === 'function' ) {
+						var $sliders = e.find( '.qodef-swiper-container' );
+						if ( $sliders.length ) {
+							$sliders.each(
+								function () {
+									qodefEssentialPremium.shortcodes[key][keyChild].createSlider( $( this ) );
+								}
+							);
+						}
+					} else if ( typeof qodefEssentialPremium.shortcodes[key][keyChild].initItem === 'function' && e.find( '.qodef-shortcode' ).length ) {
+						qodefEssentialPremium.shortcodes[key][keyChild].initItem( e.find( '.qodef-shortcode' ) );
+					} else {
+						qodefEssentialPremium.shortcodes[key][keyChild].init();
+					}
+				}
+			);
+		},
+	};
+
+	var qodefElementorSection = {
+		init: function () {
+			$( window ).on(
+				'elementor/frontend/init',
+				function () {
+					elementorFrontend.hooks.addAction( 'frontend/element_ready/section', qodefElementorSectionCallback.init );
+				}
+			);
+		}
+	};
+
+	var qodefElementorSectionCallback = {
+		init: function ( $scope ) {
+			var $target     = $scope,
+				isEditMode  = Boolean( elementorFrontend.isEditMode() ),
+				settings    = [],
+				sectionData = {};
+
+			// generate parallax settings.
+			if ( isEditMode && typeof $scope !== 'undefined' ) {
+
+				// generate options when in admin.
+				var editorElements = window.elementor.elements,
+					sectionId      = $target.data( 'id' ),
+					isInnerSection = $target.hasClass( 'elementor-inner-section' );
+
+				$.each(
+					editorElements.models,
+					function ( index, object ) {
+						if ( sectionId === object.id ) {
+							sectionData = object.attributes.settings.attributes;
+						} else if ( isInnerSection && typeof object.attributes.elements.models[0].attributes.elements.models[0] !== 'undefined' && typeof object.attributes.elements.models[0].attributes.elements.models[0].attributes.settings.attributes !== 'undefined' && sectionId === object.attributes.elements.models[0].attributes.elements.models[0].attributes.id ) {
+							sectionData = object.attributes.elements.models[0].attributes.elements.models[0].attributes.settings.attributes;
+						}
+					}
+				);
+
+				// parallax options.
+				if ( typeof sectionData.qodef_parallax_type !== 'undefined' ) {
+					settings['enable_parallax'] = sectionData.qodef_parallax_type;
+				}
+
+				if ( typeof sectionData.qodef_parallax_image !== 'undefined' && sectionData.qodef_parallax_image['url'] ) {
+					settings['parallax_image_url'] = sectionData.qodef_parallax_image['url'];
+				}
+
+				// generate output backend.
+				if ( typeof $target !== 'undefined' ) {
+					qodefElementorSectionCallback.generateOutput( $target, settings );
+				}
+			} else {
+
+				// generate options when in frontend using global js variable.
+				var sectionHandlerData = qodefElementorGlobal.vars.elementorSectionHandler;
+
+				$.each(
+					sectionHandlerData,
+					function ( index, properties ) {
+						properties.forEach(
+							function ( property ) {
+								if ( typeof property['parallax_type'] !== 'undefined' && property['parallax_type'] === 'yes' ) {
+									$target                        = $( '[data-id="' + index + '"]' );
+									settings['parallax_type']      = property['parallax_type'];
+									settings['parallax_image_url'] = property['parallax_image']['url'];
+
+									if ( typeof settings['parallax_image_url'] !== 'undefined' ) {
+										settings['enable_parallax'] = 'yes';
+									}
+								}
+
+								// generate output frontend.
+								if ( typeof $target !== 'undefined' ) {
+									qodefElementorSectionCallback.generateOutput( $target, settings );
+
+									settings = [];
+								}
+							}
+						);
+					}
+				);
+			}
+		},
+		generateOutput: function ( $target, settings ) {
+			if ( typeof settings['enable_parallax'] !== 'undefined' && settings['enable_parallax'] === 'yes' && typeof settings['parallax_image_url'] !== 'undefined' ) {
+				$( '.qodef-parallax-row-holder', $target ).remove();
+				$target.removeClass( 'qodef-parallax qodef--parallax-row' );
+
+				var $layout = null;
+
+				$target.addClass( 'qodef-parallax qodef--parallax-row' );
+
+				$layout = $( '<div class="qodef-parallax-row-holder"><div class="qodef-parallax-img-holder"><div class="qodef-parallax-img-wrapper"><img class="qodef-parallax-img" src="' + settings['parallax_image_url'] + '" alt="Parallax Image"></div></div></div>' ).prependTo( $target );
+
+				// wait for image src to be loaded.
+				var newImg    = new Image;
+				newImg.onload = function () {
+					$target.find( 'img.qodef-parallax-img' ).attr( 'src', this.src );
+					qodefEssentialPremium.qodefParallaxBackground.init();
+				};
+				newImg.src    = settings['parallax_image_url'];
+			}
+		},
+	};
+
+	// container extension.
+	var qodefElementorContainer = {
+		init: function () {
+			$( window ).on(
+				'elementor/frontend/init',
+				function () {
+					elementorFrontend.hooks.addAction(
+						'frontend/element_ready/container',
+						qodefElementorContainerCallback.init
+					);
+				}
+			);
+		}
+
+	};
+
+	var qodefElementorContainerCallback = {
+		init: function ( $scope ) {
+			var $target       = $scope,
+				isEditMode    = Boolean( elementorFrontend.isEditMode() ),
+				settings      = [],
+				containerData = {};
+
+			// generate parallax and dynamic options settings.
+			if ( isEditMode && typeof $scope !== 'undefined' ) {
+
+				// generate options when in admin.
+				var editorElements = window.elementor.elements,
+					containerId    = $target.data( 'id' ),
+					isInnerSection = $target.hasClass( 'e-con-column' );
+
+				$.each(
+					editorElements.models,
+					function ( index, object ) {
+						if ( containerId === object.id ) {
+							containerData = object.attributes.settings.attributes;
+						} else if ( isInnerSection && typeof object.attributes.elements.models[0].attributes.elements.models[0] !== 'undefined' && typeof object.attributes.elements.models[0].attributes.elements.models[0].attributes.settings.attributes !== 'undefined' && containerId === object.attributes.elements.models[0].attributes.elements.models[0].attributes.id ) {
+							containerData = object.attributes.elements.models[0].attributes.elements.models[0].attributes.settings.attributes;
+						}
+					}
+				);
+
+				// parallax options.
+				if ( typeof containerData.qodef_parallax_type !== 'undefined' ) {
+					settings['enable_parallax'] = containerData.qodef_parallax_type;
+				}
+
+				if ( typeof containerData.qodef_parallax_image !== 'undefined' && containerData.qodef_parallax_image['url'] ) {
+					settings['parallax_image_url'] = containerData.qodef_parallax_image['url'];
+				}
+
+				// dynamic data options.
+				if ( typeof containerData.qodef_dynamic_background_type !== 'undefined' ) {
+					settings['dynamic_background']       = containerData.qodef_dynamic_background_type;
+					settings['dynamic_background_color'] = containerData.qodef_dynamic_background_color;
+				}
+
+				// generate output backend.
+				if ( typeof $target !== 'undefined' ) {
+					qodefElementorContainerCallback.generateOutput( $target, settings );
+				}
+			} else {
+
+				// generate options when in frontend using global js variable.
+				var containerHandlerData = qodefElementorContainerGlobal.vars.elementorContainerHandler;
+
+				$.each(
+					containerHandlerData,
+					function ( index, properties ) {
+						properties.forEach(
+							function ( property ) {
+								if ( typeof property['parallax_type'] !== 'undefined' && property['parallax_type'] === 'yes' ) {
+									$target                        = $( '[data-id="' + index + '"]' );
+									settings['parallax_type']      = property['parallax_type'];
+									settings['parallax_image_url'] = property['parallax_image']['url'];
+
+									if ( typeof settings['parallax_image_url'] !== 'undefined' ) {
+										settings['enable_parallax'] = 'yes';
+									}
+								}
+
+								// generate output frontend.
+								if ( typeof $target !== 'undefined' ) {
+									qodefElementorContainerCallback.generateOutput( $target, settings );
+
+									settings = [];
+								}
+							}
+						);
+					}
+				);
+			}
+		},
+		generateOutput: function ( $target, settings ) {
+			if ( typeof settings['enable_parallax'] !== 'undefined' && settings['enable_parallax'] === 'yes' && typeof settings['parallax_image_url'] !== 'undefined' ) {
+				$( '.qodef-parallax-row-holder', $target ).remove();
+				$target.removeClass( 'qodef-parallax qodef--parallax-row' );
+
+				var $layout = null;
+
+				$target.addClass( 'qodef-parallax qodef--parallax-row' );
+
+				$layout = $( '<div class="qodef-parallax-row-holder"><div class="qodef-parallax-img-holder"><div class="qodef-parallax-img-wrapper"><img class="qodef-parallax-img" src="' + settings['parallax_image_url'] + '" alt="Parallax Image"></div></div></div>' ).prependTo( $target );
+
+				// wait for image src to be loaded.
+				var newImg    = new Image;
+				newImg.onload = function () {
+					$target.find( 'img.qodef-parallax-img' ).attr( 'src', this.src );
+					qodefEssentialPremium.qodefParallaxBackground.init();
+				};
+				newImg.src    = settings['parallax_image_url'];
+			}
+
+			if ( typeof settings['dynamic_background'] !== 'undefined' && settings['dynamic_background'] === 'yes' && typeof settings['dynamic_background_color'] !== 'undefined' ) {
+				$( $target[0] ).attr( 'data-dynamic-background', settings['dynamic_background_color'] );
+			}
+		},
+	};
+
+})( jQuery );
