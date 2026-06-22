@@ -3,14 +3,14 @@ import React from 'react';
 const OurProducts = () => {
   const categories = [
     {
-      title: "Quesos de Oveja",
+      title: "Línea Clásica",
       image: "/assets/Quesos Zampa/pecorino.jpeg",
-      link: "/productos#oveja"
+      link: "/productos#clasica"
     },
     {
-      title: "Quesos de Vaca",
+      title: "Quesos Madurados",
       image: "/assets/Quesos Zampa/IMG_9816.JPG",
-      link: "/productos#vaca"
+      link: "/productos#madurados"
     },
     {
       title: "Especialidades",
@@ -23,7 +23,7 @@ const OurProducts = () => {
     <section className="our-products-section">
       <div className="products-heading">
         <h6 className="products-subtitle">NUESTROS PRODUCTOS</h6>
-        <h2 className="products-title">Lácteos Naturales</h2>
+        <h2 className="products-title">100% Leche de Oveja</h2>
       </div>
 
       <div className="products-grid">
@@ -32,9 +32,10 @@ const OurProducts = () => {
             <a href={cat.link} className="product-link">
               <div className="product-img-wrapper">
                 <img src={cat.image} alt={cat.title} className="product-img" />
-              </div>
-              <div className="product-title-wrapper">
-                <h6 className="product-category-title">{cat.title}</h6>
+                <div className="product-overlay"></div>
+                <div className="product-title-wrapper">
+                  <h6 className="product-category-title">{cat.title}</h6>
+                </div>
               </div>
             </a>
           </div>
