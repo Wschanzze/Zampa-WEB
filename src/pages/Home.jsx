@@ -4,6 +4,7 @@ import ProductParallaxSection from '../components/ProductParallaxSection';
 import FeaturesIcons from '../components/FeaturesIcons';
 import Introduction from '../components/Introduction';
 import BannerBW from '../components/BannerBW';
+import OurProducts from '../components/OurProducts';
 import OurStory from '../components/OurStory';
 import PastoralSystem from '../components/PastoralSystem';
 import JoinFamily from '../components/JoinFamily';
@@ -18,6 +19,7 @@ const Home = () => {
       <ProductParallaxSection />
       <Introduction />
       <BannerBW />
+      <OurProducts />
       <OurStory />
       <PastoralSystem />
       <JoinFamily />
