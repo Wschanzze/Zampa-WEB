@@ -3,19 +3,19 @@ import React from 'react';
 const OurProducts = () => {
   const categories = [
     {
-      title: "Quesos Duros",
-      image: "/assets/Quesos Zampa/IMG_9816.JPG",
-      link: "#"
+      title: "Quesos de Oveja",
+      image: "/assets/Quesos Zampa/pecorino.jpeg",
+      link: "/productos#oveja"
     },
     {
-      title: "Quesos Semi-Duros",
-      image: "/assets/Quesos Zampa/IMG_9824.JPG",
-      link: "#"
+      title: "Quesos de Vaca",
+      image: "/assets/Quesos Zampa/IMG_9816.JPG",
+      link: "/productos#vaca"
     },
     {
       title: "Especialidades",
       image: "/assets/Quesos Zampa/tipos de quesos.jpg",
-      link: "#"
+      link: "/productos#especialidades"
     }
   ];
 
