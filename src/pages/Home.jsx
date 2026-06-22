@@ -7,6 +7,7 @@ import BannerBW from '../components/BannerBW';
 import OurStory from '../components/OurStory';
 import PastoralSystem from '../components/PastoralSystem';
 import JoinFamily from '../components/JoinFamily';
+import OurBenefits from '../components/OurBenefits';
 import QuickContact from '../components/QuickContact';
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
       <OurStory />
       <PastoralSystem />
       <JoinFamily />
+      <OurBenefits />
       <QuickContact />
     </>
   );
