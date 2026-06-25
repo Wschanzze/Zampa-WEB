@@ -1,36 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 const ProductParallaxSection = () => {
-  const sectionRef = useRef(null);
-
-  const handleMouseMove = (e) => {
-    if (!sectionRef.current) return;
-    const { clientX, clientY } = e;
-    const { left, top, width, height } = sectionRef.current.getBoundingClientRect();
-    
-    // Normalize coordinates to be -1 to 1 based on the center of the section
-    const x = (clientX - left - width / 2) / (width / 2);
-    const y = (clientY - top - height / 2) / (height / 2);
-    
-    sectionRef.current.style.setProperty('--mouse-x', x.toFixed(3));
-    sectionRef.current.style.setProperty('--mouse-y', y.toFixed(3));
-  };
-
-  const handleMouseLeave = () => {
-    if (!sectionRef.current) return;
-    // Smoothly reset the parallax offset when mouse leaves the section
-    sectionRef.current.style.setProperty('--mouse-x', '0');
-    sectionRef.current.style.setProperty('--mouse-y', '0');
-  };
-
   return (
-    <section 
-      className="parallax-section" 
-      ref={sectionRef} 
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
-      {/* Floating cheeses wrapped to isolate mouse parallax translation from CSS float animation */}
+    <section className="parallax-section">
+      {/* Floating cheeses wrapped to isolate floating animations */}
       <div className="parallax-img-wrapper wrapper-1">
         <img 
           src="/assets/Quesos Zampa/producto_1.png" 
@@ -55,6 +28,14 @@ const ProductParallaxSection = () => {
 
       <div className="parallax-container">
         <div className="parallax-card">
+          <div className="parallax-card-logo-container">
+            <img 
+              src="/IMG_1960(1).png" 
+              alt="Logo Zampa" 
+              className="parallax-card-logo" 
+            />
+          </div>
+
           <div className="parallax-badge">
             <span className="badge-line"></span>
             <span className="badge-text">FILOSOFÍA ZAMPA</span>

@@ -2811,6 +2811,29 @@ h1, h2, h3, h4, h5, h6 {
     border-color: rgba(140, 98, 57, 0.25);
 }
 
+.parallax-card-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.parallax-card-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: var(--clr-white);
+    padding: 6px;
+    border: 1px solid rgba(140, 98, 57, 0.12);
+    box-shadow: 0 8px 20px rgba(140, 98, 57, 0.08);
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.parallax-card:hover .parallax-card-logo {
+    transform: scale(1.1) rotate(6deg);
+}
+
 .parallax-badge {
     display: inline-flex;
     align-items: center;
@@ -2904,25 +2927,51 @@ h1, h2, h3, h4, h5, h6 {
     will-change: transform;
 }
 
-@keyframes float1 { 0% { transform: translateY(0); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0); } }
-@keyframes float2 { 0% { transform: translateY(0); } 50% { transform: translateY(18px); } 100% { transform: translateY(0); } }
-@keyframes float3 { 0% { transform: translateY(0) scale(1); } 50% { transform: translateY(-15px) scale(1.03); } 100% { transform: translateY(0) scale(1); } }
+@keyframes float1 {
+    0% { transform: translateY(0) rotate(-12deg); }
+    50% { transform: translateY(-25px) rotate(-9deg); }
+    100% { transform: translateY(0) rotate(-12deg); }
+}
+@keyframes float2 {
+    0% { transform: translateY(0) rotate(8deg); }
+    50% { transform: translateY(22px) rotate(11deg); }
+    100% { transform: translateY(0) rotate(8deg); }
+}
+@keyframes float3 {
+    0% { transform: translateY(0) rotate(-5deg) scale(1); }
+    50% { transform: translateY(-15px) rotate(-3deg) scale(1.03); }
+    100% { transform: translateY(0) rotate(-5deg) scale(1); }
+}
+
+@keyframes float1Mobile {
+    0% { transform: translateY(0) rotate(-12deg); }
+    50% { transform: translateY(-10px) rotate(-10deg); }
+    100% { transform: translateY(0) rotate(-12deg); }
+}
+@keyframes float2Mobile {
+    0% { transform: translateY(0) rotate(8deg); }
+    50% { transform: translateY(10px) rotate(9deg); }
+    100% { transform: translateY(0) rotate(8deg); }
+}
 
 .wrapper-1 {
     top: 5%;
     left: 4%;
+    width: 350px;
     animation: float1 8s ease-in-out infinite;
 }
 
 .wrapper-2 {
     bottom: -5%;
-    right: 4%;
+    right: 12%; /* Brought closer to center */
+    width: 390px;
     animation: float2 10s ease-in-out infinite;
 }
 
 .wrapper-3 {
     top: 20%;
-    right: 8%;
+    right: 16%; /* Brought closer to center */
+    width: 300px;
     animation: float3 12s ease-in-out infinite;
 }
 
@@ -2931,30 +2980,13 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 20px 40px rgba(140, 98, 57, 0.22));
-    will-change: transform;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.wrapper-1 .parallax-img {
-    width: 350px;
-    transform: rotate(-12deg) translate(calc(var(--mouse-x) * -35px), calc(var(--mouse-y) * -35px));
-}
-
-.wrapper-2 .parallax-img {
-    width: 390px;
-    transform: rotate(8deg) translate(calc(var(--mouse-x) * 45px), calc(var(--mouse-y) * 45px));
-}
-
-.wrapper-3 .parallax-img {
-    width: 300px;
-    transform: rotate(-5deg) translate(calc(var(--mouse-x) * -20px), calc(var(--mouse-y) * 20px));
 }
 
 /* Responsiveness adjustments */
 @media (max-width: 992px) {
-    .wrapper-1 .parallax-img { width: 240px; }
-    .wrapper-2 .parallax-img { width: 270px; }
-    .wrapper-3 .parallax-img { width: 210px; }
+    .wrapper-1 { width: 240px; }
+    .wrapper-2 { width: 270px; right: 10%; }
+    .wrapper-3 { width: 210px; right: 14%; }
     .parallax-card { padding: 3.5rem 2.5rem; }
 }
 
@@ -2977,21 +3009,17 @@ h1, h2, h3, h4, h5, h6 {
     .wrapper-1 {
         top: -8%;
         left: 2%;
+        width: 160px;
+        animation: float1Mobile 8s ease-in-out infinite;
     }
     .wrapper-2 {
         bottom: -8%;
         right: 2%;
+        width: 180px;
+        animation: float2Mobile 10s ease-in-out infinite;
     }
     .wrapper-3 {
         display: none;
-    }
-    .wrapper-1 .parallax-img {
-        width: 160px;
-        transform: rotate(-12deg) translate(0, 0);
-    }
-    .wrapper-2 .parallax-img {
-        width: 180px;
-        transform: rotate(8deg) translate(0, 0);
     }
 }
 
