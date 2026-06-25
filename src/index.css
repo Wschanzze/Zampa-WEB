@@ -606,22 +606,6 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
-.footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/assets/Quesos Zampa/footer.png');
-    background-size: auto 140px;
-    background-position: bottom;
-    background-repeat: repeat-x;
-    opacity: 0.12;
-    pointer-events: none;
-    z-index: 0;
-}
-
 .footer-grid,
 .footer-bottom {
     position: relative;

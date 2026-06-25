@@ -2,7 +2,6 @@ import React from 'react';
 import HeroSlider from '../components/HeroSlider';
 import ProductParallaxSection from '../components/ProductParallaxSection';
 import FeaturesIcons from '../components/FeaturesIcons';
-import Introduction from '../components/Introduction';
 import BannerBW from '../components/BannerBW';
 import OurProducts from '../components/OurProducts';
 import OurStory from '../components/OurStory';
@@ -18,7 +17,6 @@ const Home = () => {
       <FeaturesIcons />
       <ProductParallaxSection />
       <BannerBW />
-      <Introduction />
       <OurProducts />
       <OurStory />
       <PastoralSystem />
