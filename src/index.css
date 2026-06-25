@@ -2929,12 +2929,12 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes float1 {
     0% { transform: translateY(0) rotate(-12deg); }
-    50% { transform: translateY(-25px) rotate(-9deg); }
+    50% { transform: translateY(18px) rotate(-14deg); } /* Oscillate downwards to avoid top clipping */
     100% { transform: translateY(0) rotate(-12deg); }
 }
 @keyframes float2 {
     0% { transform: translateY(0) rotate(8deg); }
-    50% { transform: translateY(22px) rotate(11deg); }
+    50% { transform: translateY(-18px) rotate(6deg); } /* Oscillate upwards to avoid BannerBW overlap */
     100% { transform: translateY(0) rotate(8deg); }
 }
 @keyframes float3 {
@@ -2945,32 +2945,32 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes float1Mobile {
     0% { transform: translateY(0) rotate(-12deg); }
-    50% { transform: translateY(-10px) rotate(-10deg); }
+    50% { transform: translateY(8px) rotate(-13deg); } /* Oscillate downwards */
     100% { transform: translateY(0) rotate(-12deg); }
 }
 @keyframes float2Mobile {
     0% { transform: translateY(0) rotate(8deg); }
-    50% { transform: translateY(10px) rotate(9deg); }
+    50% { transform: translateY(-8px) rotate(7deg); } /* Oscillate upwards */
     100% { transform: translateY(0) rotate(8deg); }
 }
 
 .wrapper-1 {
-    top: 5%;
+    top: 8%; /* Added breathing room at the top */
     left: 4%;
     width: 350px;
     animation: float1 8s ease-in-out infinite;
 }
 
 .wrapper-2 {
-    bottom: -5%;
-    right: 12%; /* Brought closer to center */
+    bottom: 6%; /* Moved up from -5% to prevent BannerBW overlap */
+    right: 12%; 
     width: 390px;
     animation: float2 10s ease-in-out infinite;
 }
 
 .wrapper-3 {
-    top: 20%;
-    right: 16%; /* Brought closer to center */
+    top: 22%;
+    right: 16%; 
     width: 300px;
     animation: float3 12s ease-in-out infinite;
 }
@@ -2984,8 +2984,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsiveness adjustments */
 @media (max-width: 992px) {
-    .wrapper-1 { width: 240px; }
-    .wrapper-2 { width: 270px; right: 10%; }
+    .wrapper-1 { width: 240px; top: 6%; }
+    .wrapper-2 { width: 270px; right: 10%; bottom: 4%; }
     .wrapper-3 { width: 210px; right: 14%; }
     .parallax-card { padding: 3.5rem 2.5rem; }
 }
@@ -3007,15 +3007,15 @@ h1, h2, h3, h4, h5, h6 {
         margin: 1.5rem 0;
     }
     .wrapper-1 {
-        top: -8%;
+        top: 2%; /* Lifted down to prevent clipping */
         left: 2%;
-        width: 160px;
+        width: 150px;
         animation: float1Mobile 8s ease-in-out infinite;
     }
     .wrapper-2 {
-        bottom: -8%;
+        bottom: 4%; /* Lifted up from -8% to prevent overlap */
         right: 2%;
-        width: 180px;
+        width: 160px;
         animation: float2Mobile 10s ease-in-out infinite;
     }
     .wrapper-3 {
