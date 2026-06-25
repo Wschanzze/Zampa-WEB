@@ -17,8 +17,8 @@ const Home = () => {
       <HeroSlider />
       <FeaturesIcons />
       <ProductParallaxSection />
-      <Introduction />
       <BannerBW />
+      <Introduction />
       <OurProducts />
       <OurStory />
       <PastoralSystem />
