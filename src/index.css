@@ -2095,72 +2095,26 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
-.intro-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+.intro-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
-@media (max-width: 900px) {
-    .intro-grid {
-        grid-template-columns: 1fr;
-        gap: 4rem;
-    }
+.intro-image {
+    max-width: 100%;
+    width: 1100px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease;
 }
 
-.intro-pillar {
-    text-align: center;
-    padding: 2rem 1.5rem;
-    position: relative;
-    border-right: 1px solid var(--clr-border);
-    transition: transform 0.3s ease;
+.intro-image:hover {
+    transform: scale(1.01);
 }
-
-.intro-pillar:last-child {
-    border-right: none;
-}
-
-@media (max-width: 900px) {
-    .intro-pillar {
-        border-right: none;
-        border-bottom: 1px solid var(--clr-border);
-        padding-bottom: 4rem;
-    }
-    .intro-pillar:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
-    }
-}
-
-.pillar-number {
-    font-family: var(--font-sub);
-    font-size: 1.8rem;
-    color: var(--clr-accent);
-    display: block;
-    margin-bottom: 1.5rem;
-    font-weight: 300;
-    opacity: 0.8;
-}
-
-.intro-pillar h3 {
-    font-family: var(--font-brand);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--clr-text-main);
-    margin-bottom: 1.2rem;
-}
-
-.intro-pillar p {
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: var(--clr-text-light);
-}
-
-.intro-pillar:hover {
-    transform: translateY(-5px);
-}
-
 /* ====== BEST SELLERS (EDITORIAL) ====== */
 .best-sellers {
     background-color: var(--clr-bg);

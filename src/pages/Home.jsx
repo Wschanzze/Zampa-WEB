@@ -3,6 +3,7 @@ import HeroSlider from '../components/HeroSlider';
 import ProductParallaxSection from '../components/ProductParallaxSection';
 import FeaturesIcons from '../components/FeaturesIcons';
 import BannerBW from '../components/BannerBW';
+import Introduction from '../components/Introduction';
 import OurProducts from '../components/OurProducts';
 import OurStory from '../components/OurStory';
 import PastoralSystem from '../components/PastoralSystem';
@@ -17,6 +18,7 @@ const Home = () => {
       <FeaturesIcons />
       <ProductParallaxSection />
       <BannerBW />
+      <Introduction />
       <OurProducts />
       <OurStory />
       <PastoralSystem />

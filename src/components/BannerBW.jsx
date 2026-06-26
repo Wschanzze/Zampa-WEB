@@ -9,8 +9,8 @@ const BannerBW = () => {
         className="banner-bg" 
       />
       <div className="banner-content">
-        <h3 className="banner-text left-text">INTEGRACIÓN TOTAL<br />DEL PROCESO</h3>
-        <h3 className="banner-text right-text">DESDE LA CRÍA<br />HASTA LA MADURACIÓN</h3>
+        <h3 className="banner-text left-text">QUESOS DE OVEJA<br />DE AUTOR</h3>
+        <h3 className="banner-text right-text">SISTEMA PASTORIL<br />100% EN LIBERTAD</h3>
       </div>
     </section>
   );
