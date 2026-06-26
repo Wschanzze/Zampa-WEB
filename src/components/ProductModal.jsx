@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 
 const ProductModal = () => {
-  const { activeProduct, closeProductModal } = useApp();
-  const navigate = useNavigate();
+  const { activeProduct, closeProductModal, addToCart } = useApp();
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -44,11 +42,11 @@ const ProductModal = () => {
           <button 
             className="btn btn-secondary btn-add-modal"
             onClick={() => {
+              addToCart(activeProduct);
               closeProductModal();
-              navigate('/contacto');
             }}
           >
-            CONSULTAR PRODUCTO
+            AÑADIR AL CARRITO
           </button>
         </div>
       </div>
