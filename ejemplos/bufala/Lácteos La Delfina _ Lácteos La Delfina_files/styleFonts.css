@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'Akzidenz';
+	src: url('AG_400.woff') format('woff');
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Miller';
+	src: url('ML_400.woff') format('woff');
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Miller';
+	src: url('ML_700.woff') format('woff');
+	font-display: swap;
+	font-style: normal;
+	font-weight: 700;
+}

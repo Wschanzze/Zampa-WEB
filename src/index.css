@@ -2034,6 +2034,11 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
+.premium-hero-badges .badge {
+    font-size: 1.25rem; /* Increased font size */
+    font-weight: 600;
+}
+
 .badge-item {
     display: flex;
     align-items: center;
@@ -3632,3 +3637,28 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* ====== DECORATED TITLE ====== */
+.decorated-title {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+    text-transform: none; /* Keeps elegant Title Case */
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+.title-ornament {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2.2em;
+    height: 0.88em;
+    color: inherit;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.ornament-right {
+    transform: scaleX(-1); /* Flips the SVG horizontally */
+}

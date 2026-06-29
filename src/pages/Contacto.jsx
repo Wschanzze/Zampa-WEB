@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
+import DecoratedTitle from '../components/DecoratedTitle';
 
 const Contacto = () => {
   const { addToast } = useApp();
@@ -31,7 +32,7 @@ const Contacto = () => {
     <section className="contacto-page" style={{ padding: '6rem 5% 4rem', backgroundColor: 'var(--clr-bg)' }}>
       <div className="section-header" style={{ textAlign: 'center', marginBottom: '4rem' }}>
         <p className="section-subtitle">COMUNICATE CON NOSOTROS</p>
-        <h2 className="section-title">CONTACTO</h2>
+        <DecoratedTitle className="section-title">Contacto</DecoratedTitle>
         <p className="section-description" style={{ maxWidth: '700px', margin: '1rem auto 0', color: 'var(--clr-text-light)' }}>
           ¿Querés saber más sobre nuestros quesos, coordinar una compra especial o visitarnos en Napaleofú? Dejanos tu mensaje.
         </p>

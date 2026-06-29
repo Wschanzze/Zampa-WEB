@@ -1,4 +1,5 @@
 import React from 'react';
+import DecoratedTitle from './DecoratedTitle';
 
 const OurProducts = () => {
   const categories = [
@@ -23,7 +24,7 @@ const OurProducts = () => {
     <section className="our-products-section">
       <div className="products-heading">
         <h6 className="products-subtitle">NUESTROS PRODUCTOS</h6>
-        <h2 className="products-title">100% Leche de Oveja</h2>
+        <DecoratedTitle className="products-title">100% Leche de Oveja</DecoratedTitle>
       </div>
 
       <div className="products-grid">

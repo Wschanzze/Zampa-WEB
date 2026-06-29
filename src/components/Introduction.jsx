@@ -1,4 +1,5 @@
 import React from 'react';
+import DecoratedTitle from './DecoratedTitle';
 
 const Introduction = () => {
   return (
@@ -6,8 +7,7 @@ const Introduction = () => {
       <div className="intro-container">
         <div className="intro-header">
           <span className="intro-subtitle">FILOSOFÍA ZAMPA</span>
-          <h2 className="intro-title">Nuestra Vocación</h2>
-          <div className="intro-title-line"></div>
+          <DecoratedTitle className="intro-title">Nuestra Vocación</DecoratedTitle>
         </div>
 
         <div className="intro-grid">

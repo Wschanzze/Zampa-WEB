@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
+import DecoratedTitle from '../components/DecoratedTitle';
 
 const Revendedores = () => {
   const { addToast } = useApp();
@@ -40,7 +41,7 @@ const Revendedores = () => {
     <section className="b2b-page" style={{ padding: '6rem 5% 4rem' }}>
       <div className="section-header" style={{ textAlign: 'center', marginBottom: '4rem' }}>
         <p className="section-subtitle">ALIANZAS COMERCIALES</p>
-        <h2 className="section-title">ZAMPA REVENDEDORES</h2>
+        <DecoratedTitle className="section-title">Zampa Revendedores</DecoratedTitle>
         <p className="section-description" style={{ maxWidth: '700px', margin: '1rem auto 0', color: 'var(--clr-text-light)' }}>
           Llevá el sabor único de nuestros quesos de oveja pastoriles a tu restaurante, fiambrería o red de distribución. Simplificamos tu logística y te ofrecemos condiciones comerciales estratégicas.
         </p>

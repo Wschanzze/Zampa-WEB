@@ -1,5 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
+import DecoratedTitle from './DecoratedTitle';
 
 const BestSellers = () => {
   const { addToCart } = useApp();
@@ -34,7 +35,7 @@ const BestSellers = () => {
   return (
     <section className="best-sellers">
       <div className="best-sellers-header">
-        <h2 className="editorial-title">Descubre nuestros más vendidos</h2>
+        <DecoratedTitle className="editorial-title">Descubre nuestros más vendidos</DecoratedTitle>
         <p className="editorial-subtitle">Una selección de nuestros quesos más premiados y solicitados</p>
       </div>
 
