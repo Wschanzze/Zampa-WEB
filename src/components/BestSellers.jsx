@@ -35,8 +35,8 @@ const BestSellers = () => {
   return (
     <section className="best-sellers">
       <div className="best-sellers-header">
-        <DecoratedTitle className="editorial-title">Descubre nuestros más vendidos</DecoratedTitle>
-        <p className="editorial-subtitle">Una selección de nuestros quesos más premiados y solicitados</p>
+        <DecoratedTitle className="editorial-title">Destacados del Mes</DecoratedTitle>
+        <p className="editorial-subtitle">100% Leche de Oveja. Quesos más nutritivos, digeribles y con un sabor único.</p>
       </div>
 
       <div className="best-sellers-grid">

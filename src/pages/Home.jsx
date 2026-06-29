@@ -2,9 +2,11 @@ import React from 'react';
 import HeroSlider from '../components/HeroSlider';
 import ProductParallaxSection from '../components/ProductParallaxSection';
 import FeaturesIcons from '../components/FeaturesIcons';
+import BestSellers from '../components/BestSellers';
 import BannerBW from '../components/BannerBW';
 import Introduction from '../components/Introduction';
 import OurProducts from '../components/OurProducts';
+import RecipesPairings from '../components/RecipesPairings';
 import OurStory from '../components/OurStory';
 import PastoralSystem from '../components/PastoralSystem';
 import JoinFamily from '../components/JoinFamily';
@@ -17,10 +19,12 @@ const Home = () => {
     <>
       <HeroSlider />
       <FeaturesIcons />
+      <BestSellers />
       <ProductParallaxSection />
       <BannerBW />
       <Introduction />
       <OurProducts />
+      <RecipesPairings />
       <OurStory />
       <PastoralSystem />
       <JoinFamily />
