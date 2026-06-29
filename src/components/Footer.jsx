@@ -4,42 +4,41 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-grid">
-        <div className="footer-col">
-          <Link to="/">NUESTROS QUESOS</Link>
-          <Link to="/">AHUMADO</Link>
-          <Link to="/">PECORINO</Link>
-          <Link to="/">ORÉGANO</Link>
+      <div className="footer-content">
+        <div className="footer-logo">
+          <Link to="/">
+            <img src="/IMG_1960(1).png" alt="Zampa Logo" style={{ height: '90px', objectFit: 'contain' }} />
+          </Link>
         </div>
         
-        <div className="footer-col">
-          <Link to="/">MANCHEGO</Link>
-          <Link to="/">PICADAS</Link>
-          <Link to="/">MESA DIARIA</Link>
-        </div>
-        
-        <div className="footer-col footer-center-logo">
-          <Link to="/"><img src="/IMG_1960(1).png" alt="Zampa Logo" style={{ height: '70px', objectFit: 'contain' }} /></Link>
-
-        </div>
-
-        <div className="footer-col">
-          <Link to="/">INICIO</Link>
-          <Link to="/productos">PRODUCTOS</Link>
-          <Link to="/nuestra-historia">NUESTRA HISTORIA</Link>
-          <Link to="/elaboracion">ELABORACIÓN</Link>
-          <Link to="/revendedores">REVENDEDORES</Link>
-          <Link to="/comunidad">COMUNIDAD</Link>
-        </div>
-        
-        <div className="footer-col">
-          <a href="#support">SOPORTE</a>
-          <Link to="/contacto">CONTACTO</Link>
+        <div className="footer-links">
+          <Link to="/productos">Shop Online</Link>
+          <span className="separator">|</span>
+          <Link to="/nuestra-historia">About</Link>
+          <span className="separator">|</span>
+          <Link to="/elaboracion">Leche A2</Link>
+          <span className="separator">|</span>
+          <Link to="/recetas">Recetas</Link>
+          <span className="separator">|</span>
+          <Link to="/revendedores">Puntos de Venta</Link>
+          <span className="separator">|</span>
+          <Link to="/contacto">Post Venta</Link>
+          <span className="separator">|</span>
+          <Link to="/contacto">Atención al Cliente</Link>
+          <span className="separator">|</span>
+          <a href="mailto:info@zampa.com.ar">info@zampa.com.ar</a>
+          <span className="separator">|</span>
+          <a href="https://instagram.com/zampa_quesos" target="_blank" rel="noreferrer">@zampa_quesos</a>
         </div>
       </div>
       
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} ZAMPA. TODOS LOS DERECHOS RESERVADOS.</p>
+        <p>
+          Copyright &copy; {new Date().getFullYear()} Zampa. Todos los Derechos Reservados. 
+          <Link to="/reembolso">Política de reembolso</Link> 
+          <Link to="/privacidad">Política de privacidad</Link> 
+          <Link to="/terminos">Términos del servicio</Link>
+        </p>
       </div>
     </footer>
   );
