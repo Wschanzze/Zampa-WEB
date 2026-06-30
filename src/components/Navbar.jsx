@@ -26,16 +26,26 @@ const Navbar = () => {
   return (
     <>
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+        {/* Mobile Hamburger on the Left */}
+        <div className={`mobile-menu-btn ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        {/* Desktop Left Links */}
         <div className="nav-links left-links">
           <NavLink to="/" end>INICIO</NavLink>
           <NavLink to="/productos">PRODUCTOS</NavLink>
           <NavLink to="/nuestra-historia">NUESTRA HISTORIA</NavLink>
         </div>
         
+        {/* Logo in the center */}
         <div className="logo-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Link to="/"><img src="/IMG_1960(1).png" alt="Zampa Logo" className="navbar-logo" /></Link>
         </div>
         
+        {/* Desktop Right Links */}
         <div className="nav-links right-links">
           <NavLink to="/elaboracion">ELABORACIÓN</NavLink>
           <NavLink to="/comunidad">COMUNIDAD</NavLink>
@@ -61,26 +71,19 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        <div className="mobile-controls">
-          <button 
-            className="nav-cart-btn mobile-cart-btn" 
-            onClick={() => setIsCartOpen(true)}
-            aria-label="Open cart"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-            {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-          </button>
-
-          <div className={`mobile-menu-btn ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
+        {/* Mobile Cart Button on the Right */}
+        <button 
+          className="mobile-cart-btn" 
+          onClick={() => setIsCartOpen(true)}
+          aria-label="Open cart"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+        </button>
       </nav>
 
       {/* Mobile Menu Drawer */}

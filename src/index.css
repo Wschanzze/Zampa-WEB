@@ -40,6 +40,7 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    padding-top: 155px; /* Offset for desktop fixed navbar */
 }
 
 body.modal-open {
@@ -160,8 +161,10 @@ h1, h2, h3, h4, h5, h6 {
     gap: 6rem; /* Acercar los links al centro */
     padding: 1.2rem 5%;
     background-color: var(--clr-bg); /* Quitar transparencia */
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
     border-bottom: 1px solid var(--clr-border);
     transition: background-color 0.3s ease, padding 0.3s ease;
@@ -241,10 +244,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sub);
 }
 
-.mobile-controls {
+.mobile-cart-btn {
     display: none;
-    align-items: center;
-    gap: 1.5rem;
 }
 
 .mobile-menu-btn {
@@ -1308,25 +1309,21 @@ h1, h2, h3, h4, h5, h6 {
     .nav-links {
         display: none !important; /* Hide desktop links */
     }
-    .mobile-controls {
-        display: flex;
-        z-index: 101;
-        align-items: center;
-        gap: 1.5rem;
-    }
     .mobile-menu-btn {
-        display: flex; /* Show hamburger */
+        display: flex !important; /* Show hamburger */
+        z-index: 101;
     }
     .mobile-cart-btn {
         background: transparent;
         border: none;
         color: var(--clr-text-main);
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
         padding: 0.5rem;
         position: relative;
         cursor: pointer;
+        z-index: 101;
     }
     .mobile-cart-btn svg {
         width: 20px;
@@ -1347,6 +1344,9 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: center;
         font-family: var(--font-sub);
         font-weight: bold;
+    }
+    body {
+        padding-top: 92px !important; /* Offset for mobile fixed navbar */
     }
     .navbar {
         padding: 1rem 5%;
