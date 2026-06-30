@@ -25,7 +25,7 @@ const ProductModal = () => {
       <div className="modal-content">
         <button className="modal-close" onClick={closeProductModal}>&times;</button>
         <div className="modal-gallery">
-          <img src={`/${activeProduct.image}`} alt={activeProduct.name} />
+          <img src={activeProduct.image} alt={activeProduct.name} />
         </div>
         <div className="modal-details">
           <span className="modal-category">{activeProduct.category.replace('-', ' ')}</span>

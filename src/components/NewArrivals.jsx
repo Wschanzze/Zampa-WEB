@@ -32,7 +32,7 @@ const NewArrivals = () => {
               onClick={() => openProductModal(product)}
             >
               <div className="card-img-wrapper">
-                <img src={`/${product.image}`} alt={product.name} />
+                <img src={product.image} alt={product.name} />
               </div>
               <h4 className="card-title">
                 <span>{product.name}</span>
