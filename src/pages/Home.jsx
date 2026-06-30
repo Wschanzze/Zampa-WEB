@@ -16,11 +16,11 @@ const Home = () => {
     <>
       <HeroSlider />
       <FeaturesIcons />
+      <OurProducts />
       <ProductParallaxSection />
       <BannerBW />
       <Introduction />
       <BestSellers />
-      <OurProducts />
       <PastoralSystem />
       <JoinFamily />
       <InstagramCarousel />
