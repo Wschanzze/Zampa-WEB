@@ -53,7 +53,12 @@ const ProductParallaxSection = () => {
           </div>
 
           <p className="parallax-description">
-            Desde el pastoreo libre de nuestras ovejas en las sierras de Napaleofú hasta la maduración en nuestra cava. Cada horma se elabora manualmente con paciencia, respetando los tiempos de la naturaleza para lograr un queso premium y honesto.
+            <span className="desktop-text-only">
+              Desde el pastoreo libre de nuestras ovejas en las sierras de Napaleofú hasta la maduración en nuestra cava. Cada horma se elabora manualmente con paciencia, respetando los tiempos de la naturaleza para lograr un queso premium y honesto.
+            </span>
+            <span className="mobile-text-only">
+              Elaboramos cada horma manualmente con leche de pastura, respetando los tiempos de la naturaleza para lograr un queso premium y honesto.
+            </span>
           </p>
 
           <div className="parallax-footer">

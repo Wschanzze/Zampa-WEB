@@ -30,7 +30,12 @@ const Introduction = () => {
               <span className="philosophy-num">01</span>
               <h3 className="philosophy-heading">Integración Vertical: Del Pasto al Mostrador</h3>
               <p className="philosophy-text">
-                Zampa funciona bajo un modelo de cadena completa: criamos nuestras propias ovejas, producimos la leche, elaboramos los quesos y los comercializamos directamente. Sin intermediarios. Este modelo, sumamente exigente, nos permite un control absoluto sobre la calidad de nuestros productos en cada paso del proceso.
+                <span className="desktop-text-only">
+                  Zampa funciona bajo un modelo de cadena completa: criamos nuestras propias ovejas, producimos la leche, elaboramos los quesos y los comercializamos directamente. Sin intermediarios. Este modelo, sumamente exigente, nos permite un control absoluto sobre la calidad de nuestros productos en cada paso del proceso.
+                </span>
+                <span className="mobile-text-only">
+                  Criamos nuestras ovejas, producimos la leche y elaboramos nuestros quesos directamente sin intermediarios, garantizando un control absoluto de calidad en cada paso.
+                </span>
               </p>
             </div>
 
@@ -38,7 +43,12 @@ const Introduction = () => {
               <span className="philosophy-num">02</span>
               <h3 className="philosophy-heading">Materia Prima Noble: El Secreto de la Oveja</h3>
               <p className="philosophy-text">
-                La leche de oveja supera a la vacuna en concentración de grasas y proteínas. Esto se traduce en quesos con sabores más pronunciados, texturas más ricas y una cremosidad inigualable. Aprovechamos este rendimiento único elaborando nuestros quesos con leche fresca del mismo día, preservando intactas sus propiedades organolépticas naturales.
+                <span className="desktop-text-only">
+                  La leche de oveja supera a la vacuna en concentración de grasas y proteínas. Esto se traduce en quesos con sabores más pronunciados, texturas más ricas y una cremosidad inigualable. Aprovechamos este rendimiento único elaborando nuestros quesos con leche fresca del mismo día, preservando intactas sus propiedades organolépticas naturales.
+                </span>
+                <span className="mobile-text-only">
+                  La leche de oveja ofrece sabores más pronunciados, texturas más ricas y mayor cremosidad. Elaboramos nuestros quesos el mismo día del ordeñe para preservar su frescura.
+                </span>
               </p>
             </div>
           </div>

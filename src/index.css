@@ -4166,3 +4166,21 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.35rem !important;
     }
 }
+
+/* Helper classes to toggle text density on mobile vs desktop */
+.mobile-text-only {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .desktop-text-only {
+        display: none !important;
+    }
+    .mobile-text-only {
+        display: inline !important;
+    }
+    /* Hide second paragraph of Sistema Pastoril split text on mobile */
+    .pastoral-system .split-text-side p:nth-of-type(2) {
+        display: none !important;
+    }
+}

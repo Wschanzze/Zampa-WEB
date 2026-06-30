@@ -13,7 +13,12 @@ const JoinFamily = () => {
         <p className="join-subtitle">EL VALOR DE LO ARTESANAL</p>
         <h2 className="join-title">SABORES ÚNICOS DESDE EL TAMBO</h2>
         <p className="join-description">
-          Integramos todo el proceso de elaboración: desde la cría y ordeñe de nuestras ovejas en los pastos de Napaleofú, hasta la maduración perfecta de cada horma. Te invitamos a probar un queso con identidad y carácter real.
+          <span className="desktop-text-only">
+            Integramos todo el proceso de elaboración: desde la cría y ordeñe de nuestras ovejas en los pastos de Napaleofú, hasta la maduración perfecta de cada horma. Te invitamos a probar un queso con identidad y carácter real.
+          </span>
+          <span className="mobile-text-only">
+            Integramos todo el proceso de elaboración en Napaleofú para lograr un queso premium de oveja con identidad y carácter real.
+          </span>
         </p>
         
         <Link to="/productos" className="btn btn-primary join-cta">
