@@ -614,6 +614,17 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
+.join-family::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* Dark overlay to make text highly legible */
+    z-index: 0;
+}
+
 .join-bg {
     position: absolute;
     top: 0;
@@ -624,10 +635,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .join-content {
-    z-index: 1;
+    z-index: 2;
     color: var(--clr-white);
     position: relative;
     width: 100%;
+    max-width: 600px;
+}
+
+.join-description {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.join-cta {
+    display: inline-block;
+    padding: 1rem 2.2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.join-cta:hover {
+    transform: translateY(-2px);
 }
 
 .join-title {

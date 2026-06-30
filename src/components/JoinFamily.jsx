@@ -1,21 +1,7 @@
-import React, { useState } from 'react';
-import { useApp } from '../context/AppContext';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const JoinFamily = () => {
-  const { addToast } = useApp();
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!email) return;
-
-    // Simulate newsletter subscription
-    addToast(`¡Bienvenido a la familia! Te has suscrito con: ${email}`);
-    setSubmitted(true);
-    setEmail('');
-  };
-
   return (
     <section className="join-family">
       <img 
@@ -24,23 +10,15 @@ const JoinFamily = () => {
         className="join-bg" 
       />
       <div className="join-content">
-        <p className="join-subtitle">SÉ EL PRIMERO EN ENTERARTE</p>
-        <h2 className="join-title">NUEVAS HORMAS</h2>
+        <p className="join-subtitle">EL VALOR DE LO ARTESANAL</p>
+        <h2 className="join-title">SABORES ÚNICOS DESDE EL TAMBO</h2>
+        <p className="join-description">
+          Integramos todo el proceso de elaboración: desde la cría y ordeñe de nuestras ovejas en los pastos de Napaleofú, hasta la maduración perfecta de cada horma. Te invitamos a probar un queso con identidad y carácter real.
+        </p>
         
-        {!submitted ? (
-          <form className="subscribe-form" onSubmit={handleSubmit}>
-            <input 
-              type="email" 
-              placeholder="TU CORREO ELECTRÓNICO" 
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required 
-            />
-            <button type="submit" className="btn btn-submit">SUSCRIBIRSE</button>
-          </form>
-        ) : (
-          <p className="success-message">¡GRACIAS! TE HAS UNIDO A ZAMPA.</p>
-        )}
+        <Link to="/productos" className="btn btn-primary join-cta">
+          PROBAR NUESTROS QUESOS
+        </Link>
         
         <h1 className="watermark-logo">ZAMPA<br />QUESOS<br />TANDIL</h1>
       </div>
