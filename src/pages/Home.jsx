@@ -20,8 +20,8 @@ const Home = () => {
       <ProductParallaxSection />
       <BannerBW />
       <Introduction />
-      <BestSellers />
       <PastoralSystem />
+      <BestSellers />
       <JoinFamily />
       <InstagramCarousel />
       <QuickContact />
