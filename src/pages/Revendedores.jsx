@@ -25,7 +25,7 @@ const Revendedores = () => {
     e.preventDefault();
     const message = createResellerMessage(formData);
     const link = generateWhatsAppLink(WHATSAPP_NUMBER, message);
-    window.open(link, '_blank');
+    window.location.href = link;
     addToast('¡Solicitud enviada con éxito! Nos comunicaremos a la brevedad.');
     setFormData({
       businessName: '',

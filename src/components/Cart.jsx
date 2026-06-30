@@ -16,7 +16,7 @@ const Cart = () => {
   const handleCheckout = () => {
     const message = createCartMessage(cart);
     const link = generateWhatsAppLink(WHATSAPP_NUMBER, message);
-    window.open(link, '_blank');
+    window.location.href = link;
     setIsCartOpen(false);
   };
 
