@@ -38,6 +38,7 @@ const HeroSlider = () => {
         <h2 className="hero-title premium-hero-title">QUESOS ÚNICOS</h2>
         <div className="premium-hero-badges">
             <span className="badge">100% Pastoril</span>
+            <span className="separator">|</span>
             <span className="badge">Leche A2</span>
         </div>
       </div>

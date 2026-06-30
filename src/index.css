@@ -2315,7 +2315,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .premium-hero-title {
-    font-size: clamp(4rem, 8vw, 8rem);
+    font-size: clamp(4.5rem, 9.5vw, 10rem);
     font-weight: 500;
     line-height: 0.9;
     margin-bottom: 1rem;
@@ -2333,13 +2333,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .premium-hero-badges {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
 }
 
 .premium-hero-badges .badge {
-    font-size: 1.25rem; /* Increased font size */
-    font-weight: 600;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    font-family: var(--font-body) !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    color: var(--clr-white) !important;
+    font-size: clamp(1.4rem, 2.2vw, 1.8rem) !important;
+}
+
+.premium-hero-badges .separator {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: clamp(1.4rem, 2.2vw, 1.8rem);
 }
 
 .badge-item {
@@ -4136,7 +4151,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .premium-hero-title, .hero-title {
-        font-size: 2.8rem !important;
+        font-size: 3.4rem !important;
         line-height: 1.15 !important;
         margin-bottom: 1.5rem !important;
     }
@@ -4147,7 +4162,7 @@ h1, h2, h3, h4, h5, h6 {
         letter-spacing: 0.15em !important;
     }
     
-    .premium-hero-badges .badge {
-        font-size: 1.15rem !important;
+    .premium-hero-badges .badge, .premium-hero-badges .separator {
+        font-size: 1.35rem !important;
     }
 }
