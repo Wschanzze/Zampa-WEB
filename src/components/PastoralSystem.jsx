@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import DecoratedTitle from './DecoratedTitle';
 
 const PastoralSystem = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = true;
+      video.play().catch(error => {
+        console.log("Autoplay prevented on mobile:", error);
+      });
+    }
+  }, []);
+
   return (
     <section className="pastoral-system">
       <div className="split-editorial">
@@ -15,6 +27,7 @@ const PastoralSystem = () => {
         </div>
         <div className="split-image-side">
           <video 
+            ref={videoRef}
             src="/assets/Quesos Zampa/IMG_1145.mp4" 
             autoPlay 
             loop 
