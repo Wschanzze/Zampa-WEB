@@ -463,23 +463,45 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
+    min-height: 750px; /* Much larger, premium height on desktop */
 }
 
 .split-text-side {
     background-color: #fbf4eb;
     color: var(--clr-text-main);
-    padding: 6rem 12%;
+    padding: 8rem 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 2rem;
+}
+
+.split-text-side .story-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    color: var(--clr-text-light);
+    margin-bottom: -0.5rem;
+}
+
+.split-text-side .editorial-title {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+}
+
+.split-text-side p {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--clr-text-main);
+    opacity: 0.9;
+    max-width: 540px;
 }
 
 .split-image-side {
     width: 100%;
     height: 100%;
-    min-height: 500px;
     position: relative;
 }
 
@@ -494,16 +516,27 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
 }
 
+@media (max-width: 1024px) {
+    .split-editorial {
+        min-height: 600px;
+    }
+}
+
 @media (max-width: 768px) {
     .split-editorial {
         grid-template-columns: 1fr;
+        min-height: auto;
     }
     .split-image-side {
-        min-height: 350px;
+        min-height: 450px; /* Generous height on mobile too */
         order: -1; /* Image on top */
     }
     .split-text-side {
-        padding: 4rem 8%;
+        padding: 5rem 8%;
+        gap: 1.5rem;
+    }
+    .split-text-side p {
+        font-size: 1.05rem;
     }
 }
 
