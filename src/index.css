@@ -3971,3 +3971,162 @@ h1, h2, h3, h4, h5, h6 {
 .ornament-right {
     transform: scaleX(-1); /* Flips the SVG horizontally */
 }
+
+/* ====== MOBILE RESPONSIVENESS AND STYLING AUDIT (ELIMINATES BRUSQUENESS) ====== */
+@media (max-width: 768px) {
+    /* Global Typography & Titles scaling down */
+    h1, .watermark-logo {
+        font-size: 2.2rem !important;
+    }
+    
+    h2, .editorial-title, .decorated-title {
+        font-size: 1.55rem !important; /* Smaller, cleaner titles like La Delfina */
+    }
+    
+    h3, .story-title, .section-title {
+        font-size: 1.35rem !important;
+    }
+    
+    p, .editorial-subtitle, .instagram-desc, .feature-desc {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .editorial-subtitle {
+        margin-bottom: 1.5rem !important;
+        padding: 0 5%;
+    }
+
+    /* Grids: 2 Columns on Mobile for Products and Best Sellers to prevent massive sizes */
+    .best-sellers-grid, .products-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.25rem 0.75rem !important;
+        padding: 0 2% !important;
+    }
+
+    .best-seller-card {
+        gap: 0.5rem !important;
+        padding: 0.75rem !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02) !important;
+        border: 1px solid var(--clr-border) !important;
+    }
+
+    .best-seller-desc {
+        display: none !important; /* Hide description in 2-column mobile layout to keep it clean */
+    }
+
+    .best-seller-name {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .best-seller-price {
+        font-size: 0.85rem !important;
+        font-weight: 700 !important;
+    }
+
+    .best-seller-actions {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.5rem !important;
+        margin-top: 0.25rem !important;
+    }
+
+    .btn-add-minimal {
+        width: 100% !important;
+        font-size: 0.7rem !important;
+        padding: 0.4rem 0.5rem !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .best-seller-badge-top {
+        font-size: 0.65rem !important;
+        padding: 0.2% 0.4rem !important;
+        top: 0.5rem !important;
+        left: 0.5rem !important;
+    }
+
+    /* Features Icons Section scaling down */
+    .features-icons-section {
+        padding: 2.5rem 5% !important;
+    }
+
+    .features-grid {
+        gap: 1.25rem !important;
+    }
+
+    .feature-item {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+    }
+
+    .feature-icon {
+        width: 50px !important;
+        height: 50px !important;
+        margin-right: 1rem !important;
+        background-color: #f7f2eb !important;
+    }
+
+    .feature-icon svg {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .feature-title {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.1rem !important;
+    }
+
+    /* Split Editorial Section (Sistema Pastoril) compact version */
+    .split-text-side {
+        padding: 3rem 6% !important;
+        gap: 1rem !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .split-text-side .btn {
+        width: 100% !important;
+        max-width: 250px !important;
+        font-size: 0.8rem !important;
+        padding: 0.75rem 1.5rem !important;
+    }
+
+    .split-image-side {
+        min-height: 300px !important;
+    }
+
+    /* Banner Black and White */
+    .banner-bw {
+        padding: 3rem 1.5rem !important;
+    }
+
+    .banner-text {
+        font-size: 1.1rem !important;
+        letter-spacing: 0.05em !important;
+    }
+    
+    /* Join Family CTA */
+    .join-family {
+        padding: 3.5rem 6% !important;
+        min-height: 45vh !important;
+    }
+    
+    .join-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .join-description {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1.75rem !important;
+    }
+    
+    .join-cta {
+        padding: 0.8rem 1.8rem !important;
+        font-size: 0.8rem !important;
+    }
+}
