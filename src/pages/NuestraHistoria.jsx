@@ -1,5 +1,6 @@
 import React from 'react';
 import NutritionalBenefits from '../components/NutritionalBenefits';
+import DecoratedTitle from '../components/DecoratedTitle';
 
 const NuestraHistoria = () => {
   return (
@@ -8,7 +9,7 @@ const NuestraHistoria = () => {
         
         {/* CABECERA DEL PERIÓDICO */}
         <header className="newspaper-header">
-          <h1 className="masthead">El Diario de Zampa</h1>
+          <DecoratedTitle tag="h1" className="masthead">El Diario de Zampa</DecoratedTitle>
           <p style={{ fontFamily: 'var(--font-brand)', fontSize: '1rem', fontStyle: 'italic', margin: '0.5rem 0 0 0', letterSpacing: '0.05em' }}>
             Crónicas de la Cría Pastoril y la Quesería Artesanal
           </p>
@@ -118,7 +119,7 @@ const NuestraHistoria = () => {
               </div>
 
               {/* Marca de agua del logo de Zampa para rellenar espacio */}
-              <div className="newspaper-watermark" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', opacity: 0.08, marginTop: '4rem', padding: '2rem 0' }}>
+              <div className="newspaper-watermark" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', opacity: 0.6, marginTop: '4rem', padding: '2rem 0' }}>
                 <img 
                   src="/IMG_1960(1).png" 
                   alt="Zampa Marca de Agua" 
