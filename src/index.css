@@ -29,12 +29,16 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     background-color: var(--clr-bg);
     color: var(--clr-text-main);
     font-family: var(--font-body);
     line-height: 1.6;
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -2766,6 +2770,12 @@ h1, h2, h3, h4, h5, h6 {
     
     .premium-hero-badges {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .premium-hero-badges .badge {
+        font-size: 1rem;
     }
     
     .link-editorial {
