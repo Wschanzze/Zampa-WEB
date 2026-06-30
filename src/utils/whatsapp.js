@@ -5,11 +5,19 @@ export const generateWhatsAppLink = (phoneNumber, message) => {
   return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 };
 
-export const createCartMessage = (cartItems) => {
-  let message = "Hola, vengo desde la página web y estoy interesado en los siguientes productos:\n\n";
+export const createCartMessage = (cartItems, subtotal) => {
+  let message = "¡Hola, equipo de Zampa! 🧀\n\n";
+  message += "Espero que se encuentren muy bien. Vengo desde su sitio web y estoy interesado en concretar la compra de los siguientes productos:\n\n";
+  
   cartItems.forEach(({ product, quantity }) => {
-    message += `- ${product.name} (x${quantity})\n`;
+    message += `🔸 *${product.name}* (x${quantity}) - $${(product.price * quantity).toFixed(2)}\n`;
   });
+  
+  if (subtotal !== undefined) {
+    message += `\n💵 *Total Estimado:* $${subtotal.toFixed(2)}\n`;
+  }
+  
+  message += "\nQuedo a la espera de sus comentarios para coordinar el pago y la entrega. ¡Muchas gracias!";
   return message;
 };
 
@@ -21,14 +29,19 @@ export const createResellerMessage = (formData) => {
     supermarket: "Supermercado / Cadena"
   };
   
-  return `Hola, me interesa ser revendedor. A continuación dejo mis datos:
+  return `¡Hola, equipo de Zampa! 🧀
 
-*Razón Social:* ${formData.businessName}
-*Identificación Tributaria:* ${formData.taxId}
-*Tipo de Negocio:* ${businessTypeMap[formData.businessType] || formData.businessType}
-*Nombre de Contacto:* ${formData.contactName}
-*Email:* ${formData.email}
-*Teléfono:* ${formData.phone}
-*Ubicación:* ${formData.location}
-${formData.message ? `*Mensaje:* ${formData.message}` : ''}`;
+Espero que se encuentren muy bien. Me pongo en contacto a través del sitio web con el fin de solicitar el alta como revendedor de sus quesos. A continuación, les comparto los datos de mi negocio:
+
+💼 *Razón Social:* ${formData.businessName}
+🆔 *Identificación Tributaria (RUT/CUIT):* ${formData.taxId}
+🏢 *Tipo de Negocio:* ${businessTypeMap[formData.businessType] || formData.businessType}
+👤 *Persona de Contacto:* ${formData.contactName}
+📧 *Correo Electrónico:* ${formData.email}
+📞 *Teléfono:* ${formData.phone}
+📍 *Ubicación:* ${formData.location}
+${formData.message ? `\n📝 *Comentarios/Requerimientos:* \n${formData.message}\n` : ''}
+Agradezco de antemano su atención y quedo a la espera de su respuesta para conocer sus condiciones comerciales.
+
+Saludos cordiales.`;
 };
