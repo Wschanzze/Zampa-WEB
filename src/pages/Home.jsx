@@ -7,7 +7,6 @@ import BannerBW from '../components/BannerBW';
 import Introduction from '../components/Introduction';
 import OurProducts from '../components/OurProducts';
 import RecipesPairings from '../components/RecipesPairings';
-import OurStory from '../components/OurStory';
 import PastoralSystem from '../components/PastoralSystem';
 import JoinFamily from '../components/JoinFamily';
 import OurBenefits from '../components/OurBenefits';
@@ -25,7 +24,6 @@ const Home = () => {
       <Introduction />
       <OurProducts />
       <RecipesPairings />
-      <OurStory />
       <PastoralSystem />
       <JoinFamily />
       <OurBenefits />
