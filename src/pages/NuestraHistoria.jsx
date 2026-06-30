@@ -67,7 +67,7 @@ const NuestraHistoria = () => {
               </p>
               <div className="newspaper-img-container">
                 <img 
-                  src="/assets/Quesos Zampa/IMG_0019.JPG" 
+                  src="/assets/Quesos Zampa/IMG_8715.jpg" 
                   alt="Pastoreo de ovejas Zampa" 
                 />
                 <p className="newspaper-img-caption">
@@ -115,6 +115,15 @@ const NuestraHistoria = () => {
                     Hormas listas para ser marcadas con el logo original de la quesería.
                   </p>
                 </div>
+              </div>
+
+              {/* Marca de agua del logo de Zampa para rellenar espacio */}
+              <div className="newspaper-watermark" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', opacity: 0.08, marginTop: '4rem', padding: '2rem 0' }}>
+                <img 
+                  src="/IMG_1960(1).png" 
+                  alt="Zampa Marca de Agua" 
+                  style={{ width: '70%', maxWidth: '220px', filter: 'grayscale(100%)' }} 
+                />
               </div>
 
             </div>
