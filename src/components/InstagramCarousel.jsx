@@ -4,7 +4,6 @@ const InstagramCarousel = () => {
   const scrollContainerRef = useRef(null);
 
   const items = [
-    { type: 'video', src: '/assets/Quesos Zampa/sheeps.mp4' },
     { type: 'image', src: '/assets/Quesos Zampa/IMG_0773.jpg' },
     { type: 'image', src: '/assets/Quesos Zampa/IMG_0853.jpg' },
     { type: 'image', src: '/assets/Quesos Zampa/IMG_1034.jpg' },
