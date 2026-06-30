@@ -2315,7 +2315,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .premium-hero-title {
-    font-size: clamp(4.5rem, 9.5vw, 10rem);
+    font-size: clamp(4rem, 8vw, 8rem);
     font-weight: 500;
     line-height: 0.9;
     margin-bottom: 1rem;
@@ -2333,28 +2333,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .premium-hero-badges {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     align-items: center;
 }
 
 .premium-hero-badges .badge {
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    font-family: var(--font-body) !important;
-    font-weight: 300 !important;
-    letter-spacing: 0.15em !important;
-    text-transform: uppercase !important;
-    color: var(--clr-white) !important;
-    font-size: clamp(1.4rem, 2.2vw, 1.8rem) !important;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+    color: var(--clr-white);
 }
 
 .premium-hero-badges .separator {
-    color: rgba(255, 255, 255, 0.4);
-    font-family: var(--font-body);
-    font-weight: 300;
-    font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+    display: none; /* Hide separator on desktop */
 }
 
 .badge-item {
@@ -4162,7 +4153,24 @@ h1, h2, h3, h4, h5, h6 {
         letter-spacing: 0.15em !important;
     }
     
-    .premium-hero-badges .badge, .premium-hero-badges .separator {
+    .premium-hero-badges .badge {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        font-family: var(--font-body) !important;
+        font-weight: 300 !important;
+        letter-spacing: 0.15em !important;
+        text-transform: uppercase !important;
+        color: var(--clr-white) !important;
+        font-size: 1.35rem !important;
+    }
+
+    .premium-hero-badges .separator {
+        display: inline !important;
+        color: rgba(255, 255, 255, 0.4) !important;
+        font-family: var(--font-body) !important;
+        font-weight: 300 !important;
         font-size: 1.35rem !important;
     }
 }
