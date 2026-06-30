@@ -6,7 +6,6 @@ import BestSellers from '../components/BestSellers';
 import BannerBW from '../components/BannerBW';
 import Introduction from '../components/Introduction';
 import OurProducts from '../components/OurProducts';
-import RecipesPairings from '../components/RecipesPairings';
 import PastoralSystem from '../components/PastoralSystem';
 import JoinFamily from '../components/JoinFamily';
 import QuickContact from '../components/QuickContact';
@@ -22,7 +21,6 @@ const Home = () => {
       <Introduction />
       <BestSellers />
       <OurProducts />
-      <RecipesPairings />
       <PastoralSystem />
       <JoinFamily />
       <InstagramCarousel />

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import RecipesPairings from '../components/RecipesPairings';
 
 const chefSections = [
   {
@@ -84,7 +85,9 @@ const Elaboracion = () => {
   }, []);
 
   return (
-    <section className="our-story chef-scroll-section" style={{ minHeight: '100vh', paddingBottom: '6rem' }}>
+    <>
+      <RecipesPairings />
+      <section className="our-story chef-scroll-section" style={{ minHeight: '100vh', paddingBottom: '6rem' }}>
       
       <div className="section-header chef-main-header">
         <p className="section-subtitle">LA GASTRONOMÍA DETRÁS DE ZAMPA</p>
@@ -130,6 +133,7 @@ const Elaboracion = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
