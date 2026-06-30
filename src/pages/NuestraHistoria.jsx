@@ -67,11 +67,11 @@ const NuestraHistoria = () => {
               </p>
               <div className="newspaper-img-container">
                 <img 
-                  src="/assets/Quesos Zampa/IMG_9824.JPG" 
+                  src="/assets/Quesos Zampa/IMG_0019.JPG" 
                   alt="Pastoreo de ovejas Zampa" 
                 />
                 <p className="newspaper-img-caption">
-                  Ovejas frisonas lecheras en pleno pastoreo diario en las sierras.
+                  El rebaño de ovejas frisonas en pastoreo diario en las sierras de Tandil.
                 </p>
               </div>
             </div>
