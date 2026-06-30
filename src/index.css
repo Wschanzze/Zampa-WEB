@@ -714,6 +714,12 @@ h1, h2, h3, h4, h5, h6 {
     pointer-events: none;
 }
 
+.join-family .watermark-logo {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .success-message {
     font-family: var(--font-sub);
     font-size: 1rem;
