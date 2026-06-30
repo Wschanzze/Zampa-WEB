@@ -19,9 +19,8 @@ const JoinFamily = () => {
         <Link to="/productos" className="btn btn-primary join-cta">
           PROBAR NUESTROS QUESOS
         </Link>
-        
-        <h1 className="watermark-logo">ZAMPA<br />QUESOS<br />TANDIL</h1>
       </div>
+      <h1 className="watermark-logo">ZAMPA<br />QUESOS<br />TANDIL</h1>
     </section>
   );
 };
