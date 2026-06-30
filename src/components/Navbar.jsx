@@ -50,7 +50,6 @@ const Navbar = () => {
           <NavLink to="/elaboracion">ELABORACIÓN</NavLink>
           <NavLink to="/comunidad">COMUNIDAD</NavLink>
           <NavLink to="/revendedores">REVENDEDORES</NavLink>
-          
           <button 
             className="nav-cart-btn" 
             onClick={() => setIsCartOpen(true)}
@@ -63,12 +62,6 @@ const Navbar = () => {
             </svg>
             CARRITO {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
           </button>
-
-          <NavLink to="/contacto" className="nav-contact-btn-link" style={{ padding: 0 }}>
-            <button className="btn btn-primary" style={{ padding: '0.5rem 1.2rem', fontSize: '0.8rem', letterSpacing: '0.1em' }}>
-              CONTACTO
-            </button>
-          </NavLink>
         </div>
 
         {/* Mobile Cart Button on the Right */}
@@ -110,12 +103,6 @@ const Navbar = () => {
           </svg>
           CARRITO {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
         </button>
-
-        <Link to="/contacto" onClick={toggleMobileMenu} style={{ padding: '1rem 0' }}>
-          <button className="btn btn-primary" style={{ width: '100%', padding: '0.8rem' }}>
-            CONTACTO
-          </button>
-        </Link>
       </div>
     </>
   );

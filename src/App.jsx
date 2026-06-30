@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Cart from './components/Cart';
 import ProductModal from './components/ProductModal';
 import ToastContainer from './components/ToastContainer';
+import WhatsAppFloat from './components/WhatsAppFloat';
 
 // Pages
 import Home from './pages/Home';
@@ -37,6 +38,7 @@ function App() {
           <Cart />
           <ProductModal />
           <ToastContainer />
+          <WhatsAppFloat />
         </div>
       </Router>
     </AppProvider>
