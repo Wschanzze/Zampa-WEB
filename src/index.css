@@ -1406,9 +1406,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ====== PASTORAL SYSTEM ====== */
 .pastoral-system {
-    padding: 6rem 5%;
-    max-width: var(--container-max);
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .pastoral-video video {
