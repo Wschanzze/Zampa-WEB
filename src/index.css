@@ -3369,22 +3369,17 @@ h1, h2, h3, h4, h5, h6 {
     .wrapper-1 {
         top: 2%; /* Lifted down to prevent clipping */
         left: 2%;
-        width: 150px;
+        width: 100px; /* Smaller size on mobile so they peek out without covering text */
         animation: float1Mobile 8s ease-in-out infinite;
     }
     .wrapper-2 {
         bottom: 4%; /* Lifted up from -8% to prevent overlap */
         right: 2%;
-        width: 160px;
+        width: 110px; /* Smaller size on mobile */
         animation: float2Mobile 10s ease-in-out infinite;
     }
     .wrapper-3 {
         display: none;
-    }
-    @media (max-width: 600px) {
-        .wrapper-1, .wrapper-2 {
-            display: none !important;
-        }
     }
 }
 
