@@ -10,7 +10,6 @@ const BestSellers = () => {
       id: 101,
       name: 'Pecorino Clásico',
       description: 'Queso de oveja madurado 6 meses',
-      price: 18000,
       image: '/assets/Quesos Zampa/producto_1.png',
       badge: 'Sin lactosa'
     },
@@ -18,7 +17,6 @@ const BestSellers = () => {
       id: 102,
       name: 'Ahumado Natural',
       description: 'Ahumado con maderas nobles',
-      price: 21000,
       image: '/assets/Quesos Zampa/producto_2.png',
       badge: 'Premiado'
     },
@@ -26,7 +24,6 @@ const BestSellers = () => {
       id: 103,
       name: 'Manchego Reserva',
       description: 'Madurado 12 meses',
-      price: 25000,
       image: '/assets/Quesos Zampa/producto_3.png',
       badge: 'Sin lactosa'
     }
@@ -55,7 +52,6 @@ const BestSellers = () => {
               <p className="best-seller-desc">{product.description}</p>
               
               <div className="best-seller-actions">
-                <span className="best-seller-price">${product.price.toLocaleString()} / kg</span>
                 <button 
                   className="btn-add-minimal"
                   onClick={(e) => {

@@ -2,7 +2,6 @@
   {
     "id": "queso-ahumado",
     "name": "Queso Ahumado",
-    "price": 12500,
     "image": "/assets/Quesos Zampa/IMG_9821.JPG",
     "category": "picadas",
     "description": "Queso de oveja con proceso de ahumado. Color marfil uniforme, sin agregados. Ideal para acompañar fiambres intensos.",
@@ -17,7 +16,6 @@
   {
     "id": "queso-pecorino",
     "name": "Queso Pecorino",
-    "price": 18000,
     "image": "/assets/Quesos Zampa/IMG_9823.JPG",
     "category": "alta-cocina",
     "description": "Queso duro de oveja estilo italiano, madurado entre 9 y 12 meses. Su pasta firme y color amarillo pálido resaltan su complejidad.",
@@ -32,7 +30,6 @@
   {
     "id": "queso-oregano",
     "name": "Queso de Orégano",
-    "price": 13000,
     "image": "/assets/Quesos Zampa/IMG_9824.JPG",
     "category": "picadas",
     "description": "Queso de oveja saborizado con orégano. Presencia de hierbas distribuidas en la pasta para un toque aromático.",
@@ -47,7 +44,6 @@
   {
     "id": "queso-manchego",
     "name": "Queso Manchego",
-    "price": 15500,
     "image": "/assets/Quesos Zampa/IMG_9858.JPG",
     "category": "mesa-diaria",
     "description": "Queso de oveja estilo manchego de pasta compacta, sin agregados visibles. El clásico de todos los días, elaborado artesanalmente en Tandil.",

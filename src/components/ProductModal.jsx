@@ -30,7 +30,6 @@ const ProductModal = () => {
         <div className="modal-details">
           <span className="modal-category">{activeProduct.category.replace('-', ' ')}</span>
           <h3 className="modal-name">{activeProduct.name}</h3>
-          <span className="modal-price">${activeProduct.price.toFixed(2)}</span>
           <p className="modal-description">{activeProduct.description}</p>
           {activeProduct.details && (
             <ul className="modal-specs">

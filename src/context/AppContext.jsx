@@ -83,7 +83,7 @@ export const AppProvider = ({ children }) => {
   };
 
   const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
-  const cartSubtotal = cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
+  const cartSubtotal = cart.reduce((acc, item) => acc + (item.product.price || 0) * item.quantity, 0);
 
   return (
     <AppContext.Provider

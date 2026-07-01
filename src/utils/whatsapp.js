@@ -5,19 +5,15 @@ export const generateWhatsAppLink = (phoneNumber, message) => {
   return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 };
 
-export const createCartMessage = (cartItems, subtotal) => {
+export const createCartMessage = (cartItems) => {
   let message = "¡Hola, equipo de Zampa! 🧀\n\n";
   message += "Espero que se encuentren muy bien. Vengo desde su sitio web y estoy interesado en concretar la compra de los siguientes productos:\n\n";
   
   cartItems.forEach(({ product, quantity }) => {
-    message += `🔸 *${product.name}* (x${quantity}) - $${(product.price * quantity).toFixed(2)}\n`;
+    message += `🔸 *${product.name}* (x${quantity})\n`;
   });
   
-  if (subtotal !== undefined) {
-    message += `\n💵 *Total Estimado:* $${subtotal.toFixed(2)}\n`;
-  }
-  
-  message += "\nQuedo a la espera de sus comentarios para coordinar el pago y la entrega. ¡Muchas gracias!";
+  message += "\nQuedo a la espera de sus comentarios para coordinar el precio, el pago y la entrega. ¡Muchas gracias!";
   return message;
 };
 

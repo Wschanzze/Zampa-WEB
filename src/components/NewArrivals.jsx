@@ -34,9 +34,8 @@ const NewArrivals = () => {
               <div className="card-img-wrapper">
                 <img src={product.image} alt={product.name} />
               </div>
-              <h4 className="card-title">
+              <h4 className="card-title" style={{ justifyContent: 'center' }}>
                 <span>{product.name}</span>
-                <span className="card-price">${product.price.toFixed(2)}</span>
               </h4>
             </div>
           ))

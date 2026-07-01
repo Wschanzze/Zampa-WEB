@@ -14,7 +14,7 @@ const Cart = () => {
   } = useApp();
 
   const handleCheckout = () => {
-    const message = createCartMessage(cart, cartSubtotal);
+    const message = createCartMessage(cart);
     const link = generateWhatsAppLink(WHATSAPP_NUMBER, message);
     window.location.href = link;
     setIsCartOpen(false);
@@ -41,8 +41,7 @@ const Cart = () => {
                 <img src={product.image} alt={product.name} />
                 <div className="cart-item-details">
                   <div>
-                    <h4 className="cart-item-name">{product.name}</h4>
-                    <span className="cart-item-price">${(product.price * quantity).toFixed(2)}</span>
+                    <h4 className="cart-item-name" style={{ marginBottom: '0.5rem' }}>{product.name}</h4>
                   </div>
                   <div className="cart-item-actions">
                     <div className="quantity-controls">
@@ -62,9 +61,13 @@ const Cart = () => {
 
         {cart.length > 0 && (
           <div className="cart-footer">
-            <div className="cart-subtotal">
-              <span>SUBTOTAL:</span>
-              <span className="cart-subtotal-val">${cartSubtotal.toFixed(2)}</span>
+            <div className="cart-subtotal" style={{ borderBottom: 'none', paddingBottom: '0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem', margin: '1rem 0' }}>
+              <span style={{ fontSize: '0.85rem', color: 'var(--clr-text-light)', letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: '600' }}>
+                Precio a convenir
+              </span>
+              <span style={{ fontSize: '0.75rem', color: 'var(--clr-text-light)', textAlign: 'center', fontStyle: 'italic' }}>
+                Se coordinará directamente por WhatsApp
+              </span>
             </div>
             <button className="btn btn-secondary btn-checkout" onClick={handleCheckout} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
               FINALIZAR COMPRA
