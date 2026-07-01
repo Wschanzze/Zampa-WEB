@@ -10,6 +10,7 @@ import PastoralSystem from '../components/PastoralSystem';
 import JoinFamily from '../components/JoinFamily';
 import QuickContact from '../components/QuickContact';
 import InstagramCarousel from '../components/InstagramCarousel';
+import VisitSection from '../components/VisitSection';
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <BannerBW />
       <Introduction />
       <PastoralSystem />
+      <VisitSection />
       <BestSellers />
       <JoinFamily />
       <InstagramCarousel />
