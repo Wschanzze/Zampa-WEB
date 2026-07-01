@@ -5,7 +5,7 @@ import CultivarGrid from '../components/CultivarGrid';
 
 const Productos = () => {
   return (
-    <div className="productos-page" style={{ padding: '6rem 0 2rem', backgroundColor: 'var(--clr-bg)' }}>
+    <div className="productos-page" style={{ padding: '0 0 2rem', backgroundColor: 'var(--clr-bg)' }}>
       <CultivarGrid />
       <BestSellers />
       <SignatureCollection />

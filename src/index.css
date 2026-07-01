@@ -4575,7 +4575,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ====== CULTIVAR GRID / SELECCIÓN DE AUTOR ====== */
 .cultivar-section {
-  padding: 8rem 2rem;
+  padding: 4rem 2rem 8rem 2rem;
   background-color: var(--clr-bg);
   position: relative;
   overflow: hidden;

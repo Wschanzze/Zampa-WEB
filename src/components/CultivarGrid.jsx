@@ -79,8 +79,6 @@ export default function CultivarGrid() {
 
   return (
     <section id="cultivars" ref={sectionRef} className="cultivar-section">
-      {/* Wheat divider top */}
-      <div className="wheat-rule-gradient mb-16" />
 
       <div className="cultivar-container">
         {/* Header */}
