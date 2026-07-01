@@ -2,6 +2,7 @@ import React from 'react';
 import BestSellers from '../components/BestSellers';
 import SignatureCollection from '../components/SignatureCollection';
 import DecoratedTitle from '../components/DecoratedTitle';
+import CultivarGrid from '../components/CultivarGrid';
 
 const Productos = () => {
   return (
@@ -16,6 +17,7 @@ const Productos = () => {
       </div>
       <BestSellers />
       <SignatureCollection />
+      <CultivarGrid />
     </div>
   );
 };
