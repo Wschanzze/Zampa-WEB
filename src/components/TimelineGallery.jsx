@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import DecoratedTitle from './DecoratedTitle';
 
 const entries = [
   {
@@ -77,14 +78,14 @@ export default function TimelineGallery() {
         {/* Header */}
         <div className={`timeline-header transition-reveal ${visible ? 'reveal-active' : ''}`}>
           <p className="timeline-pretitle">Nuestra Trayectoria</p>
-          <h2 className="timeline-title">
-            Un Tambo Ovino Familiar,<br />
-            <em className="timeline-title-italic">Pasión de Origen en Cada Queso.</em>
-          </h2>
+          <DecoratedTitle className="timeline-title" tag="h2">
+            Un Tambo Ovino Familiar, Pasión de Origen en Cada Queso.
+          </DecoratedTitle>
           <p className="timeline-intro-text">
             Cada hito representa el esfuerzo de nuestro equipo para perfeccionar el queso de oveja artesanal. Haz clic en cualquier época para conocer más.
           </p>
         </div>
+
 
         {/* Timeline entries */}
         <div className="timeline-list">

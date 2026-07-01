@@ -4265,7 +4265,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--clr-accent);
+  color: var(--clr-text-main);
   margin-bottom: 0.75rem;
 }
 
@@ -4279,16 +4279,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-.timeline-title-italic {
-  font-family: var(--font-brand);
-  font-style: italic;
-  font-weight: 400;
-  text-transform: none;
-  color: var(--clr-accent);
-  display: block;
-  margin-top: 0.25rem;
-}
-
 .timeline-intro-text {
   margin-top: 1.25rem;
   color: var(--clr-text-light);
@@ -4300,8 +4290,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Divider gradient */
 .wheat-rule-gradient {
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--clr-accent), transparent);
-  opacity: 0.4;
+  background: linear-gradient(to right, transparent, var(--clr-text-main), transparent);
+  opacity: 0.2;
 }
 
 /* Timeline list and items */
@@ -4311,7 +4301,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .timeline-item {
-  border-bottom: 1px solid rgba(140, 98, 57, 0.15);
+  border-bottom: 1px solid rgba(44, 43, 41, 0.15);
   transition: background-color 0.3s ease;
 }
 
@@ -4334,7 +4324,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .timeline-trigger:hover {
-  background-color: rgba(140, 98, 57, 0.04);
+  background-color: rgba(44, 43, 41, 0.04);
 }
 
 .timeline-year-group {
@@ -4357,8 +4347,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .timeline-item.active .timeline-dot {
-  background: var(--clr-accent);
-  box-shadow: 0 0 0 2px var(--clr-accent);
+  background: var(--clr-text-main);
+  box-shadow: 0 0 0 2px var(--clr-text-main);
   transform: scale(1.25);
 }
 
@@ -4366,7 +4356,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-brand);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--clr-accent);
+  color: var(--clr-text-main);
 }
 
 .timeline-badge-era {
@@ -4401,7 +4391,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .timeline-trigger:hover .timeline-item-title {
-  color: var(--clr-accent);
+  color: var(--clr-text-main);
+  opacity: 0.85;
 }
 
 .timeline-item-description {
@@ -4439,7 +4430,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .timeline-chevron-wrapper {
-  color: var(--clr-accent);
+  color: var(--clr-text-main);
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
@@ -4514,17 +4505,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--clr-accent);
+  color: var(--clr-text-main);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   align-self: flex-start;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--clr-text-main);
   padding-bottom: 2px;
   transition: border-bottom-color 0.2s ease, color 0.2s ease;
 }
 
 .timeline-link:hover {
-  border-bottom-color: var(--clr-accent);
+  color: var(--clr-text-light);
+  border-bottom-color: var(--clr-text-light);
 }
 
 .timeline-panel-data {
@@ -4547,7 +4539,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--clr-accent);
+  color: var(--clr-text-main);
   margin-bottom: 0.5rem;
 }
 
