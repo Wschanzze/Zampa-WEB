@@ -1,4 +1,5 @@
 import React from 'react';
+import TimelineGallery from '../components/TimelineGallery';
 
 const Comunidad = () => {
   return (
@@ -121,8 +122,12 @@ const Comunidad = () => {
         </div>
       </section>
 
+      {/* GALERÍA CRONOLÓGICA DE TRAYECTORIA */}
+      <TimelineGallery />
+
     </div>
   );
 };
 
 export default Comunidad;
+
