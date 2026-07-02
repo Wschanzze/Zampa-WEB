@@ -99,15 +99,6 @@ export default function CultivarGrid() {
     <section id="cultivars" ref={sectionRef} className="cultivar-section">
 
       <div className="cultivar-container">
-        {/* Header */}
-        <div className={`cultivar-header transition-reveal ${visible ? 'reveal-active' : ''}`}>
-          <p className="cultivar-pretitle">Nuestra Selección de Autor</p>
-          <h2 className="cultivar-section-title">
-            Variedades Artesanales<br />
-            <em className="cultivar-section-title-italic">Elaboradas con Leche 100% de Oveja</em>
-          </h2>
-        </div>
-
         {/* List of Products */}
         <div className="cultivar-list">
           {cultivars.map((cultivar, index) => (
