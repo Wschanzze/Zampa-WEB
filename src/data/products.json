@@ -1,58 +1,114 @@
 [
   {
+    "id": "queso-tipo-pecorino",
+    "name": "Queso Tipo Pecorino",
+    "image": "/assets/Quesos Zampa/pecorino.jpeg",
+    "category": "alta-cocina",
+    "description": "Queso duro de oveja estilo italiano. Presentaciones: 3-6 meses, 6-12 meses, más de 12 meses de maduración.",
+    "details": [
+      "Leche cruda de oveja 100% de pastura",
+      "Maduración variable (3 a >12 meses)",
+      "Pasta firme y granulada",
+      "Peso de referencia: 300g aprox."
+    ],
+    "stock": 10
+  },
+  {
+    "id": "queso-tipo-manchego",
+    "name": "Queso Tipo Manchego",
+    "image": "/assets/Quesos Zampa/IMG_9858.JPG",
+    "category": "mesa-diaria",
+    "description": "Queso de oveja estilo manchego de pasta compacta. Presentaciones: 45 días-3 meses, 3-6 meses, 6-12 meses de maduración.",
+    "details": [
+      "Estilo manchego tradicional",
+      "Pasta compacta y equilibrada",
+      "Maduración variable (45 días a 12 meses)",
+      "Peso de referencia: 300g aprox."
+    ],
+    "stock": 10
+  },
+  {
     "id": "queso-ahumado",
     "name": "Queso Ahumado",
     "image": "/assets/Quesos Zampa/IMG_9821.JPG",
     "category": "picadas",
-    "description": "Queso de oveja con proceso de ahumado. Color marfil uniforme, sin agregados. Ideal para acompañar fiambres intensos.",
+    "description": "Queso de oveja con proceso de ahumado natural. Ideal para acompañar fiambres intensos.",
     "details": [
       "Leche de oveja 100% de pastura",
       "Proceso de ahumado natural",
       "Pasta firme",
-      "Sabor intenso y definido"
+      "Peso de referencia: 300g aprox."
     ],
-    "stock": 15
+    "stock": 10
   },
   {
-    "id": "queso-pecorino",
-    "name": "Queso Pecorino",
-    "image": "/assets/Quesos Zampa/IMG_9823.JPG",
-    "category": "alta-cocina",
-    "description": "Queso duro de oveja estilo italiano, madurado entre 9 y 12 meses. Su pasta firme y color amarillo pálido resaltan su complejidad.",
-    "details": [
-      "Maduración: 9 a 12 meses",
-      "Pasta firme and granulada",
-      "Sabor intenso y persistente",
-      "Ideal para rallar o degustar"
-    ],
-    "stock": 8
-  },
-  {
-    "id": "queso-oregano",
-    "name": "Queso de Orégano",
+    "id": "queso-saborizado",
+    "name": "Queso Saborizado",
     "image": "/assets/Quesos Zampa/IMG_9824.JPG",
     "category": "picadas",
-    "description": "Queso de oveja saborizado con orégano. Presencia de hierbas distribuidas en la pasta para un toque aromático.",
+    "description": "Queso de oveja saborizado con Orégano y Ají. Presencia de hierbas distribuidas en la pasta para un toque aromático.",
     "details": [
-      "Orégano natural seleccionado",
+      "Saborizado con Orégano y Ají",
       "Pasta suave y uniforme",
       "Perfil herbáceo",
-      "Perfecto para ensaladas o tablas"
+      "Peso de referencia: 300g aprox."
     ],
-    "stock": 12
+    "stock": 10
   },
   {
-    "id": "queso-manchego",
-    "name": "Queso Manchego",
-    "image": "/assets/Quesos Zampa/IMG_9858.JPG",
-    "category": "mesa-diaria",
-    "description": "Queso de oveja estilo manchego de pasta compacta, sin agregados visibles. El clásico de todos los días, elaborado artesanalmente en Tandil.",
+    "id": "queso-provoleta",
+    "name": "Queso Provoleta",
+    "image": "/assets/Quesos Zampa/tipos de quesos.jpg",
+    "category": "parrilla",
+    "description": "Provoleta elaborada 100% con leche de oveja. Ideal para la parrilla, con una textura elástica y un sabor moderado.",
     "details": [
-      "Estilo manchego tradicional",
-      "Pasta compacta y equilibrada",
-      "Sabor suave con notas lácticas",
-      "Corteza natural"
+      "Especial para parrilla",
+      "Pasta hilada y semidura",
+      "Textura elástica",
+      "Peso de referencia: 200 - 250g"
     ],
-    "stock": 20
+    "stock": 10
+  },
+  {
+    "id": "queso-camembert",
+    "name": "Queso Camembert",
+    "image": "/assets/Quesos Zampa/producto_3.png",
+    "category": "especialidades",
+    "description": "Queso de pasta blanda con corteza enmohecida blanca. Textura untuosa y fundente con aromas lácticos intensos.",
+    "details": [
+      "Pasta blanda y corteza blanca",
+      "Textura untuosa y fundente",
+      "Aromas lácticos complejos",
+      "Peso de referencia: 120 - 150g"
+    ],
+    "stock": 10
+  },
+  {
+    "id": "queso-brie",
+    "name": "Queso Brie",
+    "image": "/assets/Quesos Zampa/producto_2.png",
+    "category": "especialidades",
+    "description": "De estilo clásico francés y corteza aterciopelada blanca. Queso sumamente cremoso con matices de sabor complejos.",
+    "details": [
+      "Pasta blanda madurada",
+      "Cremoso y untuoso",
+      "Estilo clásico francés",
+      "Peso de referencia: 150 - 180g"
+    ],
+    "stock": 10
+  },
+  {
+    "id": "queso-ricota",
+    "name": "Queso Ricota",
+    "image": "/assets/Quesos Zampa/producto_1.png",
+    "category": "frescos",
+    "description": "Ricota fresca de leche de oveja. Textura suave e ideal para preparaciones tanto dulces como saladas.",
+    "details": [
+      "Queso fresco de oveja",
+      "Textura suave",
+      "Ideal para pastas o postres",
+      "Peso de referencia: 350 - 400g"
+    ],
+    "stock": 10
   }
 ]

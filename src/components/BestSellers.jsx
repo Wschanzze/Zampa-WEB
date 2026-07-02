@@ -8,24 +8,24 @@ const BestSellers = () => {
   const bestSellers = [
     {
       id: 101,
-      name: 'Pecorino Clásico',
-      description: 'Queso de oveja madurado 6 meses',
-      image: '/assets/Quesos Zampa/producto_1.png',
-      badge: 'Sin lactosa'
+      name: 'Queso Tipo Pecorino',
+      description: 'Queso duro estilo italiano, maduración variable (3 a >12 meses).',
+      image: '/assets/Quesos Zampa/pecorino.jpeg',
+      badge: 'Clásico'
     },
     {
       id: 102,
-      name: 'Ahumado Natural',
-      description: 'Ahumado con maderas nobles',
-      image: '/assets/Quesos Zampa/producto_2.png',
+      name: 'Queso Ahumado',
+      description: 'Queso de oveja con proceso de ahumado natural.',
+      image: '/assets/Quesos Zampa/IMG_9821.JPG',
       badge: 'Premiado'
     },
     {
       id: 103,
-      name: 'Manchego Reserva',
-      description: 'Madurado 12 meses',
-      image: '/assets/Quesos Zampa/producto_3.png',
-      badge: 'Sin lactosa'
+      name: 'Queso Tipo Manchego',
+      description: 'Estilo manchego tradicional, maduración variable (45 días a 12 meses).',
+      image: '/assets/Quesos Zampa/IMG_9858.JPG',
+      badge: 'Reserva'
     }
   ];
 
