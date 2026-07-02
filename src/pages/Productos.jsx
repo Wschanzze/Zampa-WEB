@@ -1,6 +1,5 @@
 import React from 'react';
 import BestSellers from '../components/BestSellers';
-import SignatureCollection from '../components/SignatureCollection';
 import CultivarGrid from '../components/CultivarGrid';
 
 const Productos = () => {
@@ -23,7 +22,6 @@ const Productos = () => {
       </header>
       <CultivarGrid />
       <BestSellers />
-      <SignatureCollection />
     </div>
   );
 };
