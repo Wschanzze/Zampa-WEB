@@ -2,7 +2,6 @@ import React from 'react';
 import HeroSlider from '../components/HeroSlider';
 import ProductParallaxSection from '../components/ProductParallaxSection';
 import FeaturesIcons from '../components/FeaturesIcons';
-import BestSellers from '../components/BestSellers';
 import BannerBW from '../components/BannerBW';
 import Introduction from '../components/Introduction';
 import OurProducts from '../components/OurProducts';
@@ -23,7 +22,6 @@ const Home = () => {
       <Introduction />
       <PastoralSystem />
       <VisitSection />
-      <BestSellers />
       <JoinFamily />
       <InstagramCarousel />
       <QuickContact />
