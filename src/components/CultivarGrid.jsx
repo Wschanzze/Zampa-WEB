@@ -139,10 +139,13 @@ export default function CultivarGrid() {
                 transitionDelay: visible ? `${index * 120}ms` : '0ms'
               }}
             >
-              {/* Product Title */}
-              <h3 className="cultivar-item-name">
-                {cultivar.name}
-              </h3>
+              {/* Product Header */}
+              <div className="cultivar-item-header">
+                <span className="cultivar-category-badge">{cultivar.category}</span>
+                <h3 className="cultivar-item-name">
+                  {cultivar.name}
+                </h3>
+              </div>
 
               {/* Product Content Row */}
               <div className="cultivar-item-row">
