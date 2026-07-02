@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import DecoratedTitle from './DecoratedTitle';
 
 const cultivars = [
   {
@@ -114,7 +115,7 @@ export default function CultivarGrid() {
       <div className="cultivar-container">
         {/* Catalog Header with Title and Filters */}
         <div className="catalog-header">
-          <h2 className="catalog-title">Nuestros Quesos</h2>
+          <DecoratedTitle className="catalog-title">Nuestros Quesos</DecoratedTitle>
           <div className="filter-bar">
             {['Todos', 'Duros & Semiduros', 'Blandos', 'Frescos'].map((filter) => (
               <button
