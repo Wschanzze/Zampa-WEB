@@ -4,7 +4,23 @@ import DecoratedTitle from '../components/DecoratedTitle';
 
 const NuestraHistoria = () => {
   return (
-    <div className="newspaper-wrapper">
+    <>
+      <header className="products-hero">
+        <img 
+          src="/assets/Quesos Zampa/BAB4C1FD-5368-4434-ADE4-498A3AE4D8C6.jpg" 
+          alt="Nuestra Historia - Campo Zampa" 
+          className="products-hero-bg" 
+        />
+        <div className="products-hero-overlay"></div>
+        <div className="products-hero-content">
+          <p className="hero-subtitle">DESDE NAPALEOFÚ</p>
+          <h1 className="hero-title">Nuestra Historia</h1>
+          <p className="hero-description">
+            Un proyecto familiar que nació de la curiosidad y la pasión. Conocé el origen de nuestro tambo de ovejas y nuestra quesería artesanal en las sierras de Tandil.
+          </p>
+        </div>
+      </header>
+      <div className="newspaper-wrapper">
       <div className="newspaper-container">
         
         {/* CABECERA DEL PERIÓDICO */}
@@ -177,6 +193,7 @@ const NuestraHistoria = () => {
 
       </div>
     </div>
+    </>
   );
 };
 

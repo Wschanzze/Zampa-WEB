@@ -86,6 +86,21 @@ const Elaboracion = () => {
 
   return (
     <>
+      <header className="products-hero">
+        <img 
+          src="/assets/Quesos Zampa/IMG_9816.JPG" 
+          alt="Elaboración - Quesería Zampa" 
+          className="products-hero-bg" 
+        />
+        <div className="products-hero-overlay"></div>
+        <div className="products-hero-content">
+          <p className="hero-subtitle">NUESTRO PROCESO</p>
+          <h1 className="hero-title">Elaboración</h1>
+          <p className="hero-description">
+            El arte de transformar la leche más pura en quesos extraordinarios. Conocé nuestra sala de elaboración diaria, el cuidado de la materia prima y las técnicas culinarias que nos definen.
+          </p>
+        </div>
+      </header>
       <RecipesPairings />
       <section className="our-story chef-scroll-section" style={{ minHeight: '100vh', paddingBottom: '6rem' }}>
       

@@ -40,14 +40,24 @@ const Revendedores = () => {
   };
 
   return (
-    <section className="b2b-page" style={{ padding: '6rem 5% 4rem' }}>
-      <div className="section-header" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-        <p className="section-subtitle">ALIANZAS COMERCIALES</p>
-        <DecoratedTitle className="section-title">Zampa Revendedores</DecoratedTitle>
-        <p className="section-description" style={{ maxWidth: '700px', margin: '1rem auto 0', color: 'var(--clr-text-light)' }}>
-          Llevá el sabor único de nuestros quesos de oveja pastoriles a tu restaurante, fiambrería o red de distribución. Simplificamos tu logística y te ofrecemos condiciones comerciales estratégicas.
-        </p>
-      </div>
+    <>
+      <header className="products-hero">
+        <img 
+          src="/assets/Quesos Zampa/IMG_9858.JPG" 
+          alt="Revendedores - Quesos Zampa" 
+          className="products-hero-bg" 
+        />
+        <div className="products-hero-overlay"></div>
+        <div className="products-hero-content">
+          <p className="hero-subtitle">ALIANZAS COMERCIALES</p>
+          <h1 className="hero-title">Revendedores</h1>
+          <p className="hero-description">
+            Llevá el sabor único de nuestros quesos de oveja pastoriles a tu restaurante, fiambrería o red de distribución. Simplificamos tu logística y te ofrecemos condiciones comerciales estratégicas.
+          </p>
+        </div>
+      </header>
+
+      <section className="b2b-page" style={{ padding: '4rem 5% 4rem' }}>
 
       {/* Strategic Information Cards */}
       <div className="b2b-info-grid" style={{ marginBottom: '5rem' }}>
@@ -266,6 +276,7 @@ const Revendedores = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
