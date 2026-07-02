@@ -4,6 +4,7 @@ const cultivars = [
   {
     id: 'cul-001',
     name: 'Queso Tipo Pecorino',
+    category: 'Duros & Semiduros',
     region: 'elaboración tradicional',
     yieldGain: 'Queso duro de oveja estilo italiano. Presentaciones: 3-6 meses, 6-12 meses, más de 12 meses de maduración. Pasta firme y granulada. Peso de referencia: 300g aprox.',
     droughtTolerance: 'Maduración variable',
@@ -13,6 +14,7 @@ const cultivars = [
   {
     id: 'cul-002',
     name: 'Queso Tipo Manchego',
+    category: 'Duros & Semiduros',
     region: 'receta tradicional de pasta firme',
     yieldGain: 'Queso de oveja estilo manchego de pasta compacta. Presentaciones: 45 días-3 meses, 3-6 meses, 6-12 meses de maduración. Peso de referencia: 300g aprox.',
     droughtTolerance: 'Pasta compacta',
@@ -22,6 +24,7 @@ const cultivars = [
   {
     id: 'cul-003',
     name: 'Queso Ahumado',
+    category: 'Duros & Semiduros',
     region: 'ahumado natural',
     yieldGain: 'Queso de oveja con proceso de ahumado natural. Ideal para acompañar fiambres intensos. Peso de referencia: 300g aprox.',
     droughtTolerance: 'Ahumado natural',
@@ -31,6 +34,7 @@ const cultivars = [
   {
     id: 'cul-004',
     name: 'Queso Saborizado',
+    category: 'Duros & Semiduros',
     region: 'orégano y ají',
     yieldGain: 'Queso de oveja saborizado con Orégano y Ají. Presencia de hierbas distribuidas en la pasta para un toque aromático. Peso de referencia: 300g aprox.',
     droughtTolerance: 'Saborizado',
@@ -40,6 +44,7 @@ const cultivars = [
   {
     id: 'cul-005',
     name: 'Queso Provoleta',
+    category: 'Duros & Semiduros',
     region: 'ideal para parrilla',
     yieldGain: 'Provoleta elaborada 100% con leche de oveja. Ideal para la parrilla, con una textura elástica y un sabor moderado. Peso de referencia: 200 - 250g.',
     droughtTolerance: 'Pasta hilada',
@@ -49,6 +54,7 @@ const cultivars = [
   {
     id: 'cul-006',
     name: 'Queso Camembert',
+    category: 'Blandos',
     region: 'especialidad de pasta blanda',
     yieldGain: 'Queso de pasta blanda con corteza enmohecida blanca. Textura untuosa y fundente con aromas lácticos intensos. Peso de referencia: 120 - 150g.',
     droughtTolerance: 'Corteza enmohecida',
@@ -58,6 +64,7 @@ const cultivars = [
   {
     id: 'cul-007',
     name: 'Queso Brie',
+    category: 'Blandos',
     region: 'estilo francés',
     yieldGain: 'De estilo clásico francés y corteza aterciopelada blanca. Queso sumamente cremoso con matices de sabor complejos. Peso de referencia: 150 - 180g.',
     droughtTolerance: 'Cremoso y untuoso',
@@ -67,6 +74,7 @@ const cultivars = [
   {
     id: 'cul-008',
     name: 'Queso Ricota',
+    category: 'Frescos',
     region: 'fresco y suave',
     yieldGain: 'Ricota fresca de leche de oveja. Textura suave e ideal para preparaciones tanto dulces como saladas. Peso de referencia: 350 - 400g.',
     droughtTolerance: 'Queso fresco',
@@ -78,6 +86,7 @@ const cultivars = [
 export default function CultivarGrid() {
   const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
+  const [activeFilter, setActiveFilter] = useState('Todos');
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -95,13 +104,33 @@ export default function CultivarGrid() {
     window.open(`https://wa.me/5491132554757?text=${encodeURIComponent(message)}`, '_blank');
   };
 
+  const filteredCultivars = activeFilter === 'Todos'
+    ? cultivars
+    : cultivars.filter(c => c.category === activeFilter);
+
   return (
     <section id="cultivars" ref={sectionRef} className="cultivar-section">
 
       <div className="cultivar-container">
+        {/* Catalog Header with Title and Filters */}
+        <div className="catalog-header">
+          <h2 className="catalog-title">Nuestros Quesos</h2>
+          <div className="filter-bar">
+            {['Todos', 'Duros & Semiduros', 'Blandos', 'Frescos'].map((filter) => (
+              <button
+                key={filter}
+                className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
+                onClick={() => setActiveFilter(filter)}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+        </div>
+
         {/* List of Products */}
         <div className="cultivar-list">
-          {cultivars.map((cultivar, index) => (
+          {filteredCultivars.map((cultivar, index) => (
             <div
               key={cultivar.id}
               className={`cultivar-item transition-reveal ${visible ? 'reveal-active' : ''}`}
