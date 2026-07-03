@@ -41,6 +41,18 @@
     font-style: normal;
 }
 
+/* Fallback for the percentage symbol '%' which is missing/broken in Ausion */
+@font-face {
+    font-family: 'Ausion';
+    src: local('Outfit'), local('Arial'), local('Helvetica Neue'), local('Helvetica');
+    unicode-range: U+0025;
+}
+@font-face {
+    font-family: 'AusionCaps';
+    src: local('Outfit'), local('Arial'), local('Helvetica Neue'), local('Helvetica');
+    unicode-range: U+0025;
+}
+
 /* ====== CSS VARIABLES & THEME ====== */
 :root {
     /* Colors */
