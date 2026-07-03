@@ -10,7 +10,7 @@ const Hero = () => {
       />
       <div className="hero-overlay"></div>
       <div className="hero-content">
-        <p className="hero-subtitle">DE TANDIL PARA TU MESA | 100% PASTORIL</p>
+        <p className="hero-subtitle">DE TANDIL PARA TU MESA | ELABORACIÓN ARTESANAL</p>
         <h2 className="hero-title">PRODUCCIÓN ARTESANAL<br />DE QUESO DE OVEJA</h2>
         <p className="hero-description">
           Elaboramos quesos de oveja de alta gama bajo un sistema 100% pastoril. 
