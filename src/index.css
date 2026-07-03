@@ -2421,6 +2421,17 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 4rem;
 }
 
+/* Symmetrical spacing for Hero Slider elements */
+.hero-slider .premium-hero-subtitle:first-of-type {
+    margin-bottom: 1.5rem;
+}
+.hero-slider .premium-hero-title {
+    margin-bottom: 1.5rem;
+}
+.hero-slider .premium-hero-subtitle:last-of-type {
+    margin-bottom: 0;
+}
+
 .premium-hero-badges {
     display: flex;
     gap: 2rem;
@@ -4241,6 +4252,14 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.95rem !important;
         margin-bottom: 3rem !important;
         letter-spacing: 0.15em !important;
+    }
+
+    /* Mobile overrides for Hero Slider symmetry */
+    .hero-slider .premium-hero-subtitle:first-of-type {
+        margin-bottom: 1.5rem !important;
+    }
+    .hero-slider .premium-hero-subtitle:last-of-type {
+        margin-bottom: 0 !important;
     }
     
     .premium-hero-badges .badge {
