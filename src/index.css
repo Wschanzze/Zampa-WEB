@@ -3244,7 +3244,12 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     z-index: -2;
-    background-color: var(--clr-black);
+    background-color: #000;
+}
+
+.hero-slideshow .hero-overlay {
+    background: rgba(0, 0, 0, 0.6); /* Same darkening as other page heroes */
+    z-index: 1;
 }
 
 .hero-slide {
@@ -3261,7 +3266,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-slide.active {
-    opacity: 0.65; /* Darken a bit for text readability */
+    opacity: 1; /* Keep full contrast, let the overlay handle the darkening */
     transform: scale(1.15);
 }
 
