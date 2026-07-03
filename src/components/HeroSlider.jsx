@@ -34,7 +34,7 @@ const HeroSlider = () => {
 
       {/* Static Content */}
       <div className="hero-content premium-hero-content">
-        <p className="hero-subtitle premium-hero-subtitle">DE TANDIL PARA TU MESA | ELABORACIÓN ARTESANAL</p>
+        <p className="hero-subtitle premium-hero-subtitle">DE TANDIL A TU MESA | 100% PASTORIL</p>
         <h2 className="hero-title premium-hero-title">QUESOS ÚNICOS</h2>
         <p className="hero-subtitle premium-hero-subtitle" style={{ marginBottom: 0 }}>100% PASTORIL | LECHE A2</p>
       </div>

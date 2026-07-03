@@ -1,7 +1,6 @@
 import React from 'react';
 import HeroSlider from '../components/HeroSlider';
 import ProductParallaxSection from '../components/ProductParallaxSection';
-import FeaturesIcons from '../components/FeaturesIcons';
 import BannerBW from '../components/BannerBW';
 import Introduction from '../components/Introduction';
 import OurProducts from '../components/OurProducts';
@@ -15,7 +14,6 @@ const Home = () => {
   return (
     <>
       <HeroSlider />
-      <FeaturesIcons />
       <OurProducts />
       <ProductParallaxSection />
       <BannerBW />
