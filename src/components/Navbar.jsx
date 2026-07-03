@@ -35,9 +35,9 @@ const Navbar = () => {
 
         {/* Desktop Left Links */}
         <div className="nav-links left-links">
-          <NavLink to="/" end>INICIO</NavLink>
-          <NavLink to="/productos">PRODUCTOS</NavLink>
           <NavLink to="/nuestra-historia">NUESTRA HISTORIA</NavLink>
+          <NavLink to="/productos">PRODUCTOS</NavLink>
+          <NavLink to="/elaboracion">ELABORACIÓN</NavLink>
         </div>
         
         {/* Logo in the center */}
@@ -47,7 +47,6 @@ const Navbar = () => {
         
         {/* Desktop Right Links */}
         <div className="nav-links right-links">
-          <NavLink to="/elaboracion">ELABORACIÓN</NavLink>
           <NavLink to="/comunidad">COMUNIDAD</NavLink>
           <NavLink to="/revendedores">REVENDEDORES</NavLink>
           <button 
@@ -81,9 +80,8 @@ const Navbar = () => {
 
       {/* Mobile Menu Drawer */}
       <div className={`nav-links-mobile ${isMobileMenuOpen ? 'open' : ''}`}>
-        <Link to="/" onClick={toggleMobileMenu}>INICIO</Link>
-        <Link to="/productos" onClick={toggleMobileMenu}>PRODUCTOS</Link>
         <Link to="/nuestra-historia" onClick={toggleMobileMenu}>NUESTRA HISTORIA</Link>
+        <Link to="/productos" onClick={toggleMobileMenu}>PRODUCTOS</Link>
         <Link to="/elaboracion" onClick={toggleMobileMenu}>ELABORACIÓN</Link>
         <Link to="/comunidad" onClick={toggleMobileMenu}>COMUNIDAD</Link>
         <Link to="/revendedores" onClick={toggleMobileMenu}>REVENDEDORES</Link>
