@@ -5130,12 +5130,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ====== INTRO STATEMENT ====== */
 .intro-statement-section {
-    padding: 6rem 5%;
+    position: relative;
+    padding: 6rem 5% 12rem; /* Extra bottom padding to accommodate the sheep drawing */
     background-color: var(--clr-bg);
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid var(--clr-border);
+    overflow: hidden;
 }
 
 .intro-statement-container {
@@ -5146,6 +5148,8 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    position: relative;
+    z-index: 2; /* Sit on top of watermark */
 }
 
 .statement-ornament {
@@ -5173,4 +5177,31 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 750px;
     margin: 0 auto;
     font-weight: 300;
+}
+
+.statement-watermark {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: var(--container-max);
+    height: auto;
+    max-height: 280px;
+    object-fit: contain;
+    object-position: bottom center;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.22; /* High opacity enough to be visible but not block text readability */
+    mix-blend-mode: multiply; /* Blends pencil art perfectly with cream background */
+}
+
+@media (max-width: 768px) {
+    .intro-statement-section {
+        padding: 4rem 5% 8rem;
+    }
+    .statement-watermark {
+        max-height: 180px;
+        opacity: 0.18;
+    }
 }

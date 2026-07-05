@@ -18,6 +18,11 @@ const IntroStatement = () => {
         </Link>
         <div className="statement-ornament">*</div>
       </div>
+      <img 
+        src="/assets/Quesos Zampa/ovejas_render.png" 
+        alt="Ovejas en Napaleofú" 
+        className="statement-watermark" 
+      />
     </section>
   );
 };
