@@ -17,7 +17,7 @@ const IntroStatement = () => {
         </Link>
       </div>
       <img 
-        src="/assets/Quesos%20Zampa/ovejas_render.png" 
+        src="/assets/Quesos Zampa/ovejas_render.png" 
         alt="Ovejas en Napaleofú" 
         className="statement-watermark" 
       />

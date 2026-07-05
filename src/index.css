@@ -5186,7 +5186,6 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
     pointer-events: none;
     opacity: 0.5; /* Increased opacity so it is clearly visible */
-    mix-blend-mode: multiply; /* Blends pencil art perfectly with cream background */
 }
 
 @media (max-width: 768px) {

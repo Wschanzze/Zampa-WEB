@@ -1,6 +1,7 @@
 import React from 'react';
 import BestSellers from '../components/BestSellers';
 import CultivarGrid from '../components/CultivarGrid';
+import ProductParallaxSection from '../components/ProductParallaxSection';
 
 const Productos = () => {
   return (
@@ -22,6 +23,7 @@ const Productos = () => {
       </header>
       <CultivarGrid />
       <BestSellers />
+      <ProductParallaxSection />
     </div>
   );
 };

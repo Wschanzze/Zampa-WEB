@@ -1,7 +1,6 @@
 import React from 'react';
 import HeroSlider from '../components/HeroSlider';
 import IntroStatement from '../components/IntroStatement';
-import ProductParallaxSection from '../components/ProductParallaxSection';
 import BannerBW from '../components/BannerBW';
 import Introduction from '../components/Introduction';
 import OurProducts from '../components/OurProducts';
@@ -17,7 +16,6 @@ const Home = () => {
       <HeroSlider />
       <IntroStatement />
       <OurProducts />
-      <ProductParallaxSection />
       <BannerBW />
       <Introduction />
       <PastoralSystem />
