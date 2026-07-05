@@ -5,7 +5,6 @@ const IntroStatement = () => {
   return (
     <section className="intro-statement-section">
       <div className="intro-statement-container">
-        <div className="statement-ornament">*</div>
         <h2 className="statement-title">
           Frescura y naturalidad<br />
           son los principios de nuestra producción
@@ -16,10 +15,9 @@ const IntroStatement = () => {
         <Link to="/nuestra-historia" className="btn btn-primary">
           Conocé nuestra historia
         </Link>
-        <div className="statement-ornament">*</div>
       </div>
       <img 
-        src="/assets/Quesos Zampa/ovejas_render.png" 
+        src="/assets/Quesos%20Zampa/ovejas_render.png" 
         alt="Ovejas en Napaleofú" 
         className="statement-watermark" 
       />

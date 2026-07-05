@@ -5152,13 +5152,6 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2; /* Sit on top of watermark */
 }
 
-.statement-ornament {
-    font-family: var(--font-body);
-    font-size: 1.5rem;
-    color: var(--clr-accent);
-    opacity: 0.7;
-}
-
 .statement-title {
     font-family: var(--font-brand);
     font-size: clamp(1.8rem, 3.5vw, 3rem);
@@ -5192,7 +5185,7 @@ h1, h2, h3, h4, h5, h6 {
     object-position: bottom center;
     z-index: 1;
     pointer-events: none;
-    opacity: 0.22; /* High opacity enough to be visible but not block text readability */
+    opacity: 0.5; /* Increased opacity so it is clearly visible */
     mix-blend-mode: multiply; /* Blends pencil art perfectly with cream background */
 }
 
@@ -5202,6 +5195,6 @@ h1, h2, h3, h4, h5, h6 {
     }
     .statement-watermark {
         max-height: 180px;
-        opacity: 0.18;
+        opacity: 0.4;
     }
 }
