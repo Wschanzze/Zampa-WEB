@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroSlider from '../components/HeroSlider';
+import IntroStatement from '../components/IntroStatement';
 import ProductParallaxSection from '../components/ProductParallaxSection';
 import BannerBW from '../components/BannerBW';
 import Introduction from '../components/Introduction';
@@ -14,6 +15,7 @@ const Home = () => {
   return (
     <>
       <HeroSlider />
+      <IntroStatement />
       <OurProducts />
       <ProductParallaxSection />
       <BannerBW />
