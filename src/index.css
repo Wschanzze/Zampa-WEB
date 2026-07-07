@@ -2471,11 +2471,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .premium-hero-title {
-    font-size: clamp(3rem, 7vw, 6.5rem);
-    font-weight: 500;
+    font-size: clamp(3.2rem, 7.5vw, 7rem);
+    font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1rem;
-    font-family: var(--font-brand);
+    font-family: 'Playfair Display', serif;
     text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
     text-align: center;
 }
@@ -4329,10 +4329,12 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .premium-hero-title, .hero-title {
-        font-size: clamp(2.2rem, 7.5vw, 3.2rem) !important;
+        font-size: clamp(2.4rem, 8.5vw, 3.6rem) !important;
+        font-weight: 800 !important;
         line-height: 1.15 !important;
         margin-bottom: 1.5rem !important;
         text-align: center !important;
+        font-family: 'Playfair Display', serif !important;
     }
     
     .premium-hero-subtitle, .hero-subtitle {
