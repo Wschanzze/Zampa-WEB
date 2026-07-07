@@ -2489,6 +2489,20 @@ h1, h2, h3, h4, h5, h6 {
 .hero-slider .premium-hero-title {
     margin-bottom: 1.5rem;
 }
+.premium-hero-title-active {
+    animation: titleFade 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes titleFade {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .hero-slider .premium-hero-subtitle:last-of-type {
     margin-bottom: 0;
 }

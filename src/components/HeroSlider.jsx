@@ -10,6 +10,13 @@ const HeroSlider = () => {
     '/assets/Quesos Zampa/BAB4C1FD-5368-4434-ADE4-498A3AE4D8C6.jpg',
   ];
 
+  const titles = [
+    'QUESOS ÚNICOS',
+    'CRIAMOS NUESTRAS OVEJAS',
+    'PRODUCIMOS NUESTRA LECHE',
+    'ELABORAMOS NUESTROS QUESOS'
+  ];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
@@ -35,8 +42,13 @@ const HeroSlider = () => {
       {/* Static Content */}
       <div className="hero-content premium-hero-content">
         <p className="hero-subtitle premium-hero-subtitle">DE TANDIL A TU MESA | 100% PASTORIL</p>
-        <h2 className="hero-title premium-hero-title">QUESOS ÚNICOS</h2>
-        <p className="hero-subtitle premium-hero-subtitle" style={{ marginBottom: 0 }}>100% PASTORIL | LECHE A2</p>
+        <h2 
+          key={currentSlide} 
+          className="hero-title premium-hero-title premium-hero-title-active"
+        >
+          {titles[currentSlide]}
+        </h2>
+        <p className="hero-subtitle premium-hero-subtitle" style={{ marginBottom: 0 }}>QUESOS DE OVEJA | LECHE A2</p>
       </div>
 
       {/* Slider Controls (Bullets) */}
