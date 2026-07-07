@@ -10,7 +10,7 @@ const IntroStatement = () => {
           son los principios de nuestra producción
         </h2>
         <p className="statement-description">
-          Desde el pastoreo libre de nuestras ovejas en las sierras de Napaleofú hasta la maduración en nuestra cava. Cada horma se elabora manualmente con paciencia, respetando los tiempos de la naturaleza para lograr un queso premium y honesto.
+          Desde el pastoreo libre de nuestras ovejas en las pasturas de Tandil hasta la maduración en nuestra cava. Cada horma se elabora manualmente con paciencia, respetando los tiempos de la naturaleza para lograr un queso premium y honesto.
         </p>
         <Link to="/nuestra-historia" className="btn btn-primary">
           Conocé nuestra historia
