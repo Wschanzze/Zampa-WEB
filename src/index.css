@@ -5264,7 +5264,7 @@ body {
         print-color-adjust: exact !important;
     }
 
-    /* Hide web interface controls, navigation, floating buttons, cart, and footer */
+    /* Hide web interface controls, navigation, floating buttons, cart, parallax decorative elements, and footer */
     .print-pdf-banner,
     .navbar,
     .nav-links-mobile,
@@ -5280,7 +5280,9 @@ body {
     button,
     a.btn,
     .hero-bullets,
-    .carousel-nav-btn {
+    .carousel-nav-btn,
+    .parallax-section,
+    .parallax-img-wrapper {
         display: none !important;
     }
 
@@ -5291,13 +5293,164 @@ body {
         color: #000000 !important;
     }
 
-    /* Page break adjustments for clean document flow */
-    section, header, div {
-        page-break-inside: avoid;
+    /* Prevent scroll-reveal elements from being hidden on print */
+    .timeline-header,
+    .cultivar-header,
+    .cultivar-item,
+    .visit-content,
+    .visit-video-wrapper,
+    .transition-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
     }
 
-    img {
+    /* Hero section sizing for printing */
+    .products-hero {
+        height: 250px !important;
+        min-height: auto !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+    .products-hero-bg {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* Product page catalog adaptations */
+    .cultivar-list {
+        gap: 2rem !important;
+    }
+    .cultivar-item {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        padding: 2rem !important;
+        margin-bottom: 2rem !important;
+        border: 1px solid rgba(226, 222, 201, 0.8) !important;
+        border-radius: 16px !important;
+        background-color: #ffffff !important;
+        box-shadow: none !important;
+    }
+    .cultivar-item-row {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+    .cultivar-text-col,
+    .cultivar-image-col,
+    .cultivar-specs-col {
+        width: 100% !important;
         max-width: 100% !important;
-        page-break-inside: avoid;
+        order: unset !important;
+        padding: 0 !important;
+    }
+    .cultivar-image-col {
+        text-align: center !important;
+    }
+    .cultivar-img {
+        max-height: 220px !important;
+        width: auto !important;
+        margin: 0 auto !important;
+    }
+    .cultivar-item-name {
+        font-size: 1.8rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+
+    /* Best Sellers catalog */
+    .best-sellers-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* 2 columns is perfect for page printing */
+        gap: 1.5rem !important;
+    }
+    .best-seller-card {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        border: 1px solid rgba(226, 222, 201, 0.8) !important;
+        padding: 1.2rem !important;
+        background-color: #ffffff !important;
+    }
+    .best-seller-image-container img {
+        max-height: 180px !important;
+        object-fit: cover !important;
+    }
+
+    /* Nuestra Historia Newspaper Layout Print Optimizations */
+    .newspaper-wrapper {
+        padding: 0 !important;
+        background: transparent !important;
+    }
+    .newspaper-container {
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        max-width: 100% !important;
+    }
+    .newspaper-spread {
+        display: block !important;
+    }
+    .newspaper-page-left {
+        width: 100% !important;
+        border-right: none !important;
+        padding-right: 0 !important;
+        border-bottom: 1px solid #E2DEC9 !important;
+        padding-bottom: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+    .newspaper-page-right {
+        width: 100% !important;
+        display: block !important;
+    }
+    .cifras-sidebar {
+        border-left: none !important;
+        border-top: 1px solid #E2DEC9 !important;
+        padding-left: 0 !important;
+        padding-top: 1.5rem !important;
+        margin-top: 2rem !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: space-around !important;
+        gap: 1.5rem !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+    .cifra-item {
+        flex: 1 1 120px !important;
+        text-align: center !important;
+    }
+    .sub-article {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        border-bottom: 1px dotted #E2DEC9 !important;
+        padding-bottom: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+    .newspaper-ad-container {
+        margin-top: 2rem !important;
+        padding-top: 2rem !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+    .newspaper-ad-box {
+        padding: 2rem !important;
+        border: 2px dashed #2C2B29 !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+    .newspaper-img-container {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin-bottom: 1rem !important;
+    }
+    .newspaper-img-container img {
+        max-height: 350px !important;
+        object-fit: cover !important;
+        width: 100% !important;
     }
 }
