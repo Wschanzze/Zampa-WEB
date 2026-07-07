@@ -11,10 +11,10 @@ const HeroSlider = () => {
   ];
 
   const titles = [
-    'QUESOS ÚNICOS',
-    'CRIAMOS NUESTRAS OVEJAS',
-    'PRODUCIMOS NUESTRA LECHE',
-    'ELABORAMOS NUESTROS QUESOS'
+    ['QUESOS', 'ÚNICOS'],
+    ['CRIAMOS', 'NUESTRAS OVEJAS'],
+    ['PRODUCIMOS', 'NUESTRA LECHE'],
+    ['ELABORAMOS', 'NUESTROS QUESOS']
   ];
 
   useEffect(() => {
@@ -46,7 +46,12 @@ const HeroSlider = () => {
           key={currentSlide} 
           className="hero-title premium-hero-title premium-hero-title-active"
         >
-          {titles[currentSlide]}
+          {titles[currentSlide].map((line, i) => (
+            <React.Fragment key={i}>
+              {line}
+              {i < titles[currentSlide].length - 1 && <br />}
+            </React.Fragment>
+          ))}
         </h2>
         <p className="hero-subtitle premium-hero-subtitle" style={{ marginBottom: 0 }}>QUESOS DE OVEJA | LECHE A2</p>
       </div>
