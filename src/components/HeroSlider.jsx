@@ -47,10 +47,9 @@ const HeroSlider = () => {
           className={`hero-title premium-hero-title premium-hero-title-active ${currentSlide === 0 ? 'first-slide-title' : ''}`}
         >
           {titles[currentSlide].map((line, i) => (
-            <React.Fragment key={i}>
+            <span key={i} className="hero-title-line">
               {line}
-              {i < titles[currentSlide].length - 1 && <br />}
-            </React.Fragment>
+            </span>
           ))}
         </h2>
         <p className="hero-subtitle premium-hero-subtitle" style={{ marginBottom: 0 }}>QUESOS DE OVEJA | LECHE A2</p>
