@@ -44,7 +44,7 @@ const HeroSlider = () => {
         <p className="hero-subtitle premium-hero-subtitle">DE TANDIL A TU MESA | 100% PASTORIL</p>
         <h2 
           key={currentSlide} 
-          className="hero-title premium-hero-title premium-hero-title-active"
+          className={`hero-title premium-hero-title premium-hero-title-active ${currentSlide === 0 ? 'first-slide-title' : ''}`}
         >
           {titles[currentSlide].map((line, i) => (
             <React.Fragment key={i}>

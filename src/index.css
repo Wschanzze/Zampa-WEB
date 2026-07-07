@@ -2480,6 +2480,10 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.premium-hero-title.first-slide-title {
+    font-size: clamp(3.8rem, 8.5vw, 8.5rem);
+}
+
 .premium-hero-subtitle {
     font-family: var(--font-body);
     font-size: clamp(1rem, 1.5vw, 1.2rem);
@@ -4335,6 +4339,10 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 1.5rem !important;
         text-align: center !important;
         font-family: 'Playfair Display', serif !important;
+    }
+    
+    .premium-hero-title.first-slide-title {
+        font-size: clamp(3.2rem, 12vw, 4.8rem) !important;
     }
     
     .premium-hero-subtitle, .hero-subtitle {
