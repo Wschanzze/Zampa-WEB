@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { useApp } from '../context/AppContext';
 import DecoratedTitle from '../components/DecoratedTitle';
 import { generateWhatsAppLink, createResellerMessage, WHATSAPP_NUMBER } from '../utils/whatsapp';
 
 const Revendedores = () => {
-  const { addToast } = useApp();
   const [formData, setFormData] = useState({
     businessName: '',
     taxId: '',
@@ -26,7 +24,6 @@ const Revendedores = () => {
     const message = createResellerMessage(formData);
     const link = generateWhatsAppLink(WHATSAPP_NUMBER, message);
     window.location.href = link;
-    addToast('¡Solicitud enviada con éxito! Nos comunicaremos a la brevedad.');
     setFormData({
       businessName: '',
       taxId: '',
