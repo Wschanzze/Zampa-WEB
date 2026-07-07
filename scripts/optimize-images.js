@@ -97,7 +97,7 @@ async function run() {
 
   // Get all files in the directory
   const files = fs.readdirSync(dir);
-  const imageExtensions = ['.jpg', '.jpeg', '.png'];
+  const imageExtensions = ['.jpg', '.jpeg'];
 
   const imagesToProcess = files.filter(file => {
     const ext = path.extname(file).toLowerCase();
