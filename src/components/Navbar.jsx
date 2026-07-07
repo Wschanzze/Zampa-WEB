@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { useApp } from '../context/AppContext';
 
 const Navbar = () => {
-  const { cartCount, setIsCartOpen } = useApp();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -62,33 +60,7 @@ const Navbar = () => {
         <div className="nav-links right-links">
           <NavLink to="/comunidad">COMUNIDAD</NavLink>
           <NavLink to="/revendedores">REVENDEDORES</NavLink>
-          <button 
-            className="nav-cart-btn" 
-            onClick={() => setIsCartOpen(true)}
-            aria-label="Open cart"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-            CARRITO {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-          </button>
         </div>
-
-        {/* Mobile Cart Button on the Right */}
-        <button 
-          className="mobile-cart-btn" 
-          onClick={() => setIsCartOpen(true)}
-          aria-label="Open cart"
-        >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="9" cy="21" r="1"></circle>
-            <circle cx="20" cy="21" r="1"></circle>
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-          </svg>
-          {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-        </button>
       </nav>
 
       {/* Mobile Menu Drawer */}
@@ -98,22 +70,6 @@ const Navbar = () => {
         <Link to="/elaboracion" onClick={toggleMobileMenu}>ELABORACIÓN</Link>
         <Link to="/comunidad" onClick={toggleMobileMenu}>COMUNIDAD</Link>
         <Link to="/revendedores" onClick={toggleMobileMenu}>REVENDEDORES</Link>
-        
-        <button 
-          className="nav-cart-btn"
-          onClick={() => {
-            toggleMobileMenu();
-            setIsCartOpen(true);
-          }}
-          style={{ width: '100%', justifyContent: 'center', padding: '1rem 0' }}
-        >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="9" cy="21" r="1"></circle>
-            <circle cx="20" cy="21" r="1"></circle>
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-          </svg>
-          CARRITO {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-        </button>
       </div>
     </>
   );

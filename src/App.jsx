@@ -3,9 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Cart from './components/Cart';
 import ProductModal from './components/ProductModal';
-import ToastContainer from './components/ToastContainer';
 import WhatsAppFloat from './components/WhatsAppFloat';
 
 // Pages
@@ -35,9 +33,7 @@ function App() {
             <Route path="/contacto" element={<Contacto />} />
           </Routes>
           <Footer />
-          <Cart />
           <ProductModal />
-          <ToastContainer />
           <WhatsAppFloat />
         </div>
       </Router>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 
 const ProductModal = () => {
-  const { activeProduct, closeProductModal, addToCart } = useApp();
+  const { activeProduct, closeProductModal } = useApp();
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -41,11 +41,12 @@ const ProductModal = () => {
           <button 
             className="btn btn-secondary btn-add-modal"
             onClick={() => {
-              addToCart(activeProduct);
+              const message = `¡Hola, equipo de Zampa! 🧀\n\nMe gustaría recibir más información o consultar precio del *${activeProduct.name}*.`;
+              window.open(`https://wa.me/5491132554757?text=${encodeURIComponent(message)}`, '_blank');
               closeProductModal();
             }}
           >
-            AÑADIR AL CARRITO
+            CONSULTAR POR WHATSAPP
           </button>
         </div>
       </div>

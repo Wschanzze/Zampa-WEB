@@ -1,9 +1,11 @@
 import React from 'react';
-import { useApp } from '../context/AppContext';
 import DecoratedTitle from './DecoratedTitle';
 
 const BestSellers = () => {
-  const { addToCart } = useApp();
+  const handleInquire = (cheeseName) => {
+    const message = `¡Hola, equipo de Zampa! 🧀\n\nMe gustaría recibir más información o consultar precio del *${cheeseName}*.`;
+    window.open(`https://wa.me/5491132554757?text=${encodeURIComponent(message)}`, '_blank');
+  };
 
   const bestSellers = [
     {
@@ -56,10 +58,10 @@ const BestSellers = () => {
                   className="btn-add-minimal"
                   onClick={(e) => {
                     e.stopPropagation();
-                    addToCart(product);
+                    handleInquire(product.name);
                   }}
                 >
-                  Agregar al Carrito
+                  Consultar por WhatsApp
                 </button>
               </div>
             </div>
