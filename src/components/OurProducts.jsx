@@ -4,19 +4,19 @@ import DecoratedTitle from './DecoratedTitle';
 const OurProducts = () => {
   const categories = [
     {
-      title: "Línea Clásica",
+      title: "QUESOS DUROS",
       image: "/assets/Quesos Zampa/pecorino.jpeg",
-      link: "/productos#clasica"
+      link: "/productos"
     },
     {
-      title: "Quesos Madurados",
+      title: "QUESOS SEMIDUROS",
       image: "/assets/Quesos Zampa/IMG_9816.JPG",
-      link: "/productos#madurados"
+      link: "/productos"
     },
     {
-      title: "Especialidades",
+      title: "QUESOS BLANDOS",
       image: "/assets/Quesos Zampa/tipos de quesos.jpg",
-      link: "/productos#especialidades"
+      link: "/productos"
     }
   ];
 

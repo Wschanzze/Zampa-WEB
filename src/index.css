@@ -234,7 +234,12 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-logo {
     height: 110px; /* Agrandar un poco el logo */
     object-fit: contain;
-    transition: height 0.3s ease;
+    transition: height 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0px 2px 6px rgba(139, 115, 85, 0.15)) drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.08));
+}
+
+.navbar-logo:hover {
+    filter: drop-shadow(0px 4px 10px rgba(139, 115, 85, 0.25)) drop-shadow(0px 6px 18px rgba(0, 0, 0, 0.12));
 }
 
 .navbar.scrolled .navbar-logo {
