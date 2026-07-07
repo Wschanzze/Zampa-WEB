@@ -3,12 +3,12 @@ import DecoratedTitle from './DecoratedTitle';
 
 const RecipesPairings = () => {
   const images = [
-    '/assets/Quesos Zampa/Recetas/receta_1.png',
-    '/assets/Quesos Zampa/Recetas/receta_2.png',
-    '/assets/Quesos Zampa/Recetas/receta_3.png',
-    '/assets/Quesos Zampa/Recetas/receta_4.png',
-    '/assets/Quesos Zampa/Recetas/receta_5.png',
-    '/assets/Quesos Zampa/Recetas/receta_6.png',
+    '/assets/Quesos Zampa/Recetas/receta_1.jpg',
+    '/assets/Quesos Zampa/Recetas/receta_2.jpg',
+    '/assets/Quesos Zampa/Recetas/receta_3.jpg',
+    '/assets/Quesos Zampa/Recetas/receta_4.jpg',
+    '/assets/Quesos Zampa/Recetas/receta_5.jpg',
+    '/assets/Quesos Zampa/Recetas/receta_6.jpg',
   ];
 
   return (
