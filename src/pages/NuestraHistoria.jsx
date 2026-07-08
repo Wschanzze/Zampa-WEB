@@ -145,40 +145,7 @@ const NuestraHistoria = () => {
 
             </div>
 
-            {/* COLUMNA DE CIFRAS EXTREMA DERECHA (NEWSPAPER SIDEBAR) */}
-            <aside className="cifras-sidebar">
-              <h4 className="cifras-title">Zampa en Cifras</h4>
-              
-              <div className="cifra-item">
-                <span className="cifra-number">40</span>
-                <span className="cifra-label">Borregas Iniciales</span>
-              </div>
 
-              <div className="cifra-item">
-                <span className="cifra-number">2</span>
-                <span className="cifra-label">Ordeñes Diarios</span>
-              </div>
-
-              <div className="cifra-item">
-                <span className="cifra-number">100%</span>
-                <span className="cifra-label">Pastoral Natural</span>
-              </div>
-
-              <div className="cifra-item">
-                <span className="cifra-number">6+</span>
-                <span className="cifra-label">Meses Maduración</span>
-              </div>
-
-              <div className="cifra-item">
-                <span className="cifra-number">A2</span>
-                <span className="cifra-label">Caseína Digestiva</span>
-              </div>
-
-              <div className="cifra-item">
-                <span className="cifra-number">3</span>
-                <span className="cifra-label">Fundadores Familiares</span>
-              </div>
-            </aside>
 
           </section>
 
