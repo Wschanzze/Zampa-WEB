@@ -52,7 +52,7 @@ const Navbar = () => {
         </div>
         
         {/* Logo in the center */}
-        <div className="logo-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div className="logo-container">
           <Link to="/"><img src="/IMG_1960(1).png" alt="Zampa Logo" className="navbar-logo" /></Link>
         </div>
         
