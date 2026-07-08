@@ -1810,7 +1810,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Cuadrícula / Pliegos */
 .newspaper-spread {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 3.5rem;
 }
 @media (max-width: 1024px) {
@@ -1931,15 +1931,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Página Derecha */
 .newspaper-page-right {
-    display: grid;
-    grid-template-columns: 1fr 150px;
-    gap: 2.5rem;
-}
-@media (max-width: 768px) {
-    .newspaper-page-right {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
+    display: block;
 }
 .right-page-articles {
     display: flex;
